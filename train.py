@@ -1,0 +1,154 @@
+"""Train one (method, dataset) configuration.
+
+Examples
+--------
+python train.py --method linear --dataset flowers --epochs 100
+python train.py --method full   --dataset cifar100 --epochs 50
+"""
+import argparse
+import os
+import time
+
+import torch
+
+from src.utils import (set_seed, get_device, count_parameters,
+                       CSVLogger, append_summary, cpu_state_dict)
+from src.backbone import create_model, get_default_data_config
+from src.data import build_dataset, build_loaders
+from src.methods import configure_method
+from src.engine import train_one_epoch, evaluate
+
+
+# Per-method training defaults. PEFT methods use a much higher LR than full FT,
+# and only full FT benefits from stochastic depth (drop_path).
+METHOD_DEFAULTS = {
+    "linear":      dict(lr=1e-2, weight_decay=1e-4, drop_path=0.0, optimizer="adamw"),
+    "full":        dict(lr=1e-5, weight_decay=5e-2, drop_path=0.1, optimizer="adamw"),
+    # ---- Phase 2 (placeholders; methods not yet implemented in methods.py) ----
+    "bitfit":      dict(lr=1e-3, weight_decay=1e-4, drop_path=0.0, optimizer="adamw"),
+    "lora":        dict(lr=1e-3, weight_decay=1e-4, drop_path=0.0, optimizer="adamw"),
+    "adaptformer": dict(lr=1e-3, weight_decay=1e-4, drop_path=0.0, optimizer="adamw"),
+    "ssf":         dict(lr=1e-3, weight_decay=5e-4, drop_path=0.0, optimizer="adamw"),
+}
+
+
+def build_optimizer(model, name, lr, weight_decay):
+    """AdamW/SGD over trainable params; no weight decay on biases/1-D (norm) params."""
+    decay, no_decay = [], []
+    for n, p in model.named_parameters():
+        if not p.requires_grad:
+            continue
+        if p.ndim <= 1 or n.endswith(".bias"):
+            no_decay.append(p)
+        else:
+            decay.append(p)
+    groups = [
+        {"params": decay, "weight_decay": weight_decay},
+        {"params": no_decay, "weight_decay": 0.0},
+    ]
+    if name == "adamw":
+        return torch.optim.AdamW(groups, lr=lr)
+    if name == "sgd":
+        return torch.optim.SGD(groups, lr=lr, momentum=0.9)
+    raise ValueError(f"Unknown optimizer: {name}")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--method", required=True)
+    ap.add_argument("--dataset", required=True)
+    ap.add_argument("--data-root", default="./data")
+    ap.add_argument("--out-dir", default="./results")
+    ap.add_argument("--epochs", type=int, default=50)
+    ap.add_argument("--batch-size", type=int, default=128)
+    ap.add_argument("--warmup-epochs", type=int, default=10)
+    ap.add_argument("--lr", type=float, default=None, help="override method default")
+    ap.add_argument("--weight-decay", type=float, default=None, help="override method default")
+    ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--num-workers", type=int, default=2)
+    ap.add_argument("--val-ratio", type=float, default=0.1)
+    ap.add_argument("--no-amp", action="store_true")
+    args = ap.parse_args()
+
+    set_seed(args.seed)
+    device = get_device()
+    use_amp = (not args.no_amp) and (device.type == "cuda")
+
+    d = METHOD_DEFAULTS[args.method]
+    lr = args.lr if args.lr is not None else d["lr"]
+    wd = args.weight_decay if args.weight_decay is not None else d["weight_decay"]
+    drop_path, opt_name = d["drop_path"], d["optimizer"]
+
+    # data preprocessing config (no weight download)
+    dcfg = get_default_data_config()
+    mean, std = dcfg["mean"], dcfg["std"]
+
+    train_set, val_set, test_set, num_classes = build_dataset(
+        args.dataset, args.data_root, mean, std,
+        img_size=224, val_ratio=args.val_ratio, seed=args.seed)
+    train_loader, val_loader, test_loader = build_loaders(
+        train_set, val_set, test_set, args.batch_size, args.num_workers)
+
+    model = create_model(num_classes=num_classes, drop_path_rate=drop_path).to(device)
+    configure_method(model, args.method)
+    trainable, total = count_parameters(model)
+
+    print(f"[{args.method} | {args.dataset}] classes={num_classes} | "
+          f"trainable={trainable:,} ({100.0 * trainable / total:.3f}% of {total:,})")
+    print(f"lr={lr}  wd={wd}  drop_path={drop_path}  opt={opt_name}  "
+          f"epochs={args.epochs}  bs={args.batch_size}  amp={use_amp}  device={device}")
+
+    optimizer = build_optimizer(model, opt_name, lr, wd)
+    scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
+
+    steps_per_epoch = len(train_loader)
+    total_steps = steps_per_epoch * args.epochs
+    warmup_steps = steps_per_epoch * args.warmup_epochs
+
+    os.makedirs(args.out_dir, exist_ok=True)
+    run_name = f"{args.method}_{args.dataset}_seed{args.seed}"
+    logger = CSVLogger(
+        os.path.join(args.out_dir, run_name + ".csv"),
+        ["epoch", "train_loss", "train_acc", "val_acc", "lr", "time_s", "peak_mem_mb"])
+
+    best_val, best_state = -1.0, None
+    if device.type == "cuda":
+        torch.cuda.reset_peak_memory_stats()
+
+    for epoch in range(args.epochs):
+        t0 = time.time()
+        tr_loss, tr_acc, cur_lr = train_one_epoch(
+            model, train_loader, optimizer, scaler, device,
+            total_steps, warmup_steps, lr,
+            step_offset=epoch * steps_per_epoch, use_amp=use_amp)
+        val_acc = evaluate(model, val_loader, device, use_amp=use_amp)
+        dt = time.time() - t0
+        peak_mb = (torch.cuda.max_memory_allocated() / 1e6) if device.type == "cuda" else 0.0
+
+        logger.log(dict(epoch=epoch + 1, train_loss=round(tr_loss, 4),
+                        train_acc=round(tr_acc, 3), val_acc=round(val_acc, 3),
+                        lr=round(cur_lr, 6), time_s=round(dt, 1), peak_mem_mb=round(peak_mb, 1)))
+        print(f"epoch {epoch + 1:3d}/{args.epochs} | loss {tr_loss:.3f} | "
+              f"train {tr_acc:5.2f}% | val {val_acc:5.2f}% | {dt:5.1f}s | {peak_mb:6.0f}MB")
+
+        if val_acc > best_val:
+            best_val = val_acc
+            best_state = cpu_state_dict(model)
+
+    # final TEST with the best-on-validation weights (test touched exactly once)
+    if best_state is not None:
+        model.load_state_dict(best_state)
+    test_acc = evaluate(model, test_loader, device, use_amp=use_amp)
+
+    print(f"\n== {run_name}: best_val={best_val:.2f}%  test={test_acc:.2f}%  "
+          f"trainable={trainable:,} ({100.0 * trainable / total:.3f}%)")
+
+    append_summary(os.path.join(args.out_dir, "summary.csv"), dict(
+        method=args.method, dataset=args.dataset, seed=args.seed,
+        trainable=trainable, total=total, pct=round(100.0 * trainable / total, 4),
+        best_val=round(best_val, 3), test_acc=round(test_acc, 3),
+        epochs=args.epochs, lr=lr, wd=wd, drop_path=drop_path))
+
+
+if __name__ == "__main__":
+    main()
