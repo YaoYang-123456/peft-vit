@@ -1,65 +1,62 @@
-# PEFT-ViT: Parameter-Efficient Fine-Tuning of Vision Transformers
+# PEFT-ViT — 视觉 Transformer 高效微调方法对比
 
-A clean, from-scratch study comparing parameter-efficient fine-tuning (PEFT) methods
-on a ViT-B/16 backbone pre-trained on ImageNet-21k, across several downstream image
-classification datasets.
+在 ImageNet-21k 预训练的 **ViT-B/16** 上,统一协议对比五种微调方法
+(线性探测 / 全量微调 / BitFit / LoRA / SSF),并对 LoRA、SSF 做**层位置消融**
+(固定预算下适配早/中/晚不同深度的 Transformer Block)。
 
-Backbone: `vit_base_patch16_224.augreg_in21k` (timm). The classification head is
-replaced per dataset; everything else is frozen for the PEFT methods.
+## 实验环境
+- Python ≥ 3.10,PyTorch ≥ 2.1,`timm` ≥ 1.0,`torchvision`,`pandas`
+- 建议使用 GPU(本项目在 Google Colab 的 NVIDIA T4 / A100 上验证)
+- 安装依赖:`pip install -U timm torch torchvision pandas`
 
-## Status
+## 数据集下载
+CIFAR-100、Flowers-102、Oxford-IIIT Pets 均由 `torchvision` 在首次运行时**自动下载**
+到 `--data-root`(默认 `./data`),无需手动准备。验证集为从训练集中按固定随机种子划出的 10%
+(Flowers-102 使用其官方 train/val/test 划分);测试集仅在训练结束时评测一次。
 
-- **Phase 1 (current):** training harness + two baselines — **linear probing** and **full fine-tuning**.
-- **Phase 2 (next):** BitFit, LoRA, AdaptFormer, SSF, plus a depth-aware LoRA+SSF hybrid.
-
-## Environment
-
+## 运行方式
+单个配置:
 ```bash
-pip install -r requirements.txt   # on Colab: only `pip install -U timm` is needed
+python train.py --method <linear|full|bitfit|lora|ssf> \
+                --dataset <cifar100|flowers|pets> \
+                --epochs N --data-root ./data --out-dir ./results
 ```
+层位置消融(在方法名后加后缀 `-early` / `-mid` / `-late`,不加后缀即适配全部 12 层):
+```bash
+python train.py --method lora-early --dataset cifar100 --epochs 20
+python train.py --method ssf-mid    --dataset cifar100 --epochs 20
+```
+每个配置会打印 `best_val / test_acc / 可训练参数`,并把一行结果追加到 `results/summary.csv`。
+本项目使用的训练轮数:线性探测 8;其余方法在 Flowers/Pets 上 30、CIFAR-100 上 20。
 
-Python 3.10+, PyTorch 2.x, a CUDA GPU (developed on Google Colab Pro, T4/L4/A100).
+## 实验结果
+**五种方法测试精度(%)**(可训练参数与占比以 CIFAR-100 为例):
 
-## Datasets
+| 方法 | 占比 | CIFAR-100 | Flowers-102 | Pets |
+|---|---|---|---|---|
+| 线性探测 | 0.090% | 86.42 | 98.57 | 92.45 |
+| BitFit | 0.209% | 92.59 | 99.17 | 93.70 |
+| SSF | 0.325% | 92.72 | 99.12 | 94.06 |
+| LoRA | 0.431% | 92.60 | 99.20 | 93.95 |
+| 全量微调 | 100% | 93.41 | 96.34 | 92.86 |
 
-Downloaded automatically by torchvision on first run (`--data-root`).
+**层位置消融(CIFAR-100,固定预算)**:
 
-| Dataset | Classes | Train / Val / Test |
+| 配置 | 适配 Block | 测试精度(%) |
 |---|---|---|
-| CIFAR-100 | 100 | 45 000 / 5 000 / 10 000 (val carved from train) |
-| Oxford Flowers-102 | 102 | 1 020 / 1 020 / 6 149 (official splits) |
-| Oxford-IIIT Pets | 37 | ~3 312 / ~368 / 3 669 (val carved from trainval) |
-| DTD | 47 | 1 880 / 1 880 / 1 880 (partition 1) |
+| LoRA 全部 / 早 / 中 / 晚 | 0–11 / 0–3 / 4–7 / 8–11 | 92.60 / 92.28 / 92.26 / 91.09 |
+| SSF 全部 / 早 / 中 / 晚 | 0–11 / 0–3 / 4–7 / 8–11 | 92.72 / 92.14 / 92.38 / 90.47 |
 
-Hyperparameters are selected on the validation set; the test set is evaluated exactly
-once, using the best-validation checkpoint.
+主要结论:PEFT 用 <0.5% 参数恢复全量微调约 99% 精度、并在小数据上反超;固定预算下早/中层适配显著优于晚层,
+且仅用约 1/3 参数即可保持精度。完整分析见课题报告;图见 `results/figures/`,数据见 `results/summary.csv`。
 
-## Unified protocol
-
-Same preprocessing and schedule for every method, so differences reflect the method
-and not the recipe:
-
-- train aug: `RandomResizedCrop(224, scale=(0.5,1.0))` + horizontal flip
-- eval: `Resize(256)` + `CenterCrop(224)`
-- optimizer AdamW, cosine LR with 10-epoch linear warmup, mixed precision (fp16)
-- input 224×224, normalization `(0.5, 0.5, 0.5)`
-
-## Run
-
-```bash
-# baselines
-python train.py --method linear --dataset flowers  --epochs 100
-python train.py --method full   --dataset flowers  --epochs 100
-python train.py --method linear --dataset pets     --epochs 100
-python train.py --method full   --dataset pets     --epochs 100
-python train.py --method linear --dataset cifar100 --epochs 50
-python train.py --method full   --dataset cifar100 --epochs 50
+## 代码结构
 ```
-
-Per-run epoch curves are written to `results/<method>_<dataset>_seed<seed>.csv`,
-and a one-line summary (trainable params, best-val, test accuracy) is appended to
-`results/summary.csv`.
-
-## Results
-
-(to be filled in — main comparison table + accuracy-vs-trainable-params Pareto plot)
+train.py            训练入口(一个 method × dataset 配置)
+src/backbone.py     ViT-B/16 (IN-21k) 主干
+src/data.py         数据集、数据增广与 DataLoader
+src/methods.py      五种微调方法 + 层位置(configure_method)
+src/engine.py       训练/评估循环(AMP、warmup+余弦退火)
+src/utils.py        随机种子、参数统计、日志等工具
+results/            汇总结果 summary.csv 与图 figures/
+```

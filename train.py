@@ -74,7 +74,8 @@ def main():
     device = get_device()
     use_amp = (not args.no_amp) and (device.type == "cuda")
 
-    d = METHOD_DEFAULTS[args.method]
+    # method may carry a placement suffix (e.g. "lora-late"); look up the base.
+    d = METHOD_DEFAULTS[args.method.split("-")[0]]
     lr = args.lr if args.lr is not None else d["lr"]
     wd = args.weight_decay if args.weight_decay is not None else d["weight_decay"]
     drop_path, opt_name = d["drop_path"], d["optimizer"]
