@@ -77,11 +77,14 @@ def _placement_to_block_ids(placement, n_blocks):
     if placement == "all":
         return list(range(n_blocks))
     t = n_blocks // 3                      # 4 for ViT-B (12 blocks)
-    spans = {"early": range(0, t),
-             "mid":   range(t, 2 * t),
-             "late":  range(2 * t, n_blocks)}
+    if placement == "even":                # spread: every 3rd block -> 0,3,6,9
+        return list(range(0, n_blocks, max(1, n_blocks // 4)))[:4]
+    spans = {"early":    range(0, t),
+             "mid":      range(t, 2 * t),
+             "late":     range(2 * t, n_blocks),
+             "earlymid": range(0, 2 * t)}
     if placement not in spans:
-        raise ValueError(f"unknown placement '{placement}' (use all/early/mid/late)")
+        raise ValueError(f"unknown placement '{placement}' (use all/early/mid/late/earlymid/even)")
     return list(spans[placement])
 
 
@@ -131,9 +134,15 @@ def configure_method(model, method):
     # move the whole model back onto it at the end.
     device = next(model.parameters()).device
 
-    # method may carry a placement suffix, e.g. "lora-late" / "ssf-early".
-    base = method.split("-")[0]
-    placement = method.split("-", 1)[1] if "-" in method else "all"
+    # method may carry placement/rank suffixes, e.g. "lora-late", "lora-r12-early".
+    toks = method.split("-")
+    base = toks[0]
+    placement, rank = "all", 8
+    for t in toks[1:]:
+        if len(t) > 1 and t[0] == "r" and t[1:].isdigit():
+            rank = int(t[1:])
+        else:
+            placement = t
 
     if base == "full":
         for p in model.parameters():
@@ -159,7 +168,7 @@ def configure_method(model, method):
         for p in model.parameters():
             p.requires_grad_(False)
         ids = _placement_to_block_ids(placement, len(model.blocks))
-        _inject_lora(model, r=8, alpha=16, block_ids=ids)   # trainable low-rank params
+        _inject_lora(model, r=rank, alpha=2 * rank, block_ids=ids)   # trainable low-rank params
         for p in model.get_classifier().parameters():
             p.requires_grad_(True)
 
