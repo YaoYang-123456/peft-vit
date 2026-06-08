@@ -1,0 +1,3 @@
+method,placement,dataset,seed,trainable,total,pct,best_val,test_acc,epochs,lr,wd,drop_path,peak_mem_mb,train_time_s
+full,all,flowers,42,85877094,85877094,100.0,98.824,98.764,30,3e-05,0.05,0.1,10153.9,129.2
+full,all,flowers,43,85877094,85877094,100.0,98.824,98.829,30,3e-05,0.05,0.1,10153.9,127.2

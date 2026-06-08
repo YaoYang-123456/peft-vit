@@ -29,7 +29,7 @@
 
 ## 实验环境
 - Python ≥ 3.10,单张 GPU(本项目在 RTX 4090D 上验证;PyTorch 2.x / CUDA 11.8+)。
-- 安装依赖:`pip install -r requirements.txt`(含 `torch / torchvision / timm / pandas / numpy / matplotlib / scipy`)。
+- 安装依赖:`pip install -r requirements.txt`(含 `torch / torchvision / timm / pandas / numpy / matplotlib / scipy`)。实验在 AutoDL 上以 Python 3.12 + PyTorch 2.x + timm(最新版)完成;如需完全锁定版本,可在该环境运行 `pip freeze > requirements-lock.txt` 一并提交。
 - 查看版本:`python -c "import torch,timm;print('torch',torch.__version__,'timm',timm.__version__)"`。
 
 ## 数据集准备
@@ -63,7 +63,12 @@ python train.py --method lora-r12-early --dataset cifar100           # 早段 + 
 可用位置后缀:`early / mid / late / even / earlymid`;LoRA 秩用 `r<N>`。每个 run 把一行结果追加到
 `results/summary.csv`,逐轮日志写入 `results/runs/`。
 
-**复跑全部实验 → 再生成表与图**(断点续跑;后台:`nohup ... > train.log 2>&1 &`):
+**快速冒烟测试**(1–3 分钟确认环境与代码跑通;先装依赖 `pip install -r requirements.txt`):
+```bash
+bash scripts/smoke_test.sh
+```
+
+**复跑全部实验 → 再生成表与图**(已完成的 run 自动跳过,非从 checkpoint 续训;后台:`nohup ... > train.log 2>&1 &`):
 ```bash
 bash scripts/run_all_full.sh        # 全部 117 个 run(也可用 run_cifar_ablation.sh 只跑 CIFAR 消融)
 python scripts/summarize_results.py # 从 summary.csv 再生成表 2/3/4/5 + p 值表
@@ -76,8 +81,11 @@ python scripts/make_figures.py      # 从 summary.csv(+runs/)再生成图 1–5
 - `results/placement_ablation.csv` — 表 3/4(LoRA/SSF 层位置,各数据集 mean±std)
 - `results/significance.csv` — 配对 t 检验 p 值(§3.3/§3.4 引用)
 - `results/efficiency.csv` — 表 5(峰值显存=各种子一致值;每轮时间=seed42 代表性运行)
-- `results/runs.zip` — 117 个 run 的逐轮日志(为便于上传 GitHub 已打包;运行 `make_figures.py` 会自动解压,或手动 `cd results && unzip runs.zip`)
-- `results/figures/` — 图 1–5
+- `results/runs.zip` — 117 个 run 的逐轮日志(为便于上传 GitHub 已打包;运行 `make_figures.py` / `summarize_results.py` 会自动解压,或手动 `cd results && unzip runs.zip`)。其中 `ssf_cifar100_seed42/43/44.csv` 是中途续跑的日志、自第 3/5 轮起记录,但末轮的 best_val/test 与 `summary.csv` 完全一致,且 fig4 使用 LoRA 曲线,故不影响任何表与图
+- `results/figures/` — 图 1–7
+- `results/eqbudget/` — §3.6 等预算重分配实验(4 块 × r24,CIFAR-100;summary.csv + runs.zip)
+- `results/baseline_sweep/` — §3.6 全量微调在 Flowers 上的学习率体检(lr=3e-5 / 5e-5)
+- `results/vit_small/` — §3.7 第二主干 ViT-Small/16 的 LoRA 层位置消融(CIFAR-100 + Flowers,3 种子;summary.csv + runs.zip)
 
 ## 代码结构
 ```
@@ -87,9 +95,11 @@ src/data.py                  数据集、数据增广与 DataLoader
 src/methods.py               五种微调方法 + 层位置/秩 (configure_method)
 src/engine.py                训练/评估循环(AMP、warmup + 余弦退火)
 src/utils.py                 随机种子、参数统计、日志
-scripts/run_all_full.sh      完整复跑全部 117 个 run(3 数据集 × 3 种子,断点续跑)
+scripts/run_all_full.sh      完整复跑全部 117 个 run(3 数据集 × 3 种子;已完成的 run 自动跳过)
 scripts/run_cifar_ablation.sh  仅复跑 CIFAR-100 层位置消融(较快)
 scripts/summarize_results.py  从 summary.csv 再生成表 2/3/4/5 及配对 t 检验 p 值
+scripts/extra_experiments.py  再现 §3.6/§3.7 追加实验(等预算重分配、基线体检、第二主干 ViT-S)+ 生成图 6/7
+scripts/smoke_test.sh        1–3 分钟快速冒烟测试(先装依赖,确认代码端到端跑通)
 scripts/make_figures.py      从 summary.csv(+runs/)重新生成图 1–5
 results/                     summary.csv / main_comparison.csv / placement_ablation.csv
                              / significance.csv / efficiency.csv / runs/ / figures/

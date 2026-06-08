@@ -13,7 +13,7 @@ import torch
 
 from src.utils import (set_seed, get_device, count_parameters,
                        CSVLogger, append_summary, cpu_state_dict)
-from src.backbone import create_model, get_default_data_config
+from src.backbone import create_model, get_default_data_config, DEFAULT_MODEL
 from src.data import build_dataset, build_loaders
 from src.methods import configure_method
 from src.engine import train_one_epoch, evaluate
@@ -85,6 +85,8 @@ def main():
                     help="use only the first N training samples (quick code check)")
     ap.add_argument("--save-ckpt", action="store_true",
                     help="save best-on-val weights to <out-dir>/runs/<run>_best.pt")
+    ap.add_argument("--backbone", type=str, default=None,
+                    help="timm 主干名;默认 ViT-B/16 IN-21k (vit_base_patch16_224.augreg_in21k)")
     args = ap.parse_args()
 
     set_seed(args.seed)
@@ -98,8 +100,10 @@ def main():
     lr, wd = d["lr"], d["weight_decay"]
     drop_path, opt_name = d["drop_path"], d["optimizer"]
 
-    # data preprocessing config (no weight download)
-    dcfg = get_default_data_config()
+    # 主干:默认 ViT-B/16 IN-21k;--backbone 可换(如 vit_small_patch16_224.augreg_in21k)
+    model_name = args.backbone or DEFAULT_MODEL
+    # data preprocessing config (no weight download) —— 归一化/尺寸随主干自动解析
+    dcfg = get_default_data_config(model_name)
     mean, std = dcfg["mean"], dcfg["std"]
 
     train_set, val_set, test_set, num_classes = build_dataset(
@@ -113,7 +117,7 @@ def main():
     train_loader, val_loader, test_loader = build_loaders(
         train_set, val_set, test_set, args.batch_size, args.num_workers)
 
-    model = create_model(num_classes=num_classes, drop_path_rate=drop_path).to(device)
+    model = create_model(num_classes=num_classes, drop_path_rate=drop_path, model_name=model_name).to(device)
     configure_method(model, args.method)
     trainable, total = count_parameters(model)
 

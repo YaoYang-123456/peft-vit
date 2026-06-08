@@ -18,6 +18,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RES = os.path.join(ROOT, "results")
 RUNS = os.path.join(RES, "runs")
 
+# 若 runs/ 不存在但有 runs.zip(为方便上传 GitHub,逐轮日志打包存放),自动解压。
+# efficiency.csv 的每轮时间需要逐轮日志,没有这步会被写成 NaN。
+import zipfile
+if not os.path.isdir(RUNS) and os.path.exists(os.path.join(RES, "runs.zip")):
+    with zipfile.ZipFile(os.path.join(RES, "runs.zip")) as _z:
+        _z.extractall(RES)
+
 raw = pd.read_csv(os.path.join(RES, "summary.csv"))
 raw = raw.drop_duplicates(["method", "placement", "dataset", "seed"], keep="last")
 
