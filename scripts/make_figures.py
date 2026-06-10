@@ -66,7 +66,8 @@ def cell(method, dataset, col="test_acc"):
 fig, ax = plt.subplots(figsize=(6.6, 4.4))
 xs = [cell(m, "cifar100", "trainable") for m in ORDER]
 ys = [cell(m, "cifar100", "test_acc") for m in ORDER]
-ax.plot(xs, ys, color="#888", lw=1, ls="--", zorder=1)
+# scatter only -- deliberately NOT connected with a line, so the figure does not
+# suggest a continuously tunable Pareto frontier (see the caption of Fig. 1)
 for m, x, y in zip(ORDER, xs, ys):
     ax.scatter(x, y, s=130, color=COL[m], edgecolor="black", lw=0.6, zorder=3)
 posd = {"linear": (10, 4, "left"), "bitfit": (-9, -15, "right"), "ssf": (-2, 9, "center"),
@@ -77,7 +78,7 @@ for m, x, y in zip(ORDER, xs, ys):
 ax.set_xscale("log")
 ax.set_xlabel("Trainable parameters (log scale)")
 ax.set_ylabel("Test accuracy (%)")
-ax.set_title("Accuracy vs. parameter cost on CIFAR-100\n(ViT-B/16, ImageNet-21k pretrained)")
+ax.set_title("Accuracy vs. parameter cost on CIFAR-100\n(ViT-B/16, ImageNet-21k pretrained, 3-seed mean)")
 ax.set_ylim(85, 94.5)
 fig.tight_layout()
 fig.savefig(os.path.join(OUT, "fig1_pareto_cifar100.png"))

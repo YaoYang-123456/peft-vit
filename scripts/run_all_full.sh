@@ -19,9 +19,9 @@ run () {   # $1=method  $2=dataset  $3=epochs  $4=seed
     --num-workers 4 --data-root "$DATA" --out-dir "$OUT" && touch "$flag"
 }
 
-# 每个数据集的训练轮数(线性探测数轮即收敛,故较少)
+# 每个数据集的训练轮数(所有方法一致,含线性探测)
 declare -A EP_FULL=( [cifar100]=20 [flowers]=30 [pets]=30 )
-declare -A EP_LIN=(  [cifar100]=8  [flowers]=8  [pets]=8  )  # linear 收敛快,各数据集均 8 轮(与已提交结果一致)
+declare -A EP_LIN=(  [cifar100]=20 [flowers]=30 [pets]=30 )  # 线性探测与其他方法同轮数、同调度(完全统一的协议)
 
 for ds in cifar100 flowers pets; do
   for sd in 42 43 44; do

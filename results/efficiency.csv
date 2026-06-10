@@ -1,5 +1,5 @@
 method,trainable,pct,peak_mem_MB,sec_per_epoch
-linear,76900,0.089,1758,29.7
+linear,76900,0.089,1758,19.7
 bitfit,179812,0.209,6680,64.8
 ssf,279652,0.325,14882,130.8
 lora,371812,0.431,6992,34.7
