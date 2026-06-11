@@ -1,0 +1,1905 @@
+############  A 部分: DTD(47 类纹理,30 轮,与 Flowers/Pets 同协议)  ############
+===== linear/all / dtd / seed 42 (30 ep) =====
+[linear | dtd] classes=47 | trainable=36,143 (0.042% of 85,834,799)
+lr=0.01  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 4.221 | train 10.37% | val 39.26% |   5.4s |   1758MB
+epoch   2/30 | loss 1.299 | train 66.49% | val 69.73% |   4.4s |   1758MB
+epoch   3/30 | loss 0.391 | train 88.24% | val 73.83% |   4.3s |   1758MB
+epoch   4/30 | loss 0.157 | train 95.53% | val 74.26% |   4.8s |   1758MB
+epoch   5/30 | loss 0.059 | train 98.67% | val 75.37% |   4.2s |   1758MB
+epoch   6/30 | loss 0.035 | train 99.20% | val 75.59% |   4.2s |   1758MB
+epoch   7/30 | loss 0.030 | train 99.26% | val 75.05% |   4.3s |   1758MB
+epoch   8/30 | loss 0.023 | train 99.47% | val 74.26% |   4.2s |   1758MB
+epoch   9/30 | loss 0.018 | train 99.68% | val 74.20% |   4.2s |   1758MB
+epoch  10/30 | loss 0.028 | train 99.10% | val 74.89% |   4.2s |   1758MB
+epoch  11/30 | loss 0.021 | train 99.36% | val 75.11% |   4.7s |   1758MB
+epoch  12/30 | loss 0.026 | train 99.31% | val 74.84% |   4.8s |   1758MB
+epoch  13/30 | loss 0.044 | train 98.94% | val 74.31% |   4.2s |   1758MB
+epoch  14/30 | loss 0.050 | train 98.35% | val 72.50% |   4.2s |   1758MB
+epoch  15/30 | loss 0.066 | train 98.03% | val 72.55% |   4.3s |   1758MB
+epoch  16/30 | loss 0.076 | train 98.24% | val 72.61% |   4.2s |   1758MB
+epoch  17/30 | loss 0.067 | train 98.19% | val 72.93% |   4.2s |   1758MB
+epoch  18/30 | loss 0.063 | train 98.78% | val 73.14% |   4.2s |   1758MB
+epoch  19/30 | loss 0.042 | train 99.04% | val 72.61% |   4.2s |   1758MB
+epoch  20/30 | loss 0.032 | train 99.15% | val 73.46% |   4.5s |   1758MB
+epoch  21/30 | loss 0.016 | train 99.57% | val 73.94% |   4.4s |   1758MB
+epoch  22/30 | loss 0.006 | train 99.89% | val 73.51% |   4.2s |   1758MB
+epoch  23/30 | loss 0.005 | train 99.89% | val 74.41% |   4.2s |   1758MB
+epoch  24/30 | loss 0.004 | train 99.84% | val 74.36% |   4.2s |   1758MB
+epoch  25/30 | loss 0.003 | train 99.95% | val 74.41% |   4.2s |   1758MB
+epoch  26/30 | loss 0.003 | train 99.95% | val 74.41% |   4.2s |   1758MB
+epoch  27/30 | loss 0.002 | train 100.00% | val 74.41% |   4.2s |   1758MB
+epoch  28/30 | loss 0.002 | train 100.00% | val 74.41% |   4.8s |   1758MB
+epoch  29/30 | loss 0.001 | train 100.00% | val 74.41% |   4.2s |   1758MB
+epoch  30/30 | loss 0.002 | train 100.00% | val 74.41% |   4.3s |   1758MB
+
+== linear_dtd_seed42: best_val=75.59%  test=77.02%  trainable=36,143 (0.042%)
+===== bitfit/all / dtd / seed 42 (30 ep) =====
+[bitfit | dtd] classes=47 | trainable=139,055 (0.162% of 85,834,799)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.047 | train  2.23% | val  3.03% |   5.9s |   6679MB
+epoch   2/30 | loss 4.178 | train  6.44% | val 10.96% |   4.5s |   6679MB
+epoch   3/30 | loss 3.049 | train 25.64% | val 35.27% |   4.7s |   6679MB
+epoch   4/30 | loss 1.931 | train 52.50% | val 53.62% |   4.6s |   6679MB
+epoch   5/30 | loss 1.133 | train 70.96% | val 64.79% |   4.7s |   6679MB
+epoch   6/30 | loss 0.700 | train 81.65% | val 69.68% |   4.5s |   6679MB
+epoch   7/30 | loss 0.467 | train 87.93% | val 72.39% |   4.9s |   6679MB
+epoch   8/30 | loss 0.313 | train 93.09% | val 73.19% |   4.6s |   6679MB
+epoch   9/30 | loss 0.226 | train 94.89% | val 74.47% |   4.9s |   6679MB
+epoch  10/30 | loss 0.164 | train 97.02% | val 75.00% |   4.6s |   6679MB
+epoch  11/30 | loss 0.121 | train 98.46% | val 75.27% |   4.8s |   6679MB
+epoch  12/30 | loss 0.089 | train 99.10% | val 75.69% |   4.6s |   6679MB
+epoch  13/30 | loss 0.068 | train 99.47% | val 75.74% |   4.7s |   6679MB
+epoch  14/30 | loss 0.055 | train 100.00% | val 75.90% |   4.6s |   6679MB
+epoch  15/30 | loss 0.046 | train 99.89% | val 75.69% |   4.6s |   6679MB
+epoch  16/30 | loss 0.041 | train 99.84% | val 76.17% |   4.6s |   6679MB
+epoch  17/30 | loss 0.037 | train 99.79% | val 76.81% |   4.7s |   6679MB
+epoch  18/30 | loss 0.033 | train 99.89% | val 76.28% |   4.6s |   6679MB
+epoch  19/30 | loss 0.030 | train 100.00% | val 76.60% |   4.6s |   6679MB
+epoch  20/30 | loss 0.029 | train 99.95% | val 76.70% |   4.7s |   6679MB
+epoch  21/30 | loss 0.028 | train 99.95% | val 76.54% |   4.7s |   6679MB
+epoch  22/30 | loss 0.026 | train 100.00% | val 76.70% |   4.5s |   6679MB
+epoch  23/30 | loss 0.023 | train 100.00% | val 76.81% |   4.6s |   6679MB
+epoch  24/30 | loss 0.025 | train 99.95% | val 76.81% |   4.5s |   6679MB
+epoch  25/30 | loss 0.022 | train 100.00% | val 76.70% |   4.5s |   6679MB
+epoch  26/30 | loss 0.023 | train 100.00% | val 76.60% |   4.6s |   6679MB
+epoch  27/30 | loss 0.022 | train 100.00% | val 76.54% |   4.7s |   6679MB
+epoch  28/30 | loss 0.021 | train 100.00% | val 76.60% |   4.6s |   6679MB
+epoch  29/30 | loss 0.020 | train 100.00% | val 76.60% |   4.8s |   6679MB
+epoch  30/30 | loss 0.022 | train 100.00% | val 76.60% |   4.6s |   6679MB
+
+== bitfit_dtd_seed42: best_val=76.81%  test=77.45%  trainable=139,055 (0.162%)
+===== full/all / dtd / seed 42 (30 ep) =====
+[full | dtd] classes=47 | trainable=85,834,799 (100.000% of 85,834,799)
+lr=1e-05  wd=0.05  drop_path=0.1  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.295 | train  2.34% | val  1.76% |   6.3s |  10153MB
+epoch   2/30 | loss 5.004 | train  1.81% | val  2.29% |   5.0s |  10153MB
+epoch   3/30 | loss 4.535 | train  3.19% | val  3.78% |   5.1s |  10153MB
+epoch   4/30 | loss 4.170 | train  4.47% | val  6.06% |   5.0s |  10153MB
+epoch   5/30 | loss 3.960 | train  5.11% | val 10.64% |   5.0s |  10153MB
+epoch   6/30 | loss 3.701 | train 10.80% | val 20.05% |   5.2s |  10153MB
+epoch   7/30 | loss 3.393 | train 18.30% | val 32.23% |   5.1s |  10153MB
+epoch   8/30 | loss 3.013 | train 26.81% | val 42.02% |   5.0s |  10153MB
+epoch   9/30 | loss 2.505 | train 38.03% | val 52.13% |   5.1s |  10153MB
+epoch  10/30 | loss 2.092 | train 47.82% | val 60.27% |   4.9s |  10153MB
+epoch  11/30 | loss 1.728 | train 55.59% | val 65.11% |   5.2s |  10153MB
+epoch  12/30 | loss 1.436 | train 63.62% | val 66.60% |   5.1s |  10153MB
+epoch  13/30 | loss 1.192 | train 68.35% | val 68.88% |   5.0s |  10153MB
+epoch  14/30 | loss 1.043 | train 74.47% | val 70.43% |   4.9s |  10153MB
+epoch  15/30 | loss 0.916 | train 76.97% | val 71.60% |   5.0s |  10153MB
+epoch  16/30 | loss 0.833 | train 79.52% | val 72.07% |   5.0s |  10153MB
+epoch  17/30 | loss 0.760 | train 80.32% | val 72.61% |   5.2s |  10153MB
+epoch  18/30 | loss 0.693 | train 82.71% | val 73.51% |   5.2s |  10153MB
+epoch  19/30 | loss 0.634 | train 84.68% | val 73.78% |   4.9s |  10153MB
+epoch  20/30 | loss 0.611 | train 84.68% | val 73.46% |   5.3s |  10153MB
+epoch  21/30 | loss 0.562 | train 86.70% | val 73.78% |   5.1s |  10153MB
+epoch  22/30 | loss 0.560 | train 86.33% | val 74.04% |   5.2s |  10153MB
+epoch  23/30 | loss 0.537 | train 86.28% | val 74.10% |   5.0s |  10153MB
+epoch  24/30 | loss 0.496 | train 88.62% | val 74.15% |   5.0s |  10153MB
+epoch  25/30 | loss 0.478 | train 88.14% | val 74.15% |   5.2s |  10153MB
+epoch  26/30 | loss 0.475 | train 88.56% | val 74.10% |   5.2s |  10153MB
+epoch  27/30 | loss 0.455 | train 89.31% | val 74.10% |   5.1s |  10153MB
+epoch  28/30 | loss 0.455 | train 88.99% | val 74.20% |   5.1s |  10153MB
+epoch  29/30 | loss 0.478 | train 89.31% | val 74.10% |   5.1s |  10153MB
+epoch  30/30 | loss 0.448 | train 88.88% | val 74.31% |   5.1s |  10153MB
+
+== full_dtd_seed42: best_val=74.31%  test=75.59%  trainable=85,834,799 (100.000%)
+===== lora/all / dtd / seed 42 (30 ep) =====
+[lora | dtd] classes=47 | trainable=331,055 (0.384% of 86,129,711)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.097 | train  1.76% | val  2.93% |   6.1s |   6992MB
+epoch   2/30 | loss 4.219 | train  7.02% | val 12.87% |   4.8s |   6992MB
+epoch   3/30 | loss 2.858 | train 30.53% | val 41.76% |   4.7s |   6992MB
+epoch   4/30 | loss 1.530 | train 61.54% | val 62.82% |   4.8s |   6992MB
+epoch   5/30 | loss 0.779 | train 77.87% | val 69.79% |   4.8s |   6992MB
+epoch   6/30 | loss 0.457 | train 87.50% | val 71.60% |   4.9s |   6992MB
+epoch   7/30 | loss 0.275 | train 92.93% | val 74.36% |   5.0s |   6992MB
+epoch   8/30 | loss 0.167 | train 96.33% | val 75.69% |   4.9s |   6992MB
+epoch   9/30 | loss 0.097 | train 98.46% | val 74.84% |   4.9s |   6992MB
+epoch  10/30 | loss 0.057 | train 99.68% | val 76.01% |   4.8s |   6992MB
+epoch  11/30 | loss 0.039 | train 99.73% | val 75.59% |   5.0s |   6992MB
+epoch  12/30 | loss 0.026 | train 99.89% | val 75.74% |   4.9s |   6992MB
+epoch  13/30 | loss 0.025 | train 99.73% | val 76.01% |   4.9s |   6992MB
+epoch  14/30 | loss 0.023 | train 99.73% | val 76.65% |   4.8s |   6992MB
+epoch  15/30 | loss 0.017 | train 99.84% | val 76.12% |   4.8s |   6992MB
+epoch  16/30 | loss 0.015 | train 99.89% | val 76.91% |   4.8s |   6992MB
+epoch  17/30 | loss 0.010 | train 100.00% | val 76.86% |   4.8s |   6992MB
+epoch  18/30 | loss 0.008 | train 100.00% | val 76.60% |   4.7s |   6992MB
+epoch  19/30 | loss 0.008 | train 99.95% | val 77.34% |   4.7s |   6992MB
+epoch  20/30 | loss 0.007 | train 100.00% | val 77.34% |   5.0s |   6992MB
+epoch  21/30 | loss 0.006 | train 100.00% | val 77.23% |   4.9s |   6992MB
+epoch  22/30 | loss 0.005 | train 100.00% | val 77.34% |   4.8s |   6992MB
+epoch  23/30 | loss 0.005 | train 100.00% | val 77.29% |   4.9s |   6992MB
+epoch  24/30 | loss 0.005 | train 100.00% | val 77.18% |   5.0s |   6992MB
+epoch  25/30 | loss 0.005 | train 100.00% | val 77.13% |   4.8s |   6992MB
+epoch  26/30 | loss 0.005 | train 100.00% | val 77.29% |   4.8s |   6992MB
+epoch  27/30 | loss 0.004 | train 100.00% | val 77.18% |   4.8s |   6992MB
+epoch  28/30 | loss 0.005 | train 100.00% | val 77.18% |   4.9s |   6992MB
+epoch  29/30 | loss 0.004 | train 100.00% | val 77.18% |   4.9s |   6992MB
+epoch  30/30 | loss 0.004 | train 100.00% | val 77.18% |   4.8s |   6992MB
+
+== lora_dtd_seed42: best_val=77.34%  test=79.04%  trainable=331,055 (0.384%)
+===== ssf/all / dtd / seed 42 (30 ep) =====
+[ssf | dtd] classes=47 | trainable=238,895 (0.278% of 86,037,551)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.035 | train  2.23% | val  3.03% |   7.9s |  14881MB
+epoch   2/30 | loss 4.124 | train  6.38% | val 11.28% |   6.3s |  14881MB
+epoch   3/30 | loss 3.000 | train 26.70% | val 36.65% |   6.7s |  14881MB
+epoch   4/30 | loss 1.873 | train 54.89% | val 55.59% |   6.3s |  14881MB
+epoch   5/30 | loss 1.077 | train 72.39% | val 66.22% |   6.6s |  14881MB
+epoch   6/30 | loss 0.654 | train 83.03% | val 70.16% |   6.3s |  14881MB
+epoch   7/30 | loss 0.432 | train 88.35% | val 73.03% |   6.4s |  14881MB
+epoch   8/30 | loss 0.282 | train 93.67% | val 73.67% |   6.3s |  14881MB
+epoch   9/30 | loss 0.201 | train 95.80% | val 74.63% |   6.4s |  14881MB
+epoch  10/30 | loss 0.143 | train 97.87% | val 75.32% |   6.2s |  14881MB
+epoch  11/30 | loss 0.103 | train 98.67% | val 75.11% |   7.0s |  14881MB
+epoch  12/30 | loss 0.076 | train 99.36% | val 75.37% |   6.4s |  14881MB
+epoch  13/30 | loss 0.056 | train 99.79% | val 76.28% |   6.5s |  14881MB
+epoch  14/30 | loss 0.046 | train 99.95% | val 75.80% |   6.3s |  14881MB
+epoch  15/30 | loss 0.037 | train 99.95% | val 75.96% |   6.5s |  14881MB
+epoch  16/30 | loss 0.033 | train 99.89% | val 76.28% |   6.7s |  14881MB
+epoch  17/30 | loss 0.030 | train 99.89% | val 76.33% |   6.6s |  14881MB
+epoch  18/30 | loss 0.028 | train 99.95% | val 76.65% |   6.5s |  14881MB
+epoch  19/30 | loss 0.024 | train 100.00% | val 76.22% |   6.6s |  14881MB
+epoch  20/30 | loss 0.023 | train 100.00% | val 76.22% |   6.8s |  14881MB
+epoch  21/30 | loss 0.023 | train 99.95% | val 76.33% |   6.5s |  14881MB
+epoch  22/30 | loss 0.021 | train 100.00% | val 76.60% |   6.5s |  14881MB
+epoch  23/30 | loss 0.019 | train 100.00% | val 76.65% |   6.4s |  14881MB
+epoch  24/30 | loss 0.020 | train 99.95% | val 76.49% |   6.3s |  14881MB
+epoch  25/30 | loss 0.018 | train 100.00% | val 76.54% |   6.9s |  14881MB
+epoch  26/30 | loss 0.018 | train 100.00% | val 76.49% |   6.5s |  14881MB
+epoch  27/30 | loss 0.018 | train 100.00% | val 76.33% |   6.5s |  14881MB
+epoch  28/30 | loss 0.017 | train 100.00% | val 76.44% |   6.5s |  14881MB
+epoch  29/30 | loss 0.016 | train 99.95% | val 76.44% |   6.5s |  14881MB
+epoch  30/30 | loss 0.018 | train 100.00% | val 76.49% |   6.5s |  14881MB
+
+== ssf_dtd_seed42: best_val=76.65%  test=78.03%  trainable=238,895 (0.278%)
+===== lora/early / dtd / seed 42 (30 ep) =====
+[lora-early | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.117 | train  1.86% | val  2.71% |   5.9s |   6685MB
+epoch   2/30 | loss 4.393 | train  5.32% | val 10.16% |   4.4s |   6685MB
+epoch   3/30 | loss 3.178 | train 23.19% | val 33.51% |   4.9s |   6685MB
+epoch   4/30 | loss 1.999 | train 50.85% | val 52.66% |   4.6s |   6685MB
+epoch   5/30 | loss 1.190 | train 69.95% | val 63.88% |   4.8s |   6685MB
+epoch   6/30 | loss 0.741 | train 80.53% | val 68.35% |   4.7s |   6685MB
+epoch   7/30 | loss 0.511 | train 86.91% | val 71.70% |   4.6s |   6685MB
+epoch   8/30 | loss 0.344 | train 91.44% | val 72.50% |   4.7s |   6685MB
+epoch   9/30 | loss 0.229 | train 95.80% | val 73.83% |   4.7s |   6685MB
+epoch  10/30 | loss 0.165 | train 97.98% | val 73.83% |   4.8s |   6685MB
+epoch  11/30 | loss 0.114 | train 99.20% | val 74.36% |   4.7s |   6685MB
+epoch  12/30 | loss 0.085 | train 99.63% | val 74.84% |   4.6s |   6685MB
+epoch  13/30 | loss 0.068 | train 99.73% | val 75.32% |   4.6s |   6685MB
+epoch  14/30 | loss 0.058 | train 99.84% | val 75.27% |   4.7s |   6685MB
+epoch  15/30 | loss 0.049 | train 99.68% | val 74.95% |   4.6s |   6685MB
+epoch  16/30 | loss 0.043 | train 99.89% | val 76.01% |   4.8s |   6685MB
+epoch  17/30 | loss 0.034 | train 100.00% | val 76.44% |   4.7s |   6685MB
+epoch  18/30 | loss 0.031 | train 100.00% | val 75.80% |   4.6s |   6685MB
+epoch  19/30 | loss 0.027 | train 100.00% | val 75.96% |   4.6s |   6685MB
+epoch  20/30 | loss 0.026 | train 100.00% | val 76.12% |   4.7s |   6685MB
+epoch  21/30 | loss 0.024 | train 100.00% | val 75.96% |   4.9s |   6685MB
+epoch  22/30 | loss 0.024 | train 99.95% | val 76.12% |   4.8s |   6685MB
+epoch  23/30 | loss 0.022 | train 99.95% | val 76.17% |   4.6s |   6685MB
+epoch  24/30 | loss 0.021 | train 100.00% | val 76.28% |   4.7s |   6685MB
+epoch  25/30 | loss 0.021 | train 100.00% | val 76.12% |   4.7s |   6685MB
+epoch  26/30 | loss 0.021 | train 100.00% | val 76.06% |   4.6s |   6685MB
+epoch  27/30 | loss 0.021 | train 100.00% | val 76.12% |   4.7s |   6685MB
+epoch  28/30 | loss 0.021 | train 99.95% | val 76.06% |   4.6s |   6685MB
+epoch  29/30 | loss 0.020 | train 99.95% | val 76.06% |   4.7s |   6685MB
+epoch  30/30 | loss 0.022 | train 99.95% | val 76.06% |   4.7s |   6685MB
+
+== lora-early_dtd_seed42: best_val=76.44%  test=76.70%  trainable=134,447 (0.156%)
+===== lora/mid / dtd / seed 42 (30 ep) =====
+[lora-mid | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.109 | train  1.81% | val  2.61% |   5.7s |   4756MB
+epoch   2/30 | loss 4.335 | train  5.48% | val 10.74% |   4.4s |   4756MB
+epoch   3/30 | loss 3.102 | train 24.26% | val 35.96% |   4.6s |   4756MB
+epoch   4/30 | loss 1.910 | train 53.78% | val 55.43% |   4.8s |   4756MB
+epoch   5/30 | loss 1.071 | train 71.22% | val 66.60% |   4.6s |   4756MB
+epoch   6/30 | loss 0.640 | train 83.19% | val 70.43% |   4.4s |   4756MB
+epoch   7/30 | loss 0.426 | train 88.99% | val 71.54% |   4.5s |   4756MB
+epoch   8/30 | loss 0.278 | train 93.24% | val 73.51% |   4.6s |   4756MB
+epoch   9/30 | loss 0.175 | train 97.29% | val 74.52% |   4.5s |   4756MB
+epoch  10/30 | loss 0.114 | train 98.51% | val 75.00% |   4.4s |   4756MB
+epoch  11/30 | loss 0.084 | train 98.99% | val 75.69% |   4.6s |   4756MB
+epoch  12/30 | loss 0.058 | train 99.79% | val 76.28% |   4.5s |   4756MB
+epoch  13/30 | loss 0.044 | train 99.84% | val 75.96% |   4.5s |   4756MB
+epoch  14/30 | loss 0.034 | train 99.95% | val 76.33% |   4.5s |   4756MB
+epoch  15/30 | loss 0.030 | train 99.95% | val 77.02% |   4.4s |   4756MB
+epoch  16/30 | loss 0.025 | train 99.95% | val 77.07% |   4.6s |   4756MB
+epoch  17/30 | loss 0.020 | train 99.95% | val 76.54% |   4.4s |   4756MB
+epoch  18/30 | loss 0.019 | train 100.00% | val 77.29% |   4.5s |   4756MB
+epoch  19/30 | loss 0.016 | train 100.00% | val 77.61% |   4.5s |   4756MB
+epoch  20/30 | loss 0.015 | train 100.00% | val 77.07% |   4.5s |   4756MB
+epoch  21/30 | loss 0.013 | train 100.00% | val 77.07% |   4.6s |   4756MB
+epoch  22/30 | loss 0.013 | train 100.00% | val 77.23% |   4.8s |   4756MB
+epoch  23/30 | loss 0.012 | train 99.95% | val 77.29% |   4.5s |   4756MB
+epoch  24/30 | loss 0.012 | train 99.95% | val 77.34% |   4.5s |   4756MB
+epoch  25/30 | loss 0.012 | train 99.95% | val 77.39% |   4.4s |   4756MB
+epoch  26/30 | loss 0.012 | train 100.00% | val 77.50% |   4.6s |   4756MB
+epoch  27/30 | loss 0.011 | train 100.00% | val 77.50% |   4.4s |   4756MB
+epoch  28/30 | loss 0.012 | train 99.95% | val 77.45% |   4.7s |   4756MB
+epoch  29/30 | loss 0.012 | train 99.95% | val 77.50% |   4.5s |   4756MB
+epoch  30/30 | loss 0.014 | train 99.95% | val 77.45% |   4.4s |   4756MB
+
+== lora-mid_dtd_seed42: best_val=77.61%  test=77.71%  trainable=134,447 (0.156%)
+===== lora/late / dtd / seed 42 (30 ep) =====
+[lora-late | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.097 | train  1.91% | val  2.77% |   5.7s |   2825MB
+epoch   2/30 | loss 4.277 | train  6.12% | val 12.34% |   4.2s |   2825MB
+epoch   3/30 | loss 2.944 | train 29.10% | val 41.17% |   4.3s |   2825MB
+epoch   4/30 | loss 1.640 | train 57.50% | val 61.06% |   4.3s |   2825MB
+epoch   5/30 | loss 0.873 | train 75.80% | val 68.40% |   4.4s |   2825MB
+epoch   6/30 | loss 0.525 | train 86.01% | val 72.23% |   4.3s |   2825MB
+epoch   7/30 | loss 0.346 | train 89.95% | val 72.55% |   4.3s |   2825MB
+epoch   8/30 | loss 0.220 | train 95.37% | val 73.72% |   4.4s |   2825MB
+epoch   9/30 | loss 0.136 | train 97.77% | val 74.68% |   4.4s |   2825MB
+epoch  10/30 | loss 0.096 | train 98.56% | val 75.00% |   4.3s |   2825MB
+epoch  11/30 | loss 0.074 | train 98.99% | val 75.64% |   4.4s |   2825MB
+epoch  12/30 | loss 0.049 | train 99.73% | val 76.01% |   4.5s |   2825MB
+epoch  13/30 | loss 0.037 | train 99.68% | val 76.44% |   4.5s |   2825MB
+epoch  14/30 | loss 0.033 | train 99.52% | val 76.44% |   4.4s |   2825MB
+epoch  15/30 | loss 0.023 | train 99.89% | val 76.97% |   4.4s |   2825MB
+epoch  16/30 | loss 0.020 | train 100.00% | val 76.91% |   4.4s |   2825MB
+epoch  17/30 | loss 0.017 | train 99.89% | val 76.97% |   4.4s |   2825MB
+epoch  18/30 | loss 0.015 | train 99.95% | val 76.54% |   4.4s |   2825MB
+epoch  19/30 | loss 0.013 | train 99.95% | val 76.49% |   4.3s |   2825MB
+epoch  20/30 | loss 0.012 | train 99.95% | val 76.70% |   4.4s |   2825MB
+epoch  21/30 | loss 0.012 | train 99.89% | val 76.49% |   4.4s |   2825MB
+epoch  22/30 | loss 0.010 | train 99.95% | val 76.70% |   4.3s |   2825MB
+epoch  23/30 | loss 0.011 | train 99.89% | val 76.81% |   4.3s |   2825MB
+epoch  24/30 | loss 0.009 | train 100.00% | val 76.97% |   4.4s |   2825MB
+epoch  25/30 | loss 0.010 | train 99.95% | val 77.13% |   4.3s |   2825MB
+epoch  26/30 | loss 0.009 | train 99.95% | val 77.13% |   4.4s |   2825MB
+epoch  27/30 | loss 0.008 | train 100.00% | val 77.13% |   4.4s |   2825MB
+epoch  28/30 | loss 0.009 | train 99.95% | val 77.13% |   4.4s |   2825MB
+epoch  29/30 | loss 0.009 | train 99.95% | val 77.13% |   4.3s |   2825MB
+epoch  30/30 | loss 0.010 | train 99.95% | val 77.18% |   4.4s |   2825MB
+
+== lora-late_dtd_seed42: best_val=77.18%  test=79.10%  trainable=134,447 (0.156%)
+===== lora/even / dtd / seed 42 (30 ep) =====
+[lora-even | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.113 | train  1.86% | val  2.71% |   6.1s |   6686MB
+epoch   2/30 | loss 4.362 | train  5.64% | val 10.69% |   4.9s |   6686MB
+epoch   3/30 | loss 3.100 | train 25.00% | val 36.01% |   4.7s |   6686MB
+epoch   4/30 | loss 1.862 | train 53.46% | val 56.17% |   4.7s |   6686MB
+epoch   5/30 | loss 1.046 | train 72.23% | val 66.44% |   4.6s |   6686MB
+epoch   6/30 | loss 0.625 | train 82.82% | val 70.64% |   4.7s |   6686MB
+epoch   7/30 | loss 0.425 | train 88.78% | val 71.60% |   4.7s |   6686MB
+epoch   8/30 | loss 0.285 | train 93.24% | val 73.83% |   4.6s |   6686MB
+epoch   9/30 | loss 0.187 | train 96.28% | val 74.20% |   4.9s |   6686MB
+epoch  10/30 | loss 0.127 | train 98.09% | val 74.68% |   5.1s |   6686MB
+epoch  11/30 | loss 0.085 | train 99.20% | val 74.95% |   4.5s |   6686MB
+epoch  12/30 | loss 0.064 | train 99.63% | val 75.05% |   4.6s |   6686MB
+epoch  13/30 | loss 0.046 | train 99.89% | val 75.43% |   4.6s |   6686MB
+epoch  14/30 | loss 0.039 | train 99.84% | val 75.96% |   4.6s |   6686MB
+epoch  15/30 | loss 0.031 | train 99.84% | val 76.22% |   4.6s |   6686MB
+epoch  16/30 | loss 0.028 | train 99.89% | val 76.60% |   4.9s |   6686MB
+epoch  17/30 | loss 0.022 | train 100.00% | val 76.70% |   4.8s |   6686MB
+epoch  18/30 | loss 0.020 | train 100.00% | val 76.70% |   4.6s |   6686MB
+epoch  19/30 | loss 0.018 | train 100.00% | val 76.38% |   4.7s |   6686MB
+epoch  20/30 | loss 0.016 | train 100.00% | val 76.97% |   4.6s |   6686MB
+epoch  21/30 | loss 0.014 | train 100.00% | val 76.91% |   4.7s |   6686MB
+epoch  22/30 | loss 0.015 | train 100.00% | val 76.97% |   4.7s |   6686MB
+epoch  23/30 | loss 0.015 | train 99.95% | val 77.07% |   4.7s |   6686MB
+epoch  24/30 | loss 0.013 | train 99.95% | val 76.49% |   5.0s |   6686MB
+epoch  25/30 | loss 0.013 | train 99.95% | val 76.91% |   5.0s |   6686MB
+epoch  26/30 | loss 0.013 | train 99.95% | val 76.81% |   4.6s |   6686MB
+epoch  27/30 | loss 0.012 | train 100.00% | val 76.91% |   4.6s |   6686MB
+epoch  28/30 | loss 0.013 | train 99.95% | val 76.91% |   4.7s |   6686MB
+epoch  29/30 | loss 0.013 | train 100.00% | val 76.91% |   4.6s |   6686MB
+epoch  30/30 | loss 0.014 | train 99.95% | val 76.91% |   4.7s |   6686MB
+
+== lora-even_dtd_seed42: best_val=77.07%  test=77.87%  trainable=134,447 (0.156%)
+===== ssf/early / dtd / seed 42 (30 ep) =====
+[ssf-early | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.080 | train  2.23% | val  2.71% |   6.5s |   9173MB
+epoch   2/30 | loss 4.300 | train  5.85% | val 10.16% |   4.9s |   9173MB
+epoch   3/30 | loss 3.135 | train 22.82% | val 32.87% |   5.1s |   9173MB
+epoch   4/30 | loss 2.029 | train 51.01% | val 51.33% |   5.0s |   9173MB
+epoch   5/30 | loss 1.247 | train 68.51% | val 62.66% |   5.1s |   9173MB
+epoch   6/30 | loss 0.782 | train 80.16% | val 68.03% |   5.0s |   9173MB
+epoch   7/30 | loss 0.529 | train 86.44% | val 70.43% |   5.2s |   9173MB
+epoch   8/30 | loss 0.353 | train 91.76% | val 72.07% |   5.2s |   9173MB
+epoch   9/30 | loss 0.255 | train 95.00% | val 72.98% |   5.2s |   9173MB
+epoch  10/30 | loss 0.185 | train 96.91% | val 73.83% |   5.2s |   9173MB
+epoch  11/30 | loss 0.138 | train 98.19% | val 74.20% |   5.3s |   9173MB
+epoch  12/30 | loss 0.101 | train 98.99% | val 74.26% |   5.2s |   9173MB
+epoch  13/30 | loss 0.078 | train 99.41% | val 74.63% |   5.1s |   9173MB
+epoch  14/30 | loss 0.064 | train 99.95% | val 74.73% |   5.3s |   9173MB
+epoch  15/30 | loss 0.056 | train 99.84% | val 74.84% |   5.2s |   9173MB
+epoch  16/30 | loss 0.050 | train 99.73% | val 74.95% |   5.1s |   9173MB
+epoch  17/30 | loss 0.044 | train 99.79% | val 75.59% |   5.3s |   9173MB
+epoch  18/30 | loss 0.040 | train 99.79% | val 75.32% |   5.2s |   9173MB
+epoch  19/30 | loss 0.036 | train 100.00% | val 75.64% |   5.1s |   9173MB
+epoch  20/30 | loss 0.034 | train 99.95% | val 75.69% |   5.3s |   9173MB
+epoch  21/30 | loss 0.034 | train 99.95% | val 75.27% |   5.3s |   9173MB
+epoch  22/30 | loss 0.031 | train 100.00% | val 75.59% |   5.2s |   9173MB
+epoch  23/30 | loss 0.028 | train 100.00% | val 75.80% |   5.0s |   9173MB
+epoch  24/30 | loss 0.029 | train 99.95% | val 75.64% |   5.1s |   9173MB
+epoch  25/30 | loss 0.027 | train 100.00% | val 75.59% |   5.1s |   9173MB
+epoch  26/30 | loss 0.028 | train 99.95% | val 75.69% |   5.2s |   9173MB
+epoch  27/30 | loss 0.026 | train 100.00% | val 75.69% |   5.2s |   9173MB
+epoch  28/30 | loss 0.026 | train 100.00% | val 75.74% |   5.1s |   9173MB
+epoch  29/30 | loss 0.025 | train 100.00% | val 75.74% |   5.4s |   9173MB
+epoch  30/30 | loss 0.027 | train 100.00% | val 75.74% |   5.3s |   9173MB
+
+== ssf-early_dtd_seed42: best_val=75.80%  test=77.18%  trainable=103,727 (0.121%)
+===== ssf/mid / dtd / seed 42 (30 ep) =====
+[ssf-mid | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.073 | train  2.23% | val  2.87% |   6.2s |   7244MB
+epoch   2/30 | loss 4.262 | train  5.74% | val 11.60% |   4.8s |   7244MB
+epoch   3/30 | loss 3.066 | train 25.16% | val 34.95% |   5.0s |   7244MB
+epoch   4/30 | loss 1.933 | train 52.87% | val 53.19% |   4.8s |   7244MB
+epoch   5/30 | loss 1.158 | train 70.37% | val 64.89% |   4.9s |   7244MB
+epoch   6/30 | loss 0.720 | train 81.44% | val 69.57% |   5.0s |   7244MB
+epoch   7/30 | loss 0.484 | train 87.45% | val 72.50% |   5.0s |   7244MB
+epoch   8/30 | loss 0.327 | train 92.29% | val 72.87% |   4.8s |   7244MB
+epoch   9/30 | loss 0.236 | train 94.47% | val 73.99% |   5.1s |   7244MB
+epoch  10/30 | loss 0.173 | train 97.23% | val 74.20% |   4.8s |   7244MB
+epoch  11/30 | loss 0.129 | train 97.82% | val 75.21% |   5.0s |   7244MB
+epoch  12/30 | loss 0.093 | train 99.15% | val 75.64% |   4.9s |   7244MB
+epoch  13/30 | loss 0.073 | train 99.41% | val 75.64% |   5.1s |   7244MB
+epoch  14/30 | loss 0.059 | train 100.00% | val 75.80% |   4.8s |   7244MB
+epoch  15/30 | loss 0.051 | train 99.95% | val 76.06% |   4.9s |   7244MB
+epoch  16/30 | loss 0.046 | train 99.73% | val 76.12% |   4.9s |   7244MB
+epoch  17/30 | loss 0.040 | train 99.89% | val 76.49% |   5.0s |   7244MB
+epoch  18/30 | loss 0.037 | train 99.89% | val 76.44% |   4.9s |   7244MB
+epoch  19/30 | loss 0.032 | train 100.00% | val 76.76% |   5.0s |   7244MB
+epoch  20/30 | loss 0.031 | train 99.95% | val 76.49% |   4.9s |   7244MB
+epoch  21/30 | loss 0.030 | train 99.95% | val 76.38% |   5.0s |   7244MB
+epoch  22/30 | loss 0.027 | train 100.00% | val 76.60% |   4.9s |   7244MB
+epoch  23/30 | loss 0.026 | train 100.00% | val 76.60% |   4.9s |   7244MB
+epoch  24/30 | loss 0.027 | train 99.95% | val 76.65% |   5.0s |   7244MB
+epoch  25/30 | loss 0.025 | train 100.00% | val 76.70% |   4.9s |   7244MB
+epoch  26/30 | loss 0.024 | train 100.00% | val 76.70% |   5.0s |   7244MB
+epoch  27/30 | loss 0.023 | train 100.00% | val 76.65% |   5.0s |   7244MB
+epoch  28/30 | loss 0.023 | train 100.00% | val 76.65% |   4.9s |   7244MB
+epoch  29/30 | loss 0.022 | train 100.00% | val 76.65% |   5.0s |   7244MB
+epoch  30/30 | loss 0.024 | train 100.00% | val 76.65% |   5.0s |   7244MB
+
+== ssf-mid_dtd_seed42: best_val=76.76%  test=77.39%  trainable=103,727 (0.121%)
+===== ssf/late / dtd / seed 42 (30 ep) =====
+[ssf-late | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.075 | train  2.23% | val  2.77% |   6.1s |   5741MB
+epoch   2/30 | loss 4.287 | train  6.22% | val 12.07% |   4.6s |   5741MB
+epoch   3/30 | loss 3.065 | train 25.69% | val 36.38% |   4.8s |   5741MB
+epoch   4/30 | loss 1.896 | train 53.30% | val 53.78% |   4.6s |   5741MB
+epoch   5/30 | loss 1.163 | train 70.48% | val 64.57% |   4.7s |   5741MB
+epoch   6/30 | loss 0.742 | train 80.85% | val 68.83% |   4.8s |   5741MB
+epoch   7/30 | loss 0.507 | train 87.55% | val 70.96% |   4.8s |   5741MB
+epoch   8/30 | loss 0.352 | train 91.81% | val 72.61% |   4.9s |   5741MB
+epoch   9/30 | loss 0.253 | train 94.95% | val 73.19% |   4.7s |   5741MB
+epoch  10/30 | loss 0.187 | train 96.70% | val 73.78% |   4.7s |   5741MB
+epoch  11/30 | loss 0.140 | train 98.03% | val 74.73% |   4.8s |   5741MB
+epoch  12/30 | loss 0.103 | train 98.99% | val 75.32% |   4.7s |   5741MB
+epoch  13/30 | loss 0.082 | train 99.47% | val 75.27% |   4.7s |   5741MB
+epoch  14/30 | loss 0.065 | train 99.89% | val 75.27% |   4.6s |   5741MB
+epoch  15/30 | loss 0.057 | train 99.79% | val 75.27% |   4.7s |   5741MB
+epoch  16/30 | loss 0.051 | train 99.68% | val 75.74% |   4.7s |   5741MB
+epoch  17/30 | loss 0.044 | train 99.89% | val 76.01% |   4.9s |   5741MB
+epoch  18/30 | loss 0.041 | train 99.89% | val 75.90% |   4.7s |   5741MB
+epoch  19/30 | loss 0.037 | train 100.00% | val 75.96% |   4.7s |   5741MB
+epoch  20/30 | loss 0.036 | train 99.89% | val 76.01% |   4.7s |   5741MB
+epoch  21/30 | loss 0.034 | train 99.89% | val 76.01% |   4.7s |   5741MB
+epoch  22/30 | loss 0.032 | train 99.79% | val 76.12% |   4.8s |   5741MB
+epoch  23/30 | loss 0.029 | train 99.95% | val 76.12% |   4.7s |   5741MB
+epoch  24/30 | loss 0.031 | train 99.89% | val 76.17% |   4.8s |   5741MB
+epoch  25/30 | loss 0.029 | train 100.00% | val 76.38% |   4.8s |   5741MB
+epoch  26/30 | loss 0.027 | train 99.95% | val 76.28% |   4.8s |   5741MB
+epoch  27/30 | loss 0.026 | train 100.00% | val 76.17% |   4.8s |   5741MB
+epoch  28/30 | loss 0.026 | train 100.00% | val 76.17% |   4.9s |   5741MB
+epoch  29/30 | loss 0.025 | train 99.95% | val 76.12% |   4.8s |   5741MB
+epoch  30/30 | loss 0.028 | train 99.89% | val 76.17% |   4.7s |   5741MB
+
+== ssf-late_dtd_seed42: best_val=76.38%  test=77.45%  trainable=103,727 (0.121%)
+===== ssf/even / dtd / seed 42 (30 ep) =====
+[ssf-even | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.077 | train  2.23% | val  2.82% |   6.7s |   9177MB
+epoch   2/30 | loss 4.332 | train  5.37% | val 10.69% |   5.0s |   9177MB
+epoch   3/30 | loss 3.121 | train 23.72% | val 34.10% |   5.1s |   9177MB
+epoch   4/30 | loss 1.967 | train 52.77% | val 53.35% |   5.0s |   9177MB
+epoch   5/30 | loss 1.187 | train 69.89% | val 63.46% |   5.1s |   9177MB
+epoch   6/30 | loss 0.745 | train 81.01% | val 68.14% |   5.1s |   9177MB
+epoch   7/30 | loss 0.499 | train 87.39% | val 70.69% |   5.2s |   9177MB
+epoch   8/30 | loss 0.337 | train 92.29% | val 72.55% |   5.1s |   9177MB
+epoch   9/30 | loss 0.243 | train 94.57% | val 73.51% |   5.2s |   9177MB
+epoch  10/30 | loss 0.177 | train 97.34% | val 73.78% |   5.0s |   9177MB
+epoch  11/30 | loss 0.131 | train 98.14% | val 74.95% |   5.2s |   9177MB
+epoch  12/30 | loss 0.096 | train 99.04% | val 74.95% |   5.1s |   9177MB
+epoch  13/30 | loss 0.074 | train 99.41% | val 75.53% |   5.1s |   9177MB
+epoch  14/30 | loss 0.061 | train 100.00% | val 75.80% |   5.2s |   9177MB
+epoch  15/30 | loss 0.051 | train 99.95% | val 75.90% |   5.3s |   9177MB
+epoch  16/30 | loss 0.046 | train 99.73% | val 76.17% |   5.1s |   9177MB
+epoch  17/30 | loss 0.042 | train 99.79% | val 76.12% |   5.3s |   9177MB
+epoch  18/30 | loss 0.038 | train 99.89% | val 76.01% |   5.2s |   9177MB
+epoch  19/30 | loss 0.034 | train 100.00% | val 76.54% |   5.1s |   9177MB
+epoch  20/30 | loss 0.032 | train 99.95% | val 76.28% |   5.2s |   9177MB
+epoch  21/30 | loss 0.031 | train 99.95% | val 76.38% |   5.2s |   9177MB
+epoch  22/30 | loss 0.029 | train 99.95% | val 76.38% |   5.1s |   9177MB
+epoch  23/30 | loss 0.026 | train 100.00% | val 76.49% |   5.0s |   9177MB
+epoch  24/30 | loss 0.028 | train 99.95% | val 76.44% |   4.9s |   9177MB
+epoch  25/30 | loss 0.025 | train 100.00% | val 76.54% |   5.1s |   9177MB
+epoch  26/30 | loss 0.025 | train 100.00% | val 76.54% |   5.2s |   9177MB
+epoch  27/30 | loss 0.025 | train 100.00% | val 76.49% |   5.1s |   9177MB
+epoch  28/30 | loss 0.024 | train 100.00% | val 76.54% |   5.2s |   9177MB
+epoch  29/30 | loss 0.023 | train 100.00% | val 76.54% |   5.1s |   9177MB
+epoch  30/30 | loss 0.025 | train 99.95% | val 76.54% |   5.2s |   9177MB
+
+== ssf-even_dtd_seed42: best_val=76.54%  test=77.18%  trainable=103,727 (0.121%)
+===== linear/all / dtd / seed 43 (30 ep) =====
+[linear | dtd] classes=47 | trainable=36,143 (0.042% of 85,834,799)
+lr=0.01  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 4.270 | train 10.11% | val 37.93% |   5.3s |   1758MB
+epoch   2/30 | loss 1.326 | train 65.85% | val 69.89% |   4.2s |   1758MB
+epoch   3/30 | loss 0.406 | train 88.19% | val 74.89% |   4.3s |   1758MB
+epoch   4/30 | loss 0.153 | train 95.43% | val 74.79% |   4.3s |   1758MB
+epoch   5/30 | loss 0.072 | train 97.93% | val 74.31% |   4.3s |   1758MB
+epoch   6/30 | loss 0.037 | train 99.63% | val 74.73% |   4.2s |   1758MB
+epoch   7/30 | loss 0.042 | train 98.88% | val 75.96% |   4.3s |   1758MB
+epoch   8/30 | loss 0.045 | train 98.67% | val 74.63% |   4.2s |   1758MB
+epoch   9/30 | loss 0.057 | train 98.03% | val 74.15% |   4.5s |   1758MB
+epoch  10/30 | loss 0.058 | train 98.19% | val 72.61% |   4.3s |   1758MB
+epoch  11/30 | loss 0.070 | train 97.87% | val 73.72% |   4.3s |   1758MB
+epoch  12/30 | loss 0.060 | train 98.30% | val 72.50% |   4.2s |   1758MB
+epoch  13/30 | loss 0.060 | train 98.67% | val 72.45% |   4.2s |   1758MB
+epoch  14/30 | loss 0.060 | train 98.14% | val 72.77% |   4.2s |   1758MB
+epoch  15/30 | loss 0.065 | train 98.40% | val 72.50% |   4.4s |   1758MB
+epoch  16/30 | loss 0.052 | train 98.51% | val 73.35% |   4.4s |   1758MB
+epoch  17/30 | loss 0.030 | train 99.26% | val 73.35% |   4.3s |   1758MB
+epoch  18/30 | loss 0.012 | train 99.63% | val 73.24% |   4.4s |   1758MB
+epoch  19/30 | loss 0.017 | train 99.63% | val 73.35% |   4.2s |   1758MB
+epoch  20/30 | loss 0.011 | train 99.73% | val 73.72% |   4.5s |   1758MB
+epoch  21/30 | loss 0.002 | train 100.00% | val 73.94% |   4.2s |   1758MB
+epoch  22/30 | loss 0.004 | train 99.73% | val 73.62% |   4.3s |   1758MB
+epoch  23/30 | loss 0.005 | train 99.79% | val 73.40% |   4.2s |   1758MB
+epoch  24/30 | loss 0.002 | train 99.95% | val 73.88% |   4.2s |   1758MB
+epoch  25/30 | loss 0.002 | train 99.95% | val 74.15% |   4.2s |   1758MB
+epoch  26/30 | loss 0.003 | train 99.89% | val 73.99% |   4.2s |   1758MB
+epoch  27/30 | loss 0.002 | train 100.00% | val 73.94% |   4.2s |   1758MB
+epoch  28/30 | loss 0.004 | train 99.95% | val 73.94% |   4.2s |   1758MB
+epoch  29/30 | loss 0.003 | train 99.95% | val 74.04% |   4.3s |   1758MB
+epoch  30/30 | loss 0.004 | train 99.89% | val 74.04% |   4.4s |   1758MB
+
+== linear_dtd_seed43: best_val=75.96%  test=77.34%  trainable=36,143 (0.042%)
+===== bitfit/all / dtd / seed 43 (30 ep) =====
+[bitfit | dtd] classes=47 | trainable=139,055 (0.162% of 85,834,799)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.061 | train  2.07% | val  2.55% |   6.0s |   6679MB
+epoch   2/30 | loss 4.154 | train  6.81% | val 11.81% |   4.4s |   6679MB
+epoch   3/30 | loss 3.021 | train 26.33% | val 35.90% |   4.4s |   6679MB
+epoch   4/30 | loss 1.877 | train 54.20% | val 53.99% |   4.7s |   6679MB
+epoch   5/30 | loss 1.109 | train 72.29% | val 64.89% |   4.6s |   6679MB
+epoch   6/30 | loss 0.697 | train 81.60% | val 69.68% |   4.5s |   6679MB
+epoch   7/30 | loss 0.481 | train 87.98% | val 72.18% |   4.7s |   6679MB
+epoch   8/30 | loss 0.335 | train 92.07% | val 74.15% |   4.7s |   6679MB
+epoch   9/30 | loss 0.239 | train 94.84% | val 74.20% |   4.6s |   6679MB
+epoch  10/30 | loss 0.166 | train 96.97% | val 74.57% |   4.7s |   6679MB
+epoch  11/30 | loss 0.120 | train 98.46% | val 74.36% |   4.7s |   6679MB
+epoch  12/30 | loss 0.096 | train 98.94% | val 74.73% |   4.6s |   6679MB
+epoch  13/30 | loss 0.075 | train 99.41% | val 75.48% |   4.7s |   6679MB
+epoch  14/30 | loss 0.062 | train 99.52% | val 76.22% |   4.5s |   6679MB
+epoch  15/30 | loss 0.051 | train 99.95% | val 76.65% |   4.5s |   6679MB
+epoch  16/30 | loss 0.044 | train 99.79% | val 76.91% |   4.6s |   6679MB
+epoch  17/30 | loss 0.039 | train 99.89% | val 76.49% |   4.7s |   6679MB
+epoch  18/30 | loss 0.035 | train 99.95% | val 76.38% |   4.5s |   6679MB
+epoch  19/30 | loss 0.033 | train 99.84% | val 76.81% |   4.8s |   6679MB
+epoch  20/30 | loss 0.029 | train 100.00% | val 76.54% |   4.7s |   6679MB
+epoch  21/30 | loss 0.028 | train 99.95% | val 76.70% |   4.6s |   6679MB
+epoch  22/30 | loss 0.026 | train 99.89% | val 76.81% |   4.7s |   6679MB
+epoch  23/30 | loss 0.025 | train 100.00% | val 76.81% |   4.7s |   6679MB
+epoch  24/30 | loss 0.024 | train 100.00% | val 76.86% |   4.6s |   6679MB
+epoch  25/30 | loss 0.023 | train 99.95% | val 76.91% |   4.5s |   6679MB
+epoch  26/30 | loss 0.024 | train 100.00% | val 76.91% |   4.8s |   6679MB
+epoch  27/30 | loss 0.023 | train 100.00% | val 76.91% |   4.7s |   6679MB
+epoch  28/30 | loss 0.023 | train 99.95% | val 76.97% |   4.7s |   6679MB
+epoch  29/30 | loss 0.023 | train 99.95% | val 76.91% |   4.7s |   6679MB
+epoch  30/30 | loss 0.023 | train 99.95% | val 76.91% |   4.6s |   6679MB
+
+== bitfit_dtd_seed43: best_val=76.97%  test=77.61%  trainable=139,055 (0.162%)
+===== full/all / dtd / seed 43 (30 ep) =====
+[full | dtd] classes=47 | trainable=85,834,799 (100.000% of 85,834,799)
+lr=1e-05  wd=0.05  drop_path=0.1  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.285 | train  1.86% | val  1.86% |   6.4s |  10153MB
+epoch   2/30 | loss 4.942 | train  2.61% | val  2.61% |   4.9s |  10153MB
+epoch   3/30 | loss 4.445 | train  4.20% | val  4.10% |   5.2s |  10153MB
+epoch   4/30 | loss 4.154 | train  4.95% | val  6.22% |   5.2s |  10153MB
+epoch   5/30 | loss 3.910 | train  7.29% | val 12.39% |   5.0s |  10153MB
+epoch   6/30 | loss 3.655 | train 12.50% | val 22.45% |   5.0s |  10153MB
+epoch   7/30 | loss 3.309 | train 19.95% | val 33.30% |   5.1s |  10153MB
+epoch   8/30 | loss 2.914 | train 29.73% | val 45.05% |   5.2s |  10153MB
+epoch   9/30 | loss 2.455 | train 38.88% | val 52.29% |   5.1s |  10153MB
+epoch  10/30 | loss 2.037 | train 48.72% | val 58.88% |   5.0s |  10153MB
+epoch  11/30 | loss 1.676 | train 58.14% | val 63.78% |   5.0s |  10153MB
+epoch  12/30 | loss 1.430 | train 63.19% | val 66.65% |   5.1s |  10153MB
+epoch  13/30 | loss 1.265 | train 67.61% | val 68.99% |   5.2s |  10153MB
+epoch  14/30 | loss 1.039 | train 73.14% | val 69.84% |   5.0s |  10153MB
+epoch  15/30 | loss 0.952 | train 76.22% | val 70.90% |   5.2s |  10153MB
+epoch  16/30 | loss 0.849 | train 78.30% | val 70.90% |   5.0s |  10153MB
+epoch  17/30 | loss 0.803 | train 80.69% | val 72.55% |   5.1s |  10153MB
+epoch  18/30 | loss 0.727 | train 81.17% | val 73.14% |   5.1s |  10153MB
+epoch  19/30 | loss 0.639 | train 83.72% | val 73.30% |   5.0s |  10153MB
+epoch  20/30 | loss 0.601 | train 85.64% | val 73.78% |   5.1s |  10153MB
+epoch  21/30 | loss 0.592 | train 85.16% | val 73.88% |   5.2s |  10153MB
+epoch  22/30 | loss 0.526 | train 87.50% | val 74.36% |   5.0s |  10153MB
+epoch  23/30 | loss 0.499 | train 88.99% | val 74.26% |   5.2s |  10153MB
+epoch  24/30 | loss 0.505 | train 88.56% | val 74.31% |   5.2s |  10153MB
+epoch  25/30 | loss 0.502 | train 87.87% | val 74.26% |   4.9s |  10153MB
+epoch  26/30 | loss 0.485 | train 88.24% | val 74.26% |   5.0s |  10153MB
+epoch  27/30 | loss 0.491 | train 88.46% | val 74.47% |   5.1s |  10153MB
+epoch  28/30 | loss 0.448 | train 90.00% | val 74.52% |   5.0s |  10153MB
+epoch  29/30 | loss 0.441 | train 90.48% | val 74.68% |   5.1s |  10153MB
+epoch  30/30 | loss 0.445 | train 89.73% | val 74.68% |   5.2s |  10153MB
+
+== full_dtd_seed43: best_val=74.68%  test=77.71%  trainable=85,834,799 (100.000%)
+===== lora/all / dtd / seed 43 (30 ep) =====
+[lora | dtd] classes=47 | trainable=331,055 (0.384% of 86,129,711)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.063 | train  2.45% | val  2.77% |   6.1s |   6992MB
+epoch   2/30 | loss 4.128 | train  7.93% | val 13.51% |   4.7s |   6992MB
+epoch   3/30 | loss 2.856 | train 31.38% | val 40.27% |   4.8s |   6992MB
+epoch   4/30 | loss 1.600 | train 59.68% | val 61.86% |   4.9s |   6992MB
+epoch   5/30 | loss 0.817 | train 78.09% | val 70.05% |   4.9s |   6992MB
+epoch   6/30 | loss 0.471 | train 86.33% | val 73.30% |   4.8s |   6992MB
+epoch   7/30 | loss 0.278 | train 93.19% | val 75.32% |   5.0s |   6992MB
+epoch   8/30 | loss 0.163 | train 96.44% | val 75.96% |   4.9s |   6992MB
+epoch   9/30 | loss 0.099 | train 98.56% | val 76.70% |   4.9s |   6992MB
+epoch  10/30 | loss 0.064 | train 99.36% | val 77.39% |   4.8s |   6992MB
+epoch  11/30 | loss 0.043 | train 99.57% | val 76.60% |   4.9s |   6992MB
+epoch  12/30 | loss 0.030 | train 99.84% | val 77.82% |   4.9s |   6992MB
+epoch  13/30 | loss 0.025 | train 99.68% | val 77.71% |   4.7s |   6992MB
+epoch  14/30 | loss 0.022 | train 99.84% | val 77.39% |   4.7s |   6992MB
+epoch  15/30 | loss 0.015 | train 100.00% | val 78.40% |   4.9s |   6992MB
+epoch  16/30 | loss 0.012 | train 100.00% | val 78.40% |   4.8s |   6992MB
+epoch  17/30 | loss 0.010 | train 99.95% | val 78.14% |   4.8s |   6992MB
+epoch  18/30 | loss 0.008 | train 100.00% | val 78.83% |   4.9s |   6992MB
+epoch  19/30 | loss 0.007 | train 100.00% | val 78.30% |   5.2s |   6992MB
+epoch  20/30 | loss 0.009 | train 99.95% | val 78.09% |   4.9s |   6992MB
+epoch  21/30 | loss 0.007 | train 100.00% | val 78.19% |   4.8s |   6992MB
+epoch  22/30 | loss 0.005 | train 100.00% | val 78.24% |   4.8s |   6992MB
+epoch  23/30 | loss 0.005 | train 100.00% | val 78.30% |   4.8s |   6992MB
+epoch  24/30 | loss 0.005 | train 100.00% | val 78.30% |   4.8s |   6992MB
+epoch  25/30 | loss 0.004 | train 100.00% | val 78.40% |   5.0s |   6992MB
+epoch  26/30 | loss 0.005 | train 100.00% | val 78.46% |   4.9s |   6992MB
+epoch  27/30 | loss 0.005 | train 100.00% | val 78.40% |   4.8s |   6992MB
+epoch  28/30 | loss 0.005 | train 100.00% | val 78.30% |   4.8s |   6992MB
+epoch  29/30 | loss 0.004 | train 100.00% | val 78.35% |   4.9s |   6992MB
+epoch  30/30 | loss 0.005 | train 100.00% | val 78.35% |   4.9s |   6992MB
+
+== lora_dtd_seed43: best_val=78.83%  test=79.10%  trainable=331,055 (0.384%)
+===== ssf/all / dtd / seed 43 (30 ep) =====
+[ssf | dtd] classes=47 | trainable=238,895 (0.278% of 86,037,551)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.047 | train  2.23% | val  2.55% |   7.7s |  14881MB
+epoch   2/30 | loss 4.102 | train  7.23% | val 12.39% |   6.2s |  14881MB
+epoch   3/30 | loss 2.971 | train 28.14% | val 37.07% |   6.4s |  14881MB
+epoch   4/30 | loss 1.813 | train 55.64% | val 55.32% |   6.5s |  14881MB
+epoch   5/30 | loss 1.051 | train 73.72% | val 65.64% |   6.5s |  14881MB
+epoch   6/30 | loss 0.652 | train 82.55% | val 70.37% |   6.3s |  14881MB
+epoch   7/30 | loss 0.444 | train 89.26% | val 72.71% |   6.5s |  14881MB
+epoch   8/30 | loss 0.306 | train 92.61% | val 74.04% |   6.4s |  14881MB
+epoch   9/30 | loss 0.217 | train 95.32% | val 74.95% |   6.4s |  14881MB
+epoch  10/30 | loss 0.147 | train 97.39% | val 74.63% |   6.6s |  14881MB
+epoch  11/30 | loss 0.104 | train 98.88% | val 74.95% |   6.4s |  14881MB
+epoch  12/30 | loss 0.083 | train 99.10% | val 75.16% |   6.5s |  14881MB
+epoch  13/30 | loss 0.063 | train 99.47% | val 76.54% |   6.2s |  14881MB
+epoch  14/30 | loss 0.052 | train 99.79% | val 76.70% |   6.4s |  14881MB
+epoch  15/30 | loss 0.042 | train 99.95% | val 76.33% |   6.5s |  14881MB
+epoch  16/30 | loss 0.035 | train 99.89% | val 76.91% |   6.2s |  14881MB
+epoch  17/30 | loss 0.031 | train 99.95% | val 76.91% |   6.6s |  14881MB
+epoch  18/30 | loss 0.028 | train 99.95% | val 77.02% |   6.6s |  14881MB
+epoch  19/30 | loss 0.026 | train 99.95% | val 77.34% |   6.3s |  14881MB
+epoch  20/30 | loss 0.023 | train 100.00% | val 76.81% |   6.5s |  14881MB
+epoch  21/30 | loss 0.023 | train 99.95% | val 77.50% |   6.6s |  14881MB
+epoch  22/30 | loss 0.022 | train 99.95% | val 77.50% |   6.2s |  14881MB
+epoch  23/30 | loss 0.021 | train 100.00% | val 77.55% |   6.5s |  14881MB
+epoch  24/30 | loss 0.020 | train 100.00% | val 77.82% |   6.5s |  14881MB
+epoch  25/30 | loss 0.019 | train 100.00% | val 77.77% |   6.3s |  14881MB
+epoch  26/30 | loss 0.020 | train 100.00% | val 77.93% |   6.5s |  14881MB
+epoch  27/30 | loss 0.018 | train 100.00% | val 77.93% |   6.5s |  14881MB
+epoch  28/30 | loss 0.019 | train 99.95% | val 77.98% |   6.4s |  14881MB
+epoch  29/30 | loss 0.018 | train 100.00% | val 77.98% |   6.4s |  14881MB
+epoch  30/30 | loss 0.018 | train 99.95% | val 77.98% |   6.5s |  14881MB
+
+== ssf_dtd_seed43: best_val=77.98%  test=78.35%  trainable=238,895 (0.278%)
+===== lora/early / dtd / seed 43 (30 ep) =====
+[lora-early | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.110 | train  2.18% | val  2.50% |   5.6s |   6685MB
+epoch   2/30 | loss 4.355 | train  5.27% | val  9.89% |   4.6s |   6685MB
+epoch   3/30 | loss 3.195 | train 21.60% | val 31.49% |   4.8s |   6685MB
+epoch   4/30 | loss 2.038 | train 49.04% | val 50.43% |   4.7s |   6685MB
+epoch   5/30 | loss 1.234 | train 68.94% | val 62.34% |   4.8s |   6685MB
+epoch   6/30 | loss 0.770 | train 80.00% | val 68.56% |   4.8s |   6685MB
+epoch   7/30 | loss 0.513 | train 86.65% | val 71.49% |   4.8s |   6685MB
+epoch   8/30 | loss 0.341 | train 92.07% | val 72.61% |   4.8s |   6685MB
+epoch   9/30 | loss 0.233 | train 95.37% | val 73.67% |   4.8s |   6685MB
+epoch  10/30 | loss 0.165 | train 97.23% | val 73.62% |   4.8s |   6685MB
+epoch  11/30 | loss 0.119 | train 98.83% | val 74.20% |   4.6s |   6685MB
+epoch  12/30 | loss 0.089 | train 99.41% | val 74.52% |   4.8s |   6685MB
+epoch  13/30 | loss 0.068 | train 99.63% | val 74.89% |   4.7s |   6685MB
+epoch  14/30 | loss 0.056 | train 99.84% | val 74.95% |   4.7s |   6685MB
+epoch  15/30 | loss 0.047 | train 99.73% | val 74.20% |   4.7s |   6685MB
+epoch  16/30 | loss 0.037 | train 99.95% | val 75.00% |   4.7s |   6685MB
+epoch  17/30 | loss 0.034 | train 99.95% | val 75.32% |   4.7s |   6685MB
+epoch  18/30 | loss 0.033 | train 99.95% | val 75.21% |   4.7s |   6685MB
+epoch  19/30 | loss 0.028 | train 100.00% | val 75.53% |   4.6s |   6685MB
+epoch  20/30 | loss 0.027 | train 99.84% | val 75.59% |   4.7s |   6685MB
+epoch  21/30 | loss 0.025 | train 100.00% | val 75.27% |   4.7s |   6685MB
+epoch  22/30 | loss 0.025 | train 99.84% | val 75.27% |   4.7s |   6685MB
+epoch  23/30 | loss 0.024 | train 100.00% | val 75.59% |   4.6s |   6685MB
+epoch  24/30 | loss 0.021 | train 100.00% | val 75.48% |   4.8s |   6685MB
+epoch  25/30 | loss 0.021 | train 100.00% | val 75.59% |   4.7s |   6685MB
+epoch  26/30 | loss 0.021 | train 100.00% | val 75.43% |   4.6s |   6685MB
+epoch  27/30 | loss 0.020 | train 100.00% | val 75.53% |   4.9s |   6685MB
+epoch  28/30 | loss 0.020 | train 100.00% | val 75.53% |   4.9s |   6685MB
+epoch  29/30 | loss 0.019 | train 100.00% | val 75.59% |   4.6s |   6685MB
+epoch  30/30 | loss 0.021 | train 100.00% | val 75.64% |   4.6s |   6685MB
+
+== lora-early_dtd_seed43: best_val=75.64%  test=77.13%  trainable=134,447 (0.156%)
+===== lora/mid / dtd / seed 43 (30 ep) =====
+[lora-mid | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.101 | train  2.18% | val  2.55% |   6.0s |   4756MB
+epoch   2/30 | loss 4.289 | train  5.90% | val 10.85% |   4.3s |   4756MB
+epoch   3/30 | loss 3.068 | train 26.44% | val 35.64% |   4.6s |   4756MB
+epoch   4/30 | loss 1.892 | train 54.04% | val 55.43% |   4.7s |   4756MB
+epoch   5/30 | loss 1.075 | train 72.55% | val 65.74% |   4.8s |   4756MB
+epoch   6/30 | loss 0.656 | train 82.87% | val 69.41% |   4.6s |   4756MB
+epoch   7/30 | loss 0.417 | train 90.27% | val 72.13% |   4.6s |   4756MB
+epoch   8/30 | loss 0.275 | train 94.20% | val 74.26% |   4.6s |   4756MB
+epoch   9/30 | loss 0.174 | train 96.70% | val 74.26% |   4.4s |   4756MB
+epoch  10/30 | loss 0.115 | train 98.72% | val 75.59% |   4.5s |   4756MB
+epoch  11/30 | loss 0.085 | train 99.31% | val 76.44% |   4.4s |   4756MB
+epoch  12/30 | loss 0.063 | train 99.68% | val 76.65% |   4.9s |   4756MB
+epoch  13/30 | loss 0.045 | train 99.84% | val 76.76% |   4.4s |   4756MB
+epoch  14/30 | loss 0.035 | train 99.84% | val 77.13% |   4.5s |   4756MB
+epoch  15/30 | loss 0.027 | train 100.00% | val 76.97% |   4.5s |   4756MB
+epoch  16/30 | loss 0.022 | train 100.00% | val 77.18% |   4.5s |   4756MB
+epoch  17/30 | loss 0.021 | train 100.00% | val 76.86% |   4.6s |   4756MB
+epoch  18/30 | loss 0.018 | train 100.00% | val 76.54% |   4.5s |   4756MB
+epoch  19/30 | loss 0.019 | train 99.89% | val 76.81% |   4.5s |   4756MB
+epoch  20/30 | loss 0.018 | train 99.95% | val 77.45% |   4.8s |   4756MB
+epoch  21/30 | loss 0.015 | train 100.00% | val 77.34% |   4.5s |   4756MB
+epoch  22/30 | loss 0.014 | train 100.00% | val 77.23% |   4.6s |   4756MB
+epoch  23/30 | loss 0.014 | train 100.00% | val 77.18% |   4.4s |   4756MB
+epoch  24/30 | loss 0.013 | train 100.00% | val 77.13% |   4.4s |   4756MB
+epoch  25/30 | loss 0.012 | train 100.00% | val 77.02% |   4.5s |   4756MB
+epoch  26/30 | loss 0.012 | train 100.00% | val 77.18% |   4.5s |   4756MB
+epoch  27/30 | loss 0.012 | train 100.00% | val 77.18% |   4.5s |   4756MB
+epoch  28/30 | loss 0.011 | train 100.00% | val 77.29% |   4.5s |   4756MB
+epoch  29/30 | loss 0.011 | train 100.00% | val 77.23% |   4.7s |   4756MB
+epoch  30/30 | loss 0.012 | train 100.00% | val 77.23% |   4.5s |   4756MB
+
+== lora-mid_dtd_seed43: best_val=77.45%  test=78.46%  trainable=134,447 (0.156%)
+===== lora/late / dtd / seed 43 (30 ep) =====
+[lora-late | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.102 | train  2.13% | val  2.55% |   5.8s |   2825MB
+epoch   2/30 | loss 4.288 | train  6.06% | val 11.76% |   4.2s |   2825MB
+epoch   3/30 | loss 2.959 | train 28.19% | val 37.29% |   4.8s |   2825MB
+epoch   4/30 | loss 1.692 | train 56.33% | val 58.94% |   4.4s |   2825MB
+epoch   5/30 | loss 0.927 | train 75.43% | val 68.67% |   4.4s |   2825MB
+epoch   6/30 | loss 0.565 | train 84.31% | val 73.09% |   4.6s |   2825MB
+epoch   7/30 | loss 0.350 | train 90.80% | val 74.04% |   4.4s |   2825MB
+epoch   8/30 | loss 0.220 | train 94.63% | val 74.79% |   4.6s |   2825MB
+epoch   9/30 | loss 0.137 | train 97.45% | val 75.11% |   4.5s |   2825MB
+epoch  10/30 | loss 0.090 | train 99.04% | val 75.90% |   4.4s |   2825MB
+epoch  11/30 | loss 0.067 | train 99.47% | val 75.69% |   4.3s |   2825MB
+epoch  12/30 | loss 0.055 | train 99.41% | val 76.76% |   4.4s |   2825MB
+epoch  13/30 | loss 0.039 | train 99.63% | val 75.43% |   4.4s |   2825MB
+epoch  14/30 | loss 0.032 | train 99.84% | val 76.65% |   4.5s |   2825MB
+epoch  15/30 | loss 0.023 | train 99.95% | val 75.85% |   4.5s |   2825MB
+epoch  16/30 | loss 0.018 | train 99.89% | val 76.81% |   4.6s |   2825MB
+epoch  17/30 | loss 0.017 | train 99.95% | val 76.44% |   4.4s |   2825MB
+epoch  18/30 | loss 0.014 | train 100.00% | val 76.49% |   4.5s |   2825MB
+epoch  19/30 | loss 0.014 | train 99.95% | val 76.49% |   4.5s |   2825MB
+epoch  20/30 | loss 0.013 | train 99.95% | val 76.70% |   4.5s |   2825MB
+epoch  21/30 | loss 0.011 | train 100.00% | val 77.02% |   4.5s |   2825MB
+epoch  22/30 | loss 0.009 | train 100.00% | val 76.70% |   4.3s |   2825MB
+epoch  23/30 | loss 0.010 | train 100.00% | val 76.65% |   4.4s |   2825MB
+epoch  24/30 | loss 0.009 | train 100.00% | val 76.49% |   4.5s |   2825MB
+epoch  25/30 | loss 0.008 | train 100.00% | val 76.86% |   4.3s |   2825MB
+epoch  26/30 | loss 0.009 | train 100.00% | val 76.76% |   4.4s |   2825MB
+epoch  27/30 | loss 0.009 | train 99.95% | val 76.60% |   4.4s |   2825MB
+epoch  28/30 | loss 0.008 | train 100.00% | val 76.60% |   4.4s |   2825MB
+epoch  29/30 | loss 0.008 | train 100.00% | val 76.49% |   4.4s |   2825MB
+epoch  30/30 | loss 0.009 | train 100.00% | val 76.49% |   4.3s |   2825MB
+
+== lora-late_dtd_seed43: best_val=77.02%  test=78.83%  trainable=134,447 (0.156%)
+===== lora/even / dtd / seed 43 (30 ep) =====
+[lora-even | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.107 | train  2.18% | val  2.50% |   5.8s |   6686MB
+epoch   2/30 | loss 4.328 | train  5.48% | val 10.69% |   4.6s |   6686MB
+epoch   3/30 | loss 3.076 | train 24.95% | val 34.36% |   4.7s |   6686MB
+epoch   4/30 | loss 1.887 | train 53.56% | val 54.84% |   4.6s |   6686MB
+epoch   5/30 | loss 1.081 | train 71.91% | val 65.85% |   4.7s |   6686MB
+epoch   6/30 | loss 0.654 | train 82.87% | val 70.69% |   4.7s |   6686MB
+epoch   7/30 | loss 0.414 | train 89.57% | val 72.82% |   4.7s |   6686MB
+epoch   8/30 | loss 0.265 | train 93.78% | val 74.10% |   4.8s |   6686MB
+epoch   9/30 | loss 0.174 | train 96.97% | val 75.00% |   4.6s |   6686MB
+epoch  10/30 | loss 0.119 | train 98.46% | val 75.85% |   4.7s |   6686MB
+epoch  11/30 | loss 0.085 | train 99.26% | val 75.96% |   4.6s |   6686MB
+epoch  12/30 | loss 0.062 | train 99.57% | val 76.38% |   4.8s |   6686MB
+epoch  13/30 | loss 0.047 | train 99.68% | val 76.33% |   4.6s |   6686MB
+epoch  14/30 | loss 0.036 | train 99.89% | val 76.97% |   4.6s |   6686MB
+epoch  15/30 | loss 0.028 | train 99.89% | val 76.97% |   4.7s |   6686MB
+epoch  16/30 | loss 0.023 | train 100.00% | val 77.02% |   4.9s |   6686MB
+epoch  17/30 | loss 0.021 | train 100.00% | val 77.18% |   4.6s |   6686MB
+epoch  18/30 | loss 0.019 | train 100.00% | val 77.13% |   4.5s |   6686MB
+epoch  19/30 | loss 0.018 | train 100.00% | val 77.45% |   4.7s |   6686MB
+epoch  20/30 | loss 0.016 | train 100.00% | val 77.02% |   4.7s |   6686MB
+epoch  21/30 | loss 0.015 | train 100.00% | val 77.34% |   4.6s |   6686MB
+epoch  22/30 | loss 0.016 | train 99.89% | val 77.39% |   4.6s |   6686MB
+epoch  23/30 | loss 0.014 | train 100.00% | val 77.55% |   4.6s |   6686MB
+epoch  24/30 | loss 0.013 | train 100.00% | val 77.45% |   4.6s |   6686MB
+epoch  25/30 | loss 0.012 | train 100.00% | val 77.55% |   4.6s |   6686MB
+epoch  26/30 | loss 0.012 | train 100.00% | val 77.61% |   4.7s |   6686MB
+epoch  27/30 | loss 0.012 | train 100.00% | val 77.61% |   4.6s |   6686MB
+epoch  28/30 | loss 0.011 | train 100.00% | val 77.61% |   4.7s |   6686MB
+epoch  29/30 | loss 0.012 | train 100.00% | val 77.61% |   4.6s |   6686MB
+epoch  30/30 | loss 0.012 | train 100.00% | val 77.61% |   4.5s |   6686MB
+
+== lora-even_dtd_seed43: best_val=77.61%  test=78.46%  trainable=134,447 (0.156%)
+===== ssf/early / dtd / seed 43 (30 ep) =====
+[ssf-early | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.101 | train  2.13% | val  2.55% |   6.4s |   9173MB
+epoch   2/30 | loss 4.286 | train  5.85% | val 10.74% |   4.9s |   9173MB
+epoch   3/30 | loss 3.112 | train 23.94% | val 33.35% |   5.0s |   9173MB
+epoch   4/30 | loss 1.995 | train 50.80% | val 50.90% |   5.2s |   9173MB
+epoch   5/30 | loss 1.223 | train 69.31% | val 62.02% |   5.1s |   9173MB
+epoch   6/30 | loss 0.783 | train 80.05% | val 67.71% |   5.1s |   9173MB
+epoch   7/30 | loss 0.538 | train 87.07% | val 70.74% |   5.4s |   9173MB
+epoch   8/30 | loss 0.374 | train 90.96% | val 72.55% |   5.3s |   9173MB
+epoch   9/30 | loss 0.266 | train 94.47% | val 73.51% |   5.3s |   9173MB
+epoch  10/30 | loss 0.185 | train 96.91% | val 73.83% |   5.3s |   9173MB
+epoch  11/30 | loss 0.134 | train 97.87% | val 74.36% |   5.1s |   9173MB
+epoch  12/30 | loss 0.103 | train 99.31% | val 74.10% |   5.2s |   9173MB
+epoch  13/30 | loss 0.081 | train 99.41% | val 74.10% |   5.3s |   9173MB
+epoch  14/30 | loss 0.068 | train 99.73% | val 75.48% |   5.1s |   9173MB
+epoch  15/30 | loss 0.058 | train 99.73% | val 75.74% |   5.2s |   9173MB
+epoch  16/30 | loss 0.050 | train 99.79% | val 75.43% |   5.1s |   9173MB
+epoch  17/30 | loss 0.045 | train 99.95% | val 75.64% |   5.3s |   9173MB
+epoch  18/30 | loss 0.041 | train 99.95% | val 75.53% |   5.2s |   9173MB
+epoch  19/30 | loss 0.039 | train 99.84% | val 75.53% |   5.1s |   9173MB
+epoch  20/30 | loss 0.035 | train 100.00% | val 75.32% |   5.2s |   9173MB
+epoch  21/30 | loss 0.034 | train 99.95% | val 75.64% |   5.2s |   9173MB
+epoch  22/30 | loss 0.031 | train 99.95% | val 75.59% |   5.2s |   9173MB
+epoch  23/30 | loss 0.030 | train 100.00% | val 75.64% |   5.2s |   9173MB
+epoch  24/30 | loss 0.029 | train 100.00% | val 75.48% |   5.0s |   9173MB
+epoch  25/30 | loss 0.027 | train 99.95% | val 75.53% |   5.0s |   9173MB
+epoch  26/30 | loss 0.028 | train 100.00% | val 75.48% |   5.2s |   9173MB
+epoch  27/30 | loss 0.027 | train 99.95% | val 75.69% |   5.2s |   9173MB
+epoch  28/30 | loss 0.028 | train 99.89% | val 75.74% |   5.1s |   9173MB
+epoch  29/30 | loss 0.027 | train 99.95% | val 75.80% |   5.1s |   9173MB
+epoch  30/30 | loss 0.027 | train 99.95% | val 75.80% |   5.2s |   9173MB
+
+== ssf-early_dtd_seed43: best_val=75.80%  test=77.13%  trainable=103,727 (0.121%)
+===== ssf/mid / dtd / seed 43 (30 ep) =====
+[ssf-mid | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.092 | train  2.13% | val  2.50% |   6.2s |   7244MB
+epoch   2/30 | loss 4.244 | train  6.44% | val 11.44% |   4.7s |   7244MB
+epoch   3/30 | loss 3.045 | train 24.95% | val 34.95% |   4.9s |   7244MB
+epoch   4/30 | loss 1.913 | train 52.82% | val 53.62% |   4.8s |   7244MB
+epoch   5/30 | loss 1.144 | train 71.70% | val 63.24% |   5.0s |   7244MB
+epoch   6/30 | loss 0.727 | train 81.17% | val 69.04% |   4.9s |   7244MB
+epoch   7/30 | loss 0.499 | train 86.97% | val 71.91% |   4.8s |   7244MB
+epoch   8/30 | loss 0.346 | train 92.29% | val 73.72% |   5.2s |   7244MB
+epoch   9/30 | loss 0.246 | train 94.89% | val 73.88% |   4.9s |   7244MB
+epoch  10/30 | loss 0.169 | train 97.02% | val 74.26% |   5.0s |   7244MB
+epoch  11/30 | loss 0.123 | train 98.24% | val 74.26% |   5.0s |   7244MB
+epoch  12/30 | loss 0.100 | train 99.04% | val 74.73% |   4.9s |   7244MB
+epoch  13/30 | loss 0.076 | train 99.57% | val 75.21% |   5.1s |   7244MB
+epoch  14/30 | loss 0.064 | train 99.68% | val 75.64% |   4.9s |   7244MB
+epoch  15/30 | loss 0.052 | train 100.00% | val 75.85% |   5.0s |   7244MB
+epoch  16/30 | loss 0.045 | train 99.79% | val 75.85% |   5.0s |   7244MB
+epoch  17/30 | loss 0.042 | train 99.95% | val 75.80% |   5.0s |   7244MB
+epoch  18/30 | loss 0.038 | train 99.95% | val 76.12% |   5.1s |   7244MB
+epoch  19/30 | loss 0.036 | train 99.95% | val 75.96% |   5.0s |   7244MB
+epoch  20/30 | loss 0.031 | train 100.00% | val 75.90% |   5.1s |   7244MB
+epoch  21/30 | loss 0.030 | train 99.95% | val 75.74% |   4.9s |   7244MB
+epoch  22/30 | loss 0.029 | train 99.89% | val 75.96% |   5.1s |   7244MB
+epoch  23/30 | loss 0.029 | train 99.89% | val 76.06% |   5.0s |   7244MB
+epoch  24/30 | loss 0.026 | train 100.00% | val 76.33% |   5.0s |   7244MB
+epoch  25/30 | loss 0.025 | train 99.95% | val 76.28% |   4.8s |   7244MB
+epoch  26/30 | loss 0.026 | train 100.00% | val 76.33% |   5.0s |   7244MB
+epoch  27/30 | loss 0.025 | train 100.00% | val 76.33% |   5.0s |   7244MB
+epoch  28/30 | loss 0.025 | train 99.95% | val 76.28% |   4.9s |   7244MB
+epoch  29/30 | loss 0.025 | train 99.89% | val 76.33% |   5.0s |   7244MB
+epoch  30/30 | loss 0.026 | train 99.95% | val 76.33% |   5.0s |   7244MB
+
+== ssf-mid_dtd_seed43: best_val=76.33%  test=77.07%  trainable=103,727 (0.121%)
+===== ssf/late / dtd / seed 43 (30 ep) =====
+[ssf-late | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.094 | train  2.18% | val  2.50% |   6.1s |   5741MB
+epoch   2/30 | loss 4.267 | train  6.86% | val 11.65% |   4.6s |   5741MB
+epoch   3/30 | loss 3.037 | train 26.01% | val 34.95% |   4.7s |   5741MB
+epoch   4/30 | loss 1.895 | train 52.93% | val 53.35% |   4.7s |   5741MB
+epoch   5/30 | loss 1.166 | train 71.06% | val 63.88% |   4.7s |   5741MB
+epoch   6/30 | loss 0.753 | train 80.80% | val 68.24% |   4.8s |   5741MB
+epoch   7/30 | loss 0.523 | train 87.50% | val 71.28% |   4.8s |   5741MB
+epoch   8/30 | loss 0.364 | train 91.01% | val 72.77% |   4.9s |   5741MB
+epoch   9/30 | loss 0.260 | train 94.89% | val 73.88% |   4.8s |   5741MB
+epoch  10/30 | loss 0.181 | train 97.07% | val 74.63% |   4.8s |   5741MB
+epoch  11/30 | loss 0.131 | train 97.98% | val 74.68% |   4.8s |   5741MB
+epoch  12/30 | loss 0.103 | train 98.88% | val 75.27% |   4.7s |   5741MB
+epoch  13/30 | loss 0.079 | train 99.57% | val 74.73% |   4.8s |   5741MB
+epoch  14/30 | loss 0.069 | train 99.47% | val 75.48% |   4.8s |   5741MB
+epoch  15/30 | loss 0.058 | train 99.84% | val 75.48% |   4.8s |   5741MB
+epoch  16/30 | loss 0.049 | train 99.68% | val 75.53% |   4.7s |   5741MB
+epoch  17/30 | loss 0.046 | train 99.84% | val 75.43% |   4.9s |   5741MB
+epoch  18/30 | loss 0.041 | train 99.89% | val 76.01% |   4.9s |   5741MB
+epoch  19/30 | loss 0.040 | train 99.79% | val 76.28% |   4.7s |   5741MB
+epoch  20/30 | loss 0.034 | train 100.00% | val 75.80% |   4.8s |   5741MB
+epoch  21/30 | loss 0.033 | train 99.89% | val 75.69% |   4.8s |   5741MB
+epoch  22/30 | loss 0.031 | train 99.89% | val 75.74% |   5.0s |   5741MB
+epoch  23/30 | loss 0.031 | train 99.95% | val 75.90% |   4.9s |   5741MB
+epoch  24/30 | loss 0.028 | train 100.00% | val 75.80% |   4.8s |   5741MB
+epoch  25/30 | loss 0.028 | train 99.89% | val 75.96% |   4.7s |   5741MB
+epoch  26/30 | loss 0.029 | train 100.00% | val 76.01% |   4.7s |   5741MB
+epoch  27/30 | loss 0.027 | train 100.00% | val 76.01% |   4.9s |   5741MB
+epoch  28/30 | loss 0.028 | train 99.95% | val 76.01% |   4.8s |   5741MB
+epoch  29/30 | loss 0.029 | train 99.95% | val 76.01% |   4.7s |   5741MB
+epoch  30/30 | loss 0.030 | train 99.84% | val 76.06% |   4.8s |   5741MB
+
+== ssf-late_dtd_seed43: best_val=76.28%  test=76.54%  trainable=103,727 (0.121%)
+===== ssf/even / dtd / seed 43 (30 ep) =====
+[ssf-even | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.096 | train  2.13% | val  2.39% |   6.5s |   9177MB
+epoch   2/30 | loss 4.269 | train  6.33% | val 11.17% |   5.0s |   9177MB
+epoch   3/30 | loss 3.067 | train 24.79% | val 35.00% |   5.0s |   9177MB
+epoch   4/30 | loss 1.924 | train 52.61% | val 53.67% |   5.2s |   9177MB
+epoch   5/30 | loss 1.166 | train 71.54% | val 63.67% |   5.1s |   9177MB
+epoch   6/30 | loss 0.744 | train 80.90% | val 69.15% |   5.3s |   9177MB
+epoch   7/30 | loss 0.510 | train 87.29% | val 71.91% |   5.2s |   9177MB
+epoch   8/30 | loss 0.354 | train 91.97% | val 73.67% |   5.2s |   9177MB
+epoch   9/30 | loss 0.251 | train 94.84% | val 73.99% |   5.1s |   9177MB
+epoch  10/30 | loss 0.175 | train 96.86% | val 74.47% |   5.2s |   9177MB
+epoch  11/30 | loss 0.125 | train 98.30% | val 74.26% |   5.1s |   9177MB
+epoch  12/30 | loss 0.099 | train 99.26% | val 74.79% |   5.1s |   9177MB
+epoch  13/30 | loss 0.078 | train 99.47% | val 75.11% |   5.2s |   9177MB
+epoch  14/30 | loss 0.065 | train 99.73% | val 75.74% |   5.2s |   9177MB
+epoch  15/30 | loss 0.055 | train 99.89% | val 75.85% |   5.3s |   9177MB
+epoch  16/30 | loss 0.046 | train 99.84% | val 76.06% |   5.1s |   9177MB
+epoch  17/30 | loss 0.043 | train 99.89% | val 76.60% |   5.4s |   9177MB
+epoch  18/30 | loss 0.039 | train 99.95% | val 76.33% |   5.1s |   9177MB
+epoch  19/30 | loss 0.038 | train 99.84% | val 76.38% |   5.1s |   9177MB
+epoch  20/30 | loss 0.032 | train 100.00% | val 76.60% |   5.1s |   9177MB
+epoch  21/30 | loss 0.032 | train 99.95% | val 76.33% |   5.3s |   9177MB
+epoch  22/30 | loss 0.029 | train 99.89% | val 76.49% |   5.3s |   9177MB
+epoch  23/30 | loss 0.029 | train 100.00% | val 76.28% |   5.3s |   9177MB
+epoch  24/30 | loss 0.027 | train 100.00% | val 76.33% |   5.1s |   9177MB
+epoch  25/30 | loss 0.026 | train 99.89% | val 76.44% |   5.1s |   9177MB
+epoch  26/30 | loss 0.027 | train 100.00% | val 76.38% |   5.1s |   9177MB
+epoch  27/30 | loss 0.026 | train 100.00% | val 76.44% |   5.2s |   9177MB
+epoch  28/30 | loss 0.026 | train 99.95% | val 76.54% |   5.2s |   9177MB
+epoch  29/30 | loss 0.026 | train 99.95% | val 76.49% |   5.1s |   9177MB
+epoch  30/30 | loss 0.026 | train 99.95% | val 76.49% |   5.2s |   9177MB
+
+== ssf-even_dtd_seed43: best_val=76.60%  test=77.45%  trainable=103,727 (0.121%)
+===== linear/all / dtd / seed 44 (30 ep) =====
+[linear | dtd] classes=47 | trainable=36,143 (0.042% of 85,834,799)
+lr=0.01  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 4.500 | train  7.77% | val 33.51% |   5.8s |   1758MB
+epoch   2/30 | loss 1.340 | train 64.31% | val 69.26% |   4.4s |   1758MB
+epoch   3/30 | loss 0.427 | train 86.81% | val 74.04% |   4.2s |   1758MB
+epoch   4/30 | loss 0.151 | train 95.32% | val 75.00% |   4.2s |   1758MB
+epoch   5/30 | loss 0.059 | train 98.78% | val 74.36% |   4.2s |   1758MB
+epoch   6/30 | loss 0.041 | train 98.94% | val 75.27% |   4.3s |   1758MB
+epoch   7/30 | loss 0.046 | train 99.10% | val 75.32% |   4.1s |   1758MB
+epoch   8/30 | loss 0.030 | train 99.20% | val 75.21% |   4.4s |   1758MB
+epoch   9/30 | loss 0.039 | train 98.94% | val 74.73% |   4.4s |   1758MB
+epoch  10/30 | loss 0.043 | train 98.99% | val 73.09% |   4.6s |   1758MB
+epoch  11/30 | loss 0.104 | train 97.87% | val 73.99% |   4.3s |   1758MB
+epoch  12/30 | loss 0.115 | train 97.77% | val 72.87% |   4.2s |   1758MB
+epoch  13/30 | loss 0.130 | train 96.76% | val 72.13% |   4.3s |   1758MB
+epoch  14/30 | loss 0.061 | train 98.14% | val 72.29% |   4.4s |   1758MB
+epoch  15/30 | loss 0.082 | train 97.71% | val 71.86% |   4.9s |   1758MB
+epoch  16/30 | loss 0.109 | train 97.13% | val 71.91% |   4.6s |   1758MB
+epoch  17/30 | loss 0.085 | train 97.66% | val 72.29% |   4.2s |   1758MB
+epoch  18/30 | loss 0.046 | train 98.72% | val 73.56% |   4.3s |   1758MB
+epoch  19/30 | loss 0.032 | train 99.36% | val 72.87% |   4.7s |   1758MB
+epoch  20/30 | loss 0.020 | train 99.47% | val 73.19% |   4.3s |   1758MB
+epoch  21/30 | loss 0.012 | train 99.63% | val 73.51% |   4.4s |   1758MB
+epoch  22/30 | loss 0.011 | train 99.73% | val 73.72% |   4.3s |   1758MB
+epoch  23/30 | loss 0.011 | train 99.73% | val 73.99% |   4.2s |   1758MB
+epoch  24/30 | loss 0.004 | train 99.89% | val 73.78% |   4.1s |   1758MB
+epoch  25/30 | loss 0.001 | train 100.00% | val 73.88% |   4.2s |   1758MB
+epoch  26/30 | loss 0.002 | train 100.00% | val 74.04% |   4.2s |   1758MB
+epoch  27/30 | loss 0.004 | train 99.95% | val 74.10% |   4.6s |   1758MB
+epoch  28/30 | loss 0.001 | train 100.00% | val 74.10% |   4.2s |   1758MB
+epoch  29/30 | loss 0.001 | train 100.00% | val 74.10% |   4.2s |   1758MB
+epoch  30/30 | loss 0.001 | train 100.00% | val 74.10% |   4.3s |   1758MB
+
+== linear_dtd_seed44: best_val=75.32%  test=76.76%  trainable=36,143 (0.042%)
+===== bitfit/all / dtd / seed 44 (30 ep) =====
+[bitfit | dtd] classes=47 | trainable=139,055 (0.162% of 85,834,799)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.286 | train  1.33% | val  2.29% |   6.1s |   6679MB
+epoch   2/30 | loss 4.375 | train  3.78% | val  9.31% |   4.5s |   6679MB
+epoch   3/30 | loss 3.180 | train 21.33% | val 31.17% |   4.6s |   6679MB
+epoch   4/30 | loss 2.048 | train 50.27% | val 52.50% |   4.7s |   6679MB
+epoch   5/30 | loss 1.177 | train 70.96% | val 64.20% |   5.0s |   6679MB
+epoch   6/30 | loss 0.740 | train 79.68% | val 69.20% |   4.6s |   6679MB
+epoch   7/30 | loss 0.497 | train 86.38% | val 71.01% |   4.6s |   6679MB
+epoch   8/30 | loss 0.335 | train 91.17% | val 73.14% |   4.9s |   6679MB
+epoch   9/30 | loss 0.236 | train 94.41% | val 74.57% |   4.8s |   6679MB
+epoch  10/30 | loss 0.172 | train 96.91% | val 74.73% |   4.6s |   6679MB
+epoch  11/30 | loss 0.119 | train 98.35% | val 76.06% |   4.6s |   6679MB
+epoch  12/30 | loss 0.085 | train 99.31% | val 75.90% |   4.6s |   6679MB
+epoch  13/30 | loss 0.069 | train 99.63% | val 76.49% |   4.6s |   6679MB
+epoch  14/30 | loss 0.055 | train 99.79% | val 76.17% |   4.7s |   6679MB
+epoch  15/30 | loss 0.049 | train 99.84% | val 77.29% |   4.6s |   6679MB
+epoch  16/30 | loss 0.043 | train 99.89% | val 76.65% |   4.6s |   6679MB
+epoch  17/30 | loss 0.035 | train 99.95% | val 77.18% |   4.8s |   6679MB
+epoch  18/30 | loss 0.035 | train 99.95% | val 77.50% |   4.6s |   6679MB
+epoch  19/30 | loss 0.033 | train 99.95% | val 77.18% |   5.0s |   6679MB
+epoch  20/30 | loss 0.029 | train 99.95% | val 77.07% |   5.1s |   6679MB
+epoch  21/30 | loss 0.027 | train 100.00% | val 77.34% |   4.9s |   6679MB
+epoch  22/30 | loss 0.024 | train 99.89% | val 77.34% |   4.8s |   6679MB
+epoch  23/30 | loss 0.025 | train 99.89% | val 76.97% |   4.7s |   6679MB
+epoch  24/30 | loss 0.023 | train 100.00% | val 77.18% |   4.7s |   6679MB
+epoch  25/30 | loss 0.022 | train 100.00% | val 77.23% |   4.8s |   6679MB
+epoch  26/30 | loss 0.022 | train 100.00% | val 77.23% |   5.1s |   6679MB
+epoch  27/30 | loss 0.023 | train 100.00% | val 77.39% |   4.8s |   6679MB
+epoch  28/30 | loss 0.020 | train 100.00% | val 77.39% |   4.6s |   6679MB
+epoch  29/30 | loss 0.021 | train 99.89% | val 77.39% |   4.7s |   6679MB
+epoch  30/30 | loss 0.021 | train 100.00% | val 77.39% |   4.9s |   6679MB
+
+== bitfit_dtd_seed44: best_val=77.50%  test=77.39%  trainable=139,055 (0.162%)
+===== full/all / dtd / seed 44 (30 ep) =====
+[full | dtd] classes=47 | trainable=85,834,799 (100.000% of 85,834,799)
+lr=1e-05  wd=0.05  drop_path=0.1  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.373 | train  2.02% | val  1.54% |   6.3s |  10153MB
+epoch   2/30 | loss 5.194 | train  1.54% | val  2.61% |   4.8s |  10153MB
+epoch   3/30 | loss 4.711 | train  2.50% | val  3.56% |   5.1s |  10153MB
+epoch   4/30 | loss 4.247 | train  3.24% | val  4.36% |   5.2s |  10153MB
+epoch   5/30 | loss 4.033 | train  4.52% | val  7.07% |   5.0s |  10153MB
+epoch   6/30 | loss 3.741 | train  8.62% | val 16.49% |   5.0s |  10153MB
+epoch   7/30 | loss 3.453 | train 17.23% | val 28.14% |   5.0s |  10153MB
+epoch   8/30 | loss 3.072 | train 27.13% | val 40.32% |   5.0s |  10153MB
+epoch   9/30 | loss 2.604 | train 36.44% | val 50.96% |   5.2s |  10153MB
+epoch  10/30 | loss 2.172 | train 45.48% | val 58.03% |   5.0s |  10153MB
+epoch  11/30 | loss 1.728 | train 56.33% | val 63.03% |   4.9s |  10153MB
+epoch  12/30 | loss 1.481 | train 61.38% | val 66.22% |   4.9s |  10153MB
+epoch  13/30 | loss 1.241 | train 68.35% | val 67.55% |   5.0s |  10153MB
+epoch  14/30 | loss 1.084 | train 72.93% | val 68.62% |   5.1s |  10153MB
+epoch  15/30 | loss 0.970 | train 74.10% | val 69.79% |   5.0s |  10153MB
+epoch  16/30 | loss 0.843 | train 78.99% | val 70.53% |   4.8s |  10153MB
+epoch  17/30 | loss 0.791 | train 79.31% | val 71.49% |   5.1s |  10153MB
+epoch  18/30 | loss 0.696 | train 82.39% | val 71.91% |   4.9s |  10153MB
+epoch  19/30 | loss 0.672 | train 83.24% | val 71.70% |   5.1s |  10153MB
+epoch  20/30 | loss 0.577 | train 86.97% | val 72.55% |   5.0s |  10153MB
+epoch  21/30 | loss 0.587 | train 85.43% | val 73.19% |   5.0s |  10153MB
+epoch  22/30 | loss 0.562 | train 86.01% | val 73.24% |   5.1s |  10153MB
+epoch  23/30 | loss 0.536 | train 87.07% | val 72.87% |   5.0s |  10153MB
+epoch  24/30 | loss 0.509 | train 87.23% | val 73.09% |   4.9s |  10153MB
+epoch  25/30 | loss 0.475 | train 88.56% | val 73.46% |   5.0s |  10153MB
+epoch  26/30 | loss 0.482 | train 88.35% | val 73.30% |   5.0s |  10153MB
+epoch  27/30 | loss 0.473 | train 88.72% | val 73.30% |   5.1s |  10153MB
+epoch  28/30 | loss 0.450 | train 88.88% | val 73.30% |   4.9s |  10153MB
+epoch  29/30 | loss 0.480 | train 88.83% | val 73.40% |   5.1s |  10153MB
+epoch  30/30 | loss 0.447 | train 89.41% | val 73.35% |   4.9s |  10153MB
+
+== full_dtd_seed44: best_val=73.46%  test=75.48%  trainable=85,834,799 (100.000%)
+===== lora/all / dtd / seed 44 (30 ep) =====
+[lora | dtd] classes=47 | trainable=331,055 (0.384% of 86,129,711)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.283 | train  1.17% | val  2.02% |   6.2s |   6992MB
+epoch   2/30 | loss 4.397 | train  4.26% | val  9.89% |   4.8s |   6992MB
+epoch   3/30 | loss 3.057 | train 23.99% | val 36.65% |   5.1s |   6992MB
+epoch   4/30 | loss 1.693 | train 58.19% | val 60.85% |   5.0s |   6992MB
+epoch   5/30 | loss 0.823 | train 76.91% | val 70.27% |   4.9s |   6992MB
+epoch   6/30 | loss 0.468 | train 86.49% | val 73.67% |   4.7s |   6992MB
+epoch   7/30 | loss 0.269 | train 93.51% | val 74.31% |   4.7s |   6992MB
+epoch   8/30 | loss 0.166 | train 96.49% | val 75.32% |   4.9s |   6992MB
+epoch   9/30 | loss 0.106 | train 98.19% | val 75.59% |   4.9s |   6992MB
+epoch  10/30 | loss 0.067 | train 99.41% | val 76.65% |   5.1s |   6992MB
+epoch  11/30 | loss 0.046 | train 99.63% | val 76.22% |   4.8s |   6992MB
+epoch  12/30 | loss 0.030 | train 99.95% | val 76.33% |   4.9s |   6992MB
+epoch  13/30 | loss 0.020 | train 99.95% | val 76.86% |   4.9s |   6992MB
+epoch  14/30 | loss 0.017 | train 99.95% | val 76.91% |   4.9s |   6992MB
+epoch  15/30 | loss 0.015 | train 99.95% | val 76.81% |   5.0s |   6992MB
+epoch  16/30 | loss 0.015 | train 99.89% | val 76.28% |   5.2s |   6992MB
+epoch  17/30 | loss 0.023 | train 99.73% | val 77.34% |   5.2s |   6992MB
+epoch  18/30 | loss 0.013 | train 99.95% | val 77.39% |   4.7s |   6992MB
+epoch  19/30 | loss 0.009 | train 100.00% | val 77.45% |   4.9s |   6992MB
+epoch  20/30 | loss 0.009 | train 99.89% | val 77.07% |   4.8s |   6992MB
+epoch  21/30 | loss 0.007 | train 100.00% | val 77.18% |   5.1s |   6992MB
+epoch  22/30 | loss 0.006 | train 100.00% | val 77.39% |   4.9s |   6992MB
+epoch  23/30 | loss 0.006 | train 100.00% | val 77.45% |   4.9s |   6992MB
+epoch  24/30 | loss 0.005 | train 100.00% | val 77.50% |   4.8s |   6992MB
+epoch  25/30 | loss 0.006 | train 99.95% | val 77.61% |   4.9s |   6992MB
+epoch  26/30 | loss 0.005 | train 100.00% | val 77.45% |   4.8s |   6992MB
+epoch  27/30 | loss 0.005 | train 100.00% | val 77.55% |   4.8s |   6992MB
+epoch  28/30 | loss 0.005 | train 100.00% | val 77.55% |   4.7s |   6992MB
+epoch  29/30 | loss 0.005 | train 100.00% | val 77.50% |   4.6s |   6992MB
+epoch  30/30 | loss 0.005 | train 100.00% | val 77.50% |   4.9s |   6992MB
+
+== lora_dtd_seed44: best_val=77.61%  test=79.04%  trainable=331,055 (0.384%)
+===== ssf/all / dtd / seed 44 (30 ep) =====
+[ssf | dtd] classes=47 | trainable=238,895 (0.278% of 86,037,551)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.276 | train  1.38% | val  2.45% |   7.5s |  14881MB
+epoch   2/30 | loss 4.310 | train  3.94% | val  9.68% |   6.1s |  14881MB
+epoch   3/30 | loss 3.128 | train 22.45% | val 33.30% |   6.3s |  14881MB
+epoch   4/30 | loss 1.989 | train 51.65% | val 53.40% |   6.4s |  14881MB
+epoch   5/30 | loss 1.116 | train 71.91% | val 64.52% |   6.4s |  14881MB
+epoch   6/30 | loss 0.692 | train 81.06% | val 69.57% |   6.3s |  14881MB
+epoch   7/30 | loss 0.461 | train 87.61% | val 71.49% |   6.4s |  14881MB
+epoch   8/30 | loss 0.304 | train 92.02% | val 73.83% |   6.5s |  14881MB
+epoch   9/30 | loss 0.212 | train 95.43% | val 74.68% |   6.5s |  14881MB
+epoch  10/30 | loss 0.150 | train 97.55% | val 75.05% |   6.5s |  14881MB
+epoch  11/30 | loss 0.101 | train 98.56% | val 75.96% |   6.4s |  14881MB
+epoch  12/30 | loss 0.071 | train 99.52% | val 75.96% |   6.5s |  14881MB
+epoch  13/30 | loss 0.057 | train 99.68% | val 76.12% |   6.3s |  14881MB
+epoch  14/30 | loss 0.046 | train 99.79% | val 76.28% |   6.3s |  14881MB
+epoch  15/30 | loss 0.041 | train 99.79% | val 76.91% |   6.3s |  14881MB
+epoch  16/30 | loss 0.036 | train 99.89% | val 77.23% |   6.3s |  14881MB
+epoch  17/30 | loss 0.029 | train 100.00% | val 76.76% |   6.5s |  14881MB
+epoch  18/30 | loss 0.028 | train 99.95% | val 77.29% |   6.5s |  14881MB
+epoch  19/30 | loss 0.027 | train 99.95% | val 77.55% |   6.5s |  14881MB
+epoch  20/30 | loss 0.023 | train 99.95% | val 77.45% |   6.3s |  14881MB
+epoch  21/30 | loss 0.021 | train 100.00% | val 77.66% |   6.4s |  14881MB
+epoch  22/30 | loss 0.020 | train 99.95% | val 76.97% |   6.4s |  14881MB
+epoch  23/30 | loss 0.020 | train 99.89% | val 77.13% |   6.4s |  14881MB
+epoch  24/30 | loss 0.019 | train 100.00% | val 77.34% |   6.3s |  14881MB
+epoch  25/30 | loss 0.018 | train 100.00% | val 77.39% |   6.3s |  14881MB
+epoch  26/30 | loss 0.018 | train 100.00% | val 77.34% |   6.3s |  14881MB
+epoch  27/30 | loss 0.019 | train 100.00% | val 77.50% |   6.4s |  14881MB
+epoch  28/30 | loss 0.016 | train 100.00% | val 77.45% |   6.3s |  14881MB
+epoch  29/30 | loss 0.018 | train 99.89% | val 77.45% |   6.4s |  14881MB
+epoch  30/30 | loss 0.017 | train 100.00% | val 77.45% |   6.5s |  14881MB
+
+== ssf_dtd_seed44: best_val=77.66%  test=77.45%  trainable=238,895 (0.278%)
+===== lora/early / dtd / seed 44 (30 ep) =====
+[lora-early | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.304 | train  1.33% | val  1.86% |   5.9s |   6685MB
+epoch   2/30 | loss 4.560 | train  3.67% | val  7.39% |   4.5s |   6685MB
+epoch   3/30 | loss 3.338 | train 18.88% | val 28.56% |   4.7s |   6685MB
+epoch   4/30 | loss 2.099 | train 46.60% | val 51.06% |   4.5s |   6685MB
+epoch   5/30 | loss 1.216 | train 69.57% | val 63.09% |   4.6s |   6685MB
+epoch   6/30 | loss 0.753 | train 81.06% | val 68.46% |   4.7s |   6685MB
+epoch   7/30 | loss 0.497 | train 87.13% | val 71.17% |   4.6s |   6685MB
+epoch   8/30 | loss 0.350 | train 91.65% | val 73.35% |   4.6s |   6685MB
+epoch   9/30 | loss 0.238 | train 95.74% | val 74.31% |   4.6s |   6685MB
+epoch  10/30 | loss 0.166 | train 97.50% | val 74.63% |   4.6s |   6685MB
+epoch  11/30 | loss 0.109 | train 99.26% | val 75.21% |   4.6s |   6685MB
+epoch  12/30 | loss 0.085 | train 99.57% | val 75.00% |   4.7s |   6685MB
+epoch  13/30 | loss 0.069 | train 99.68% | val 75.43% |   4.6s |   6685MB
+epoch  14/30 | loss 0.052 | train 99.95% | val 76.22% |   4.6s |   6685MB
+epoch  15/30 | loss 0.044 | train 99.84% | val 76.54% |   4.6s |   6685MB
+epoch  16/30 | loss 0.039 | train 99.95% | val 76.33% |   4.7s |   6685MB
+epoch  17/30 | loss 0.035 | train 99.84% | val 76.81% |   4.6s |   6685MB
+epoch  18/30 | loss 0.032 | train 100.00% | val 76.54% |   4.6s |   6685MB
+epoch  19/30 | loss 0.030 | train 100.00% | val 76.49% |   4.5s |   6685MB
+epoch  20/30 | loss 0.028 | train 99.95% | val 76.97% |   4.6s |   6685MB
+epoch  21/30 | loss 0.023 | train 100.00% | val 77.02% |   4.7s |   6685MB
+epoch  22/30 | loss 0.022 | train 100.00% | val 76.76% |   4.9s |   6685MB
+epoch  23/30 | loss 0.023 | train 100.00% | val 77.07% |   4.7s |   6685MB
+epoch  24/30 | loss 0.020 | train 100.00% | val 77.13% |   4.7s |   6685MB
+epoch  25/30 | loss 0.020 | train 100.00% | val 76.97% |   4.6s |   6685MB
+epoch  26/30 | loss 0.020 | train 100.00% | val 76.81% |   4.7s |   6685MB
+epoch  27/30 | loss 0.020 | train 100.00% | val 76.70% |   4.6s |   6685MB
+epoch  28/30 | loss 0.021 | train 100.00% | val 76.76% |   4.7s |   6685MB
+epoch  29/30 | loss 0.019 | train 100.00% | val 76.81% |   4.5s |   6685MB
+epoch  30/30 | loss 0.019 | train 100.00% | val 76.76% |   4.6s |   6685MB
+
+== lora-early_dtd_seed44: best_val=77.13%  test=77.45%  trainable=134,447 (0.156%)
+===== lora/mid / dtd / seed 44 (30 ep) =====
+[lora-mid | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.295 | train  1.33% | val  2.02% |   5.6s |   4756MB
+epoch   2/30 | loss 4.490 | train  3.83% | val  8.03% |   4.5s |   4756MB
+epoch   3/30 | loss 3.225 | train 21.01% | val 31.65% |   4.6s |   4756MB
+epoch   4/30 | loss 1.960 | train 51.33% | val 54.63% |   4.2s |   4756MB
+epoch   5/30 | loss 1.081 | train 71.97% | val 66.06% |   4.4s |   4756MB
+epoch   6/30 | loss 0.662 | train 82.82% | val 70.37% |   4.3s |   4756MB
+epoch   7/30 | loss 0.425 | train 89.26% | val 73.19% |   4.4s |   4756MB
+epoch   8/30 | loss 0.282 | train 93.51% | val 74.68% |   4.4s |   4756MB
+epoch   9/30 | loss 0.188 | train 96.81% | val 74.89% |   4.4s |   4756MB
+epoch  10/30 | loss 0.122 | train 98.46% | val 75.37% |   4.5s |   4756MB
+epoch  11/30 | loss 0.081 | train 99.57% | val 74.57% |   4.5s |   4756MB
+epoch  12/30 | loss 0.066 | train 99.52% | val 76.12% |   4.5s |   4756MB
+epoch  13/30 | loss 0.049 | train 99.68% | val 76.33% |   4.5s |   4756MB
+epoch  14/30 | loss 0.037 | train 99.89% | val 76.38% |   4.5s |   4756MB
+epoch  15/30 | loss 0.031 | train 99.95% | val 76.86% |   4.5s |   4756MB
+epoch  16/30 | loss 0.025 | train 100.00% | val 76.81% |   4.4s |   4756MB
+epoch  17/30 | loss 0.021 | train 100.00% | val 76.70% |   4.3s |   4756MB
+epoch  18/30 | loss 0.021 | train 99.95% | val 76.65% |   4.5s |   4756MB
+epoch  19/30 | loss 0.018 | train 100.00% | val 76.91% |   4.5s |   4756MB
+epoch  20/30 | loss 0.016 | train 100.00% | val 77.07% |   4.4s |   4756MB
+epoch  21/30 | loss 0.014 | train 100.00% | val 77.34% |   4.4s |   4756MB
+epoch  22/30 | loss 0.013 | train 100.00% | val 76.86% |   4.4s |   4756MB
+epoch  23/30 | loss 0.012 | train 100.00% | val 76.86% |   4.4s |   4756MB
+epoch  24/30 | loss 0.012 | train 100.00% | val 77.02% |   4.3s |   4756MB
+epoch  25/30 | loss 0.012 | train 100.00% | val 76.86% |   4.3s |   4756MB
+epoch  26/30 | loss 0.012 | train 100.00% | val 76.91% |   4.4s |   4756MB
+epoch  27/30 | loss 0.011 | train 100.00% | val 77.02% |   4.4s |   4756MB
+epoch  28/30 | loss 0.011 | train 100.00% | val 76.97% |   4.5s |   4756MB
+epoch  29/30 | loss 0.011 | train 100.00% | val 76.91% |   4.4s |   4756MB
+epoch  30/30 | loss 0.011 | train 100.00% | val 76.97% |   4.4s |   4756MB
+
+== lora-mid_dtd_seed44: best_val=77.34%  test=77.93%  trainable=134,447 (0.156%)
+===== lora/late / dtd / seed 44 (30 ep) =====
+[lora-late | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.296 | train  1.33% | val  2.02% |   5.5s |   2825MB
+epoch   2/30 | loss 4.495 | train  3.99% | val  8.40% |   4.2s |   2825MB
+epoch   3/30 | loss 3.143 | train 22.71% | val 34.89% |   4.4s |   2825MB
+epoch   4/30 | loss 1.763 | train 55.37% | val 58.14% |   4.2s |   2825MB
+epoch   5/30 | loss 0.927 | train 74.95% | val 68.99% |   4.3s |   2825MB
+epoch   6/30 | loss 0.544 | train 84.41% | val 72.98% |   4.4s |   2825MB
+epoch   7/30 | loss 0.333 | train 91.01% | val 73.30% |   4.3s |   2825MB
+epoch   8/30 | loss 0.214 | train 94.36% | val 73.94% |   4.4s |   2825MB
+epoch   9/30 | loss 0.151 | train 97.23% | val 74.41% |   4.3s |   2825MB
+epoch  10/30 | loss 0.103 | train 98.19% | val 75.37% |   4.3s |   2825MB
+epoch  11/30 | loss 0.073 | train 99.20% | val 75.37% |   4.2s |   2825MB
+epoch  12/30 | loss 0.058 | train 99.31% | val 75.00% |   4.3s |   2825MB
+epoch  13/30 | loss 0.044 | train 99.57% | val 75.90% |   4.3s |   2825MB
+epoch  14/30 | loss 0.029 | train 99.84% | val 75.96% |   4.6s |   2825MB
+epoch  15/30 | loss 0.022 | train 99.89% | val 76.33% |   4.4s |   2825MB
+epoch  16/30 | loss 0.018 | train 99.89% | val 76.76% |   4.3s |   2825MB
+epoch  17/30 | loss 0.016 | train 100.00% | val 76.17% |   4.4s |   2825MB
+epoch  18/30 | loss 0.015 | train 99.95% | val 76.60% |   4.3s |   2825MB
+epoch  19/30 | loss 0.013 | train 100.00% | val 76.65% |   4.3s |   2825MB
+epoch  20/30 | loss 0.013 | train 100.00% | val 76.86% |   4.4s |   2825MB
+epoch  21/30 | loss 0.010 | train 100.00% | val 76.60% |   4.3s |   2825MB
+epoch  22/30 | loss 0.010 | train 100.00% | val 76.76% |   4.3s |   2825MB
+epoch  23/30 | loss 0.010 | train 99.95% | val 76.49% |   4.4s |   2825MB
+epoch  24/30 | loss 0.008 | train 100.00% | val 76.54% |   4.3s |   2825MB
+epoch  25/30 | loss 0.009 | train 100.00% | val 77.02% |   4.3s |   2825MB
+epoch  26/30 | loss 0.008 | train 100.00% | val 76.97% |   4.3s |   2825MB
+epoch  27/30 | loss 0.009 | train 99.95% | val 77.02% |   4.3s |   2825MB
+epoch  28/30 | loss 0.009 | train 99.95% | val 77.02% |   4.2s |   2825MB
+epoch  29/30 | loss 0.008 | train 100.00% | val 77.07% |   4.3s |   2825MB
+epoch  30/30 | loss 0.009 | train 100.00% | val 77.07% |   4.3s |   2825MB
+
+== lora-late_dtd_seed44: best_val=77.07%  test=79.63%  trainable=134,447 (0.156%)
+===== lora/even / dtd / seed 44 (30 ep) =====
+[lora-even | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.301 | train  1.33% | val  1.86% |   6.0s |   6686MB
+epoch   2/30 | loss 4.537 | train  3.83% | val  7.71% |   4.4s |   6686MB
+epoch   3/30 | loss 3.269 | train 20.11% | val 31.38% |   4.6s |   6686MB
+epoch   4/30 | loss 1.960 | train 50.00% | val 54.73% |   4.6s |   6686MB
+epoch   5/30 | loss 1.071 | train 72.87% | val 65.80% |   4.9s |   6686MB
+epoch   6/30 | loss 0.641 | train 82.55% | val 71.12% |   4.6s |   6686MB
+epoch   7/30 | loss 0.407 | train 89.36% | val 73.14% |   4.8s |   6686MB
+epoch   8/30 | loss 0.265 | train 93.72% | val 75.16% |   4.8s |   6686MB
+epoch   9/30 | loss 0.175 | train 97.07% | val 75.00% |   4.6s |   6686MB
+epoch  10/30 | loss 0.118 | train 98.56% | val 76.06% |   4.6s |   6686MB
+epoch  11/30 | loss 0.077 | train 99.57% | val 75.64% |   4.7s |   6686MB
+epoch  12/30 | loss 0.061 | train 99.52% | val 75.96% |   4.7s |   6686MB
+epoch  13/30 | loss 0.046 | train 99.73% | val 77.18% |   4.6s |   6686MB
+epoch  14/30 | loss 0.035 | train 99.95% | val 77.29% |   4.7s |   6686MB
+epoch  15/30 | loss 0.031 | train 100.00% | val 77.66% |   4.8s |   6686MB
+epoch  16/30 | loss 0.025 | train 99.95% | val 77.55% |   4.7s |   6686MB
+epoch  17/30 | loss 0.021 | train 99.95% | val 77.07% |   4.8s |   6686MB
+epoch  18/30 | loss 0.020 | train 100.00% | val 76.91% |   4.7s |   6686MB
+epoch  19/30 | loss 0.018 | train 100.00% | val 77.13% |   4.6s |   6686MB
+epoch  20/30 | loss 0.017 | train 100.00% | val 77.23% |   4.7s |   6686MB
+epoch  21/30 | loss 0.014 | train 100.00% | val 77.34% |   4.6s |   6686MB
+epoch  22/30 | loss 0.013 | train 100.00% | val 77.23% |   4.7s |   6686MB
+epoch  23/30 | loss 0.012 | train 100.00% | val 77.29% |   4.6s |   6686MB
+epoch  24/30 | loss 0.012 | train 100.00% | val 77.07% |   4.7s |   6686MB
+epoch  25/30 | loss 0.012 | train 100.00% | val 77.34% |   4.7s |   6686MB
+epoch  26/30 | loss 0.012 | train 100.00% | val 77.29% |   4.7s |   6686MB
+epoch  27/30 | loss 0.011 | train 100.00% | val 77.23% |   4.7s |   6686MB
+epoch  28/30 | loss 0.012 | train 99.95% | val 77.23% |   4.7s |   6686MB
+epoch  29/30 | loss 0.011 | train 100.00% | val 77.29% |   4.6s |   6686MB
+epoch  30/30 | loss 0.012 | train 100.00% | val 77.29% |   4.6s |   6686MB
+
+== lora-even_dtd_seed44: best_val=77.66%  test=77.61%  trainable=134,447 (0.156%)
+===== ssf/early / dtd / seed 44 (30 ep) =====
+[ssf-early | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.316 | train  1.33% | val  1.97% |   6.5s |   9173MB
+epoch   2/30 | loss 4.514 | train  3.19% | val  8.19% |   5.0s |   9173MB
+epoch   3/30 | loss 3.284 | train 18.99% | val 29.41% |   5.2s |   9173MB
+epoch   4/30 | loss 2.127 | train 47.93% | val 49.89% |   5.3s |   9173MB
+epoch   5/30 | loss 1.268 | train 68.99% | val 61.86% |   5.2s |   9173MB
+epoch   6/30 | loss 0.801 | train 78.83% | val 67.07% |   5.3s |   9173MB
+epoch   7/30 | loss 0.550 | train 85.37% | val 70.16% |   5.3s |   9173MB
+epoch   8/30 | loss 0.367 | train 90.74% | val 72.34% |   5.2s |   9173MB
+epoch   9/30 | loss 0.260 | train 94.63% | val 73.46% |   5.4s |   9173MB
+epoch  10/30 | loss 0.190 | train 96.91% | val 74.36% |   5.3s |   9173MB
+epoch  11/30 | loss 0.130 | train 98.51% | val 74.95% |   5.2s |   9173MB
+epoch  12/30 | loss 0.097 | train 99.26% | val 75.11% |   5.2s |   9173MB
+epoch  13/30 | loss 0.081 | train 99.36% | val 75.80% |   5.4s |   9173MB
+epoch  14/30 | loss 0.065 | train 99.68% | val 76.01% |   5.2s |   9173MB
+epoch  15/30 | loss 0.057 | train 99.89% | val 76.22% |   5.2s |   9173MB
+epoch  16/30 | loss 0.050 | train 99.89% | val 76.33% |   5.2s |   9173MB
+epoch  17/30 | loss 0.042 | train 100.00% | val 76.33% |   5.3s |   9173MB
+epoch  18/30 | loss 0.040 | train 99.95% | val 76.54% |   5.2s |   9173MB
+epoch  19/30 | loss 0.037 | train 99.95% | val 76.49% |   5.3s |   9173MB
+epoch  20/30 | loss 0.033 | train 100.00% | val 76.06% |   5.2s |   9173MB
+epoch  21/30 | loss 0.033 | train 99.89% | val 76.22% |   5.2s |   9173MB
+epoch  22/30 | loss 0.029 | train 99.95% | val 76.49% |   5.3s |   9173MB
+epoch  23/30 | loss 0.029 | train 100.00% | val 76.54% |   5.5s |   9173MB
+epoch  24/30 | loss 0.028 | train 100.00% | val 76.70% |   5.2s |   9173MB
+epoch  25/30 | loss 0.027 | train 100.00% | val 76.70% |   5.2s |   9173MB
+epoch  26/30 | loss 0.027 | train 99.95% | val 76.65% |   5.1s |   9173MB
+epoch  27/30 | loss 0.027 | train 100.00% | val 76.60% |   5.2s |   9173MB
+epoch  28/30 | loss 0.024 | train 100.00% | val 76.54% |   5.1s |   9173MB
+epoch  29/30 | loss 0.026 | train 99.95% | val 76.54% |   5.3s |   9173MB
+epoch  30/30 | loss 0.025 | train 100.00% | val 76.54% |   5.2s |   9173MB
+
+== ssf-early_dtd_seed44: best_val=76.70%  test=76.81%  trainable=103,727 (0.121%)
+===== ssf/mid / dtd / seed 44 (30 ep) =====
+[ssf-mid | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.307 | train  1.28% | val  1.97% |   6.3s |   7244MB
+epoch   2/30 | loss 4.474 | train  3.19% | val  8.51% |   4.8s |   7244MB
+epoch   3/30 | loss 3.210 | train 20.11% | val 30.80% |   5.4s |   7244MB
+epoch   4/30 | loss 2.025 | train 50.37% | val 52.18% |   5.1s |   7244MB
+epoch   5/30 | loss 1.184 | train 70.27% | val 64.04% |   5.1s |   7244MB
+epoch   6/30 | loss 0.748 | train 79.52% | val 69.26% |   5.0s |   7244MB
+epoch   7/30 | loss 0.509 | train 86.12% | val 72.02% |   5.2s |   7244MB
+epoch   8/30 | loss 0.340 | train 91.60% | val 73.56% |   5.1s |   7244MB
+epoch   9/30 | loss 0.244 | train 94.79% | val 73.94% |   5.2s |   7244MB
+epoch  10/30 | loss 0.176 | train 97.18% | val 75.85% |   5.0s |   7244MB
+epoch  11/30 | loss 0.123 | train 98.40% | val 75.59% |   5.1s |   7244MB
+epoch  12/30 | loss 0.090 | train 99.26% | val 76.33% |   4.8s |   7244MB
+epoch  13/30 | loss 0.074 | train 99.52% | val 76.70% |   5.1s |   7244MB
+epoch  14/30 | loss 0.060 | train 99.73% | val 76.38% |   5.1s |   7244MB
+epoch  15/30 | loss 0.053 | train 99.73% | val 76.97% |   4.9s |   7244MB
+epoch  16/30 | loss 0.045 | train 99.95% | val 77.39% |   5.0s |   7244MB
+epoch  17/30 | loss 0.040 | train 99.79% | val 77.39% |   5.1s |   7244MB
+epoch  18/30 | loss 0.038 | train 99.89% | val 77.61% |   5.0s |   7244MB
+epoch  19/30 | loss 0.036 | train 99.95% | val 77.34% |   5.1s |   7244MB
+epoch  20/30 | loss 0.031 | train 99.89% | val 77.29% |   5.1s |   7244MB
+epoch  21/30 | loss 0.029 | train 99.89% | val 77.77% |   5.0s |   7244MB
+epoch  22/30 | loss 0.027 | train 99.95% | val 77.39% |   5.1s |   7244MB
+epoch  23/30 | loss 0.027 | train 99.95% | val 77.50% |   5.1s |   7244MB
+epoch  24/30 | loss 0.026 | train 100.00% | val 77.50% |   5.0s |   7244MB
+epoch  25/30 | loss 0.024 | train 100.00% | val 77.39% |   5.0s |   7244MB
+epoch  26/30 | loss 0.025 | train 100.00% | val 77.61% |   5.2s |   7244MB
+epoch  27/30 | loss 0.026 | train 100.00% | val 77.66% |   4.9s |   7244MB
+epoch  28/30 | loss 0.023 | train 100.00% | val 77.66% |   4.9s |   7244MB
+epoch  29/30 | loss 0.024 | train 99.95% | val 77.71% |   4.9s |   7244MB
+epoch  30/30 | loss 0.023 | train 100.00% | val 77.71% |   5.0s |   7244MB
+
+== ssf-mid_dtd_seed44: best_val=77.77%  test=77.34%  trainable=103,727 (0.121%)
+===== ssf/late / dtd / seed 44 (30 ep) =====
+[ssf-late | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.312 | train  1.28% | val  2.07% |   5.9s |   5741MB
+epoch   2/30 | loss 4.519 | train  3.24% | val  8.19% |   4.7s |   5741MB
+epoch   3/30 | loss 3.233 | train 20.05% | val 30.85% |   4.9s |   5741MB
+epoch   4/30 | loss 1.995 | train 49.73% | val 52.93% |   4.9s |   5741MB
+epoch   5/30 | loss 1.197 | train 69.68% | val 63.94% |   4.7s |   5741MB
+epoch   6/30 | loss 0.780 | train 79.20% | val 68.35% |   4.8s |   5741MB
+epoch   7/30 | loss 0.540 | train 85.80% | val 71.17% |   4.8s |   5741MB
+epoch   8/30 | loss 0.360 | train 91.65% | val 72.39% |   5.0s |   5741MB
+epoch   9/30 | loss 0.266 | train 94.26% | val 72.93% |   4.8s |   5741MB
+epoch  10/30 | loss 0.192 | train 96.70% | val 73.94% |   4.7s |   5741MB
+epoch  11/30 | loss 0.131 | train 98.24% | val 74.68% |   4.9s |   5741MB
+epoch  12/30 | loss 0.099 | train 99.15% | val 74.47% |   4.8s |   5741MB
+epoch  13/30 | loss 0.084 | train 99.41% | val 75.37% |   4.7s |   5741MB
+epoch  14/30 | loss 0.068 | train 99.52% | val 75.32% |   4.8s |   5741MB
+epoch  15/30 | loss 0.060 | train 99.63% | val 75.85% |   4.8s |   5741MB
+epoch  16/30 | loss 0.051 | train 99.84% | val 76.01% |   4.8s |   5741MB
+epoch  17/30 | loss 0.045 | train 99.73% | val 76.01% |   4.9s |   5741MB
+epoch  18/30 | loss 0.042 | train 99.79% | val 76.33% |   4.7s |   5741MB
+epoch  19/30 | loss 0.038 | train 99.89% | val 76.33% |   4.9s |   5741MB
+epoch  20/30 | loss 0.034 | train 99.95% | val 76.38% |   4.8s |   5741MB
+epoch  21/30 | loss 0.035 | train 99.89% | val 76.38% |   4.8s |   5741MB
+epoch  22/30 | loss 0.030 | train 99.95% | val 76.28% |   4.8s |   5741MB
+epoch  23/30 | loss 0.029 | train 99.89% | val 76.60% |   4.8s |   5741MB
+epoch  24/30 | loss 0.029 | train 99.89% | val 76.70% |   4.8s |   5741MB
+epoch  25/30 | loss 0.028 | train 100.00% | val 76.65% |   4.9s |   5741MB
+epoch  26/30 | loss 0.028 | train 99.95% | val 76.60% |   4.9s |   5741MB
+epoch  27/30 | loss 0.029 | train 99.95% | val 76.65% |   4.8s |   5741MB
+epoch  28/30 | loss 0.026 | train 99.95% | val 76.70% |   4.9s |   5741MB
+epoch  29/30 | loss 0.027 | train 99.95% | val 76.70% |   4.9s |   5741MB
+epoch  30/30 | loss 0.027 | train 100.00% | val 76.65% |   4.9s |   5741MB
+
+== ssf-late_dtd_seed44: best_val=76.70%  test=77.39%  trainable=103,727 (0.121%)
+===== ssf/even / dtd / seed 44 (30 ep) =====
+[ssf-even | dtd] classes=47 | trainable=103,727 (0.121% of 85,902,383)
+lr=0.001  wd=0.0005  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.312 | train  1.28% | val  2.07% |   6.4s |   9177MB
+epoch   2/30 | loss 4.509 | train  3.09% | val  8.19% |   5.0s |   9177MB
+epoch   3/30 | loss 3.246 | train 19.47% | val 30.11% |   5.2s |   9177MB
+epoch   4/30 | loss 2.087 | train 48.40% | val 50.64% |   5.4s |   9177MB
+epoch   5/30 | loss 1.223 | train 69.36% | val 63.62% |   5.3s |   9177MB
+epoch   6/30 | loss 0.769 | train 79.20% | val 68.09% |   5.2s |   9177MB
+epoch   7/30 | loss 0.524 | train 86.17% | val 71.49% |   5.2s |   9177MB
+epoch   8/30 | loss 0.350 | train 91.49% | val 73.40% |   5.3s |   9177MB
+epoch   9/30 | loss 0.248 | train 95.05% | val 74.15% |   5.2s |   9177MB
+epoch  10/30 | loss 0.180 | train 97.29% | val 75.11% |   5.2s |   9177MB
+epoch  11/30 | loss 0.124 | train 98.46% | val 75.37% |   5.1s |   9177MB
+epoch  12/30 | loss 0.092 | train 99.26% | val 75.85% |   5.2s |   9177MB
+epoch  13/30 | loss 0.076 | train 99.36% | val 76.33% |   5.3s |   9177MB
+epoch  14/30 | loss 0.063 | train 99.57% | val 76.33% |   5.2s |   9177MB
+epoch  15/30 | loss 0.054 | train 99.73% | val 76.76% |   5.1s |   9177MB
+epoch  16/30 | loss 0.047 | train 99.95% | val 77.34% |   5.3s |   9177MB
+epoch  17/30 | loss 0.040 | train 99.89% | val 77.29% |   5.3s |   9177MB
+epoch  18/30 | loss 0.039 | train 99.95% | val 77.18% |   5.2s |   9177MB
+epoch  19/30 | loss 0.036 | train 99.89% | val 77.29% |   5.3s |   9177MB
+epoch  20/30 | loss 0.032 | train 99.84% | val 77.13% |   5.2s |   9177MB
+epoch  21/30 | loss 0.030 | train 99.95% | val 77.50% |   5.2s |   9177MB
+epoch  22/30 | loss 0.028 | train 99.95% | val 77.55% |   5.4s |   9177MB
+epoch  23/30 | loss 0.027 | train 99.95% | val 77.45% |   5.3s |   9177MB
+epoch  24/30 | loss 0.026 | train 100.00% | val 77.61% |   5.1s |   9177MB
+epoch  25/30 | loss 0.025 | train 100.00% | val 77.71% |   5.4s |   9177MB
+epoch  26/30 | loss 0.026 | train 99.95% | val 77.82% |   5.2s |   9177MB
+epoch  27/30 | loss 0.026 | train 99.95% | val 77.77% |   5.5s |   9177MB
+epoch  28/30 | loss 0.023 | train 100.00% | val 77.82% |   5.2s |   9177MB
+epoch  29/30 | loss 0.025 | train 99.95% | val 77.77% |   5.4s |   9177MB
+epoch  30/30 | loss 0.024 | train 100.00% | val 77.77% |   5.3s |   9177MB
+
+== ssf-even_dtd_seed44: best_val=77.82%  test=77.13%  trainable=103,727 (0.121%)
+############  B 部分: Fisher 自动选层(cifar100/flowers/dtd × 3 种子)  ############
+----- fisher_select: cifar100 seed42 -----
+[head warmup] step 1/300  loss=5.960
+[head warmup] step 100/300  loss=2.445
+[head warmup] step 200/300  loss=3.034
+[head warmup] step 300/300  loss=2.646
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0   12.7%  ########  <== selected
+  block  1   10.5%  ######  <== selected
+  block  2    9.1%  #####
+  block  3   11.5%  #######  <== selected
+  block  4   10.1%  ######  <== selected
+  block  5    8.3%  #####
+  block  6    8.5%  #####
+  block  7    7.8%  #####
+  block  8    6.1%  ####
+  block  9    5.8%  ###
+  block 10    5.1%  ###
+  block 11    4.3%  ###
+
+wrote ./results/followup/fisher_cifar100_seed42.json  (1.5 min)
+SELECTED_BLOCKS=0,1,3,4
+----- cifar100 seed42: selected blocks = 0,1,3,4 -----
+===== lora/auto / cifar100 / seed 42 (20 ep) =====
+[explicit blocks] adapting blocks [0, 1, 3, 4] (label='auto')
+[lora | cifar100] classes=100 | trainable=175,204 (0.204% of 85,973,860)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=20  bs=128  amp=True  device=cuda
+epoch   1/20 | loss 4.120 | train 20.08% | val 72.04% |  33.2s |   6687MB
+epoch   2/20 | loss 0.648 | train 84.10% | val 89.50% |  31.5s |   6687MB
+epoch   3/20 | loss 0.339 | train 90.20% | val 91.56% |  32.0s |   6687MB
+epoch   4/20 | loss 0.274 | train 91.73% | val 92.00% |  31.9s |   6687MB
+epoch   5/20 | loss 0.235 | train 92.63% | val 92.10% |  31.8s |   6687MB
+epoch   6/20 | loss 0.204 | train 93.52% | val 92.32% |  32.0s |   6687MB
+epoch   7/20 | loss 0.184 | train 94.07% | val 92.16% |  31.9s |   6687MB
+epoch   8/20 | loss 0.170 | train 94.58% | val 91.64% |  31.8s |   6687MB
+epoch   9/20 | loss 0.159 | train 94.86% | val 90.74% |  32.0s |   6687MB
+epoch  10/20 | loss 0.168 | train 94.56% | val 91.46% |  31.9s |   6687MB
+epoch  11/20 | loss 0.147 | train 95.14% | val 91.14% |  32.2s |   6687MB
+epoch  12/20 | loss 0.133 | train 95.59% | val 91.80% |  31.8s |   6687MB
+epoch  13/20 | loss 0.111 | train 96.32% | val 91.52% |  32.1s |   6687MB
+epoch  14/20 | loss 0.096 | train 96.83% | val 91.72% |  31.8s |   6687MB
+epoch  15/20 | loss 0.080 | train 97.29% | val 91.22% |  31.8s |   6687MB
+epoch  16/20 | loss 0.069 | train 97.73% | val 91.74% |  31.9s |   6687MB
+epoch  17/20 | loss 0.056 | train 98.22% | val 92.02% |  31.8s |   6687MB
+epoch  18/20 | loss 0.048 | train 98.47% | val 92.06% |  31.6s |   6687MB
+epoch  19/20 | loss 0.040 | train 98.80% | val 92.24% |  31.7s |   6687MB
+epoch  20/20 | loss 0.039 | train 98.83% | val 92.20% |  31.9s |   6687MB
+
+== lora-auto_cifar100_seed42: best_val=92.32%  test=91.86%  trainable=175,204 (0.204%)
+----- fisher_select: cifar100 seed43 -----
+[head warmup] step 1/300  loss=5.940
+[head warmup] step 100/300  loss=1.799
+[head warmup] step 200/300  loss=2.980
+[head warmup] step 300/300  loss=2.373
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0   12.3%  #######  <== selected
+  block  1   10.4%  ######  <== selected
+  block  2    9.4%  ######
+  block  3   11.5%  #######  <== selected
+  block  4   10.3%  ######  <== selected
+  block  5    8.5%  #####
+  block  6    8.6%  #####
+  block  7    7.9%  #####
+  block  8    6.2%  ####
+  block  9    5.8%  ###
+  block 10    5.0%  ###
+  block 11    4.3%  ###
+
+wrote ./results/followup/fisher_cifar100_seed43.json  (1.5 min)
+SELECTED_BLOCKS=0,1,3,4
+----- cifar100 seed43: selected blocks = 0,1,3,4 -----
+===== lora/auto / cifar100 / seed 43 (20 ep) =====
+[explicit blocks] adapting blocks [0, 1, 3, 4] (label='auto')
+[lora | cifar100] classes=100 | trainable=175,204 (0.204% of 85,973,860)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=20  bs=128  amp=True  device=cuda
+epoch   1/20 | loss 4.163 | train 20.26% | val 69.50% |  33.5s |   6687MB
+epoch   2/20 | loss 0.655 | train 84.17% | val 89.32% |  31.7s |   6687MB
+epoch   3/20 | loss 0.346 | train 90.12% | val 90.64% |  32.0s |   6687MB
+epoch   4/20 | loss 0.276 | train 91.52% | val 90.98% |  32.1s |   6687MB
+epoch   5/20 | loss 0.233 | train 92.85% | val 91.14% |  32.0s |   6687MB
+epoch   6/20 | loss 0.209 | train 93.45% | val 90.96% |  32.0s |   6687MB
+epoch   7/20 | loss 0.185 | train 94.13% | val 91.12% |  32.1s |   6687MB
+epoch   8/20 | loss 0.164 | train 94.64% | val 90.94% |  31.8s |   6687MB
+epoch   9/20 | loss 0.155 | train 95.00% | val 90.82% |  32.0s |   6687MB
+epoch  10/20 | loss 0.155 | train 94.97% | val 90.82% |  32.2s |   6687MB
+epoch  11/20 | loss 0.141 | train 95.43% | val 90.80% |  32.0s |   6687MB
+epoch  12/20 | loss 0.130 | train 95.69% | val 90.76% |  32.2s |   6687MB
+epoch  13/20 | loss 0.111 | train 96.33% | val 91.06% |  32.0s |   6687MB
+epoch  14/20 | loss 0.098 | train 96.83% | val 91.30% |  32.0s |   6687MB
+epoch  15/20 | loss 0.076 | train 97.48% | val 91.26% |  32.3s |   6687MB
+epoch  16/20 | loss 0.062 | train 98.05% | val 91.68% |  31.9s |   6687MB
+epoch  17/20 | loss 0.055 | train 98.20% | val 91.56% |  32.1s |   6687MB
+epoch  18/20 | loss 0.045 | train 98.62% | val 91.78% |  31.7s |   6687MB
+epoch  19/20 | loss 0.043 | train 98.61% | val 91.74% |  31.9s |   6687MB
+epoch  20/20 | loss 0.037 | train 98.87% | val 91.72% |  31.9s |   6687MB
+
+== lora-auto_cifar100_seed43: best_val=91.78%  test=92.21%  trainable=175,204 (0.204%)
+----- fisher_select: cifar100 seed44 -----
+[head warmup] step 1/300  loss=6.430
+[head warmup] step 100/300  loss=2.319
+[head warmup] step 200/300  loss=2.053
+[head warmup] step 300/300  loss=3.025
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0   11.2%  #######  <== selected
+  block  1    9.6%  ######  <== selected
+  block  2    9.4%  ######
+  block  3   11.6%  #######  <== selected
+  block  4   10.5%  ######  <== selected
+  block  5    8.6%  #####
+  block  6    8.7%  #####
+  block  7    8.1%  #####
+  block  8    6.4%  ####
+  block  9    6.0%  ####
+  block 10    5.2%  ###
+  block 11    4.5%  ###
+
+wrote ./results/followup/fisher_cifar100_seed44.json  (1.5 min)
+SELECTED_BLOCKS=0,1,3,4
+----- cifar100 seed44: selected blocks = 0,1,3,4 -----
+===== lora/auto / cifar100 / seed 44 (20 ep) =====
+[explicit blocks] adapting blocks [0, 1, 3, 4] (label='auto')
+[lora | cifar100] classes=100 | trainable=175,204 (0.204% of 85,973,860)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=20  bs=128  amp=True  device=cuda
+epoch   1/20 | loss 4.245 | train 17.83% | val 69.36% |  33.6s |   6687MB
+epoch   2/20 | loss 0.670 | train 83.61% | val 90.34% |  31.8s |   6687MB
+epoch   3/20 | loss 0.343 | train 89.85% | val 91.36% |  31.9s |   6687MB
+epoch   4/20 | loss 0.275 | train 91.54% | val 92.12% |  32.2s |   6687MB
+epoch   5/20 | loss 0.234 | train 92.70% | val 92.22% |  32.1s |   6687MB
+epoch   6/20 | loss 0.205 | train 93.44% | val 92.04% |  32.0s |   6687MB
+epoch   7/20 | loss 0.189 | train 94.00% | val 92.18% |  32.2s |   6687MB
+epoch   8/20 | loss 0.167 | train 94.53% | val 92.04% |  31.8s |   6687MB
+epoch   9/20 | loss 0.161 | train 94.73% | val 92.16% |  31.8s |   6687MB
+epoch  10/20 | loss 0.149 | train 95.17% | val 91.96% |  31.9s |   6687MB
+epoch  11/20 | loss 0.142 | train 95.35% | val 91.50% |  31.8s |   6687MB
+epoch  12/20 | loss 0.133 | train 95.65% | val 92.06% |  31.7s |   6687MB
+epoch  13/20 | loss 0.125 | train 95.86% | val 91.46% |  31.7s |   6687MB
+epoch  14/20 | loss 0.101 | train 96.57% | val 92.10% |  31.9s |   6687MB
+epoch  15/20 | loss 0.082 | train 97.25% | val 92.38% |  31.9s |   6687MB
+epoch  16/20 | loss 0.066 | train 97.79% | val 92.46% |  31.7s |   6687MB
+epoch  17/20 | loss 0.056 | train 98.15% | val 92.34% |  31.7s |   6687MB
+epoch  18/20 | loss 0.048 | train 98.41% | val 92.32% |  31.7s |   6687MB
+epoch  19/20 | loss 0.044 | train 98.66% | val 92.34% |  32.1s |   6687MB
+epoch  20/20 | loss 0.040 | train 98.82% | val 92.34% |  31.8s |   6687MB
+
+== lora-auto_cifar100_seed44: best_val=92.46%  test=91.83%  trainable=175,204 (0.204%)
+----- fisher_select: flowers seed42 -----
+[head warmup] step 1/300  loss=6.019
+[head warmup] step 100/300  loss=0.000
+[head warmup] step 200/300  loss=0.000
+[head warmup] step 300/300  loss=0.000
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0   18.3%  ###########  <== selected
+  block  1   10.1%  ######  <== selected
+  block  2    6.3%  ####
+  block  3    6.1%  ####
+  block  4    6.2%  ####
+  block  5    6.4%  ####
+  block  6    7.6%  #####
+  block  7    8.8%  #####
+  block  8   11.1%  #######  <== selected
+  block  9    6.5%  ####
+  block 10    9.4%  ######  <== selected
+  block 11    3.2%  ##
+
+wrote ./results/followup/fisher_flowers_seed42.json  (2.0 min)
+SELECTED_BLOCKS=0,1,8,10
+----- flowers seed42: selected blocks = 0,1,8,10 -----
+===== lora/auto / flowers / seed 42 (30 ep) =====
+[explicit blocks] adapting blocks [0, 1, 8, 10] (label='auto')
+[lora | flowers] classes=102 | trainable=176,742 (0.206% of 85,975,398)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 6.169 | train  0.98% | val  2.16% |   4.9s |   6684MB
+epoch   2/30 | loss 5.389 | train  2.84% | val  6.18% |   3.9s |   6684MB
+epoch   3/30 | loss 3.895 | train 14.22% | val 33.14% |   3.9s |   6684MB
+epoch   4/30 | loss 2.105 | train 59.22% | val 78.73% |   4.2s |   6684MB
+epoch   5/30 | loss 0.653 | train 93.33% | val 95.10% |   4.1s |   6684MB
+epoch   6/30 | loss 0.132 | train 99.22% | val 98.33% |   4.1s |   6684MB
+epoch   7/30 | loss 0.030 | train 99.90% | val 99.12% |   4.0s |   6684MB
+epoch   8/30 | loss 0.012 | train 100.00% | val 99.12% |   3.9s |   6684MB
+epoch   9/30 | loss 0.006 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  10/30 | loss 0.004 | train 100.00% | val 99.31% |   4.1s |   6684MB
+epoch  11/30 | loss 0.004 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  12/30 | loss 0.003 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  13/30 | loss 0.002 | train 100.00% | val 99.31% |   4.1s |   6684MB
+epoch  14/30 | loss 0.003 | train 100.00% | val 99.31% |   4.0s |   6684MB
+epoch  15/30 | loss 0.003 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  16/30 | loss 0.002 | train 100.00% | val 99.31% |   4.0s |   6684MB
+epoch  17/30 | loss 0.002 | train 100.00% | val 99.31% |   4.0s |   6684MB
+epoch  18/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  19/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  20/30 | loss 0.002 | train 100.00% | val 99.31% |   4.1s |   6684MB
+epoch  21/30 | loss 0.002 | train 100.00% | val 99.31% |   3.7s |   6684MB
+epoch  22/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  23/30 | loss 0.002 | train 100.00% | val 99.31% |   3.8s |   6684MB
+epoch  24/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  25/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  26/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  27/30 | loss 0.002 | train 100.00% | val 99.31% |   4.1s |   6684MB
+epoch  28/30 | loss 0.002 | train 100.00% | val 99.31% |   3.9s |   6684MB
+epoch  29/30 | loss 0.002 | train 100.00% | val 99.31% |   4.1s |   6684MB
+epoch  30/30 | loss 0.002 | train 100.00% | val 99.31% |   4.0s |   6684MB
+
+== lora-auto_flowers_seed42: best_val=99.31%  test=99.07%  trainable=176,742 (0.206%)
+----- fisher_select: flowers seed43 -----
+[head warmup] step 1/300  loss=6.478
+[head warmup] step 100/300  loss=0.000
+[head warmup] step 200/300  loss=0.000
+[head warmup] step 300/300  loss=0.000
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0   10.4%  ######  <== selected
+  block  1    7.2%  ####
+  block  2    8.4%  #####
+  block  3    8.1%  #####
+  block  4    7.5%  ####
+  block  5    8.4%  #####
+  block  6   10.2%  ######  <== selected
+  block  7   10.1%  ######  <== selected
+  block  8    9.1%  #####  <== selected
+  block  9    8.1%  #####
+  block 10    6.8%  ####
+  block 11    5.8%  ###
+
+wrote ./results/followup/fisher_flowers_seed43.json  (2.0 min)
+SELECTED_BLOCKS=0,6,7,8
+----- flowers seed43: selected blocks = 0,6,7,8 -----
+===== lora/auto / flowers / seed 43 (30 ep) =====
+[explicit blocks] adapting blocks [0, 6, 7, 8] (label='auto')
+[lora | flowers] classes=102 | trainable=176,742 (0.206% of 85,975,398)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 6.333 | train  1.18% | val  1.08% |   5.0s |   6689MB
+epoch   2/30 | loss 5.490 | train  2.75% | val  5.20% |   3.8s |   6689MB
+epoch   3/30 | loss 3.916 | train 12.16% | val 30.59% |   3.8s |   6689MB
+epoch   4/30 | loss 2.117 | train 58.33% | val 78.04% |   4.0s |   6689MB
+epoch   5/30 | loss 0.674 | train 93.33% | val 95.69% |   4.0s |   6689MB
+epoch   6/30 | loss 0.127 | train 99.41% | val 99.02% |   4.1s |   6689MB
+epoch   7/30 | loss 0.028 | train 100.00% | val 99.12% |   4.0s |   6689MB
+epoch   8/30 | loss 0.012 | train 100.00% | val 99.12% |   4.0s |   6689MB
+epoch   9/30 | loss 0.007 | train 100.00% | val 99.22% |   3.9s |   6689MB
+epoch  10/30 | loss 0.005 | train 100.00% | val 99.31% |   3.9s |   6689MB
+epoch  11/30 | loss 0.004 | train 100.00% | val 99.41% |   3.9s |   6689MB
+epoch  12/30 | loss 0.004 | train 100.00% | val 99.41% |   3.9s |   6689MB
+epoch  13/30 | loss 0.003 | train 100.00% | val 99.41% |   4.1s |   6689MB
+epoch  14/30 | loss 0.003 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  15/30 | loss 0.002 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  16/30 | loss 0.002 | train 100.00% | val 99.41% |   4.1s |   6689MB
+epoch  17/30 | loss 0.002 | train 100.00% | val 99.41% |   4.2s |   6689MB
+epoch  18/30 | loss 0.002 | train 100.00% | val 99.41% |   4.1s |   6689MB
+epoch  19/30 | loss 0.002 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  20/30 | loss 0.002 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  21/30 | loss 0.002 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  22/30 | loss 0.002 | train 100.00% | val 99.41% |   3.9s |   6689MB
+epoch  23/30 | loss 0.002 | train 100.00% | val 99.41% |   4.1s |   6689MB
+epoch  24/30 | loss 0.002 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  25/30 | loss 0.002 | train 100.00% | val 99.41% |   4.0s |   6689MB
+epoch  26/30 | loss 0.002 | train 100.00% | val 99.51% |   4.0s |   6689MB
+epoch  27/30 | loss 0.002 | train 100.00% | val 99.51% |   4.0s |   6689MB
+epoch  28/30 | loss 0.002 | train 100.00% | val 99.51% |   4.0s |   6689MB
+epoch  29/30 | loss 0.002 | train 100.00% | val 99.51% |   4.0s |   6689MB
+epoch  30/30 | loss 0.002 | train 100.00% | val 99.51% |   4.1s |   6689MB
+
+== lora-auto_flowers_seed43: best_val=99.51%  test=99.43%  trainable=176,742 (0.206%)
+----- fisher_select: flowers seed44 -----
+[head warmup] step 1/300  loss=6.323
+[head warmup] step 100/300  loss=0.000
+[head warmup] step 200/300  loss=0.000
+[head warmup] step 300/300  loss=0.000
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0    5.6%  ###
+  block  1    7.8%  #####
+  block  2    7.1%  ####
+  block  3    7.3%  ####
+  block  4    7.5%  #####
+  block  5    8.2%  #####
+  block  6   10.3%  ######  <== selected
+  block  7    9.5%  ######
+  block  8   10.4%  ######  <== selected
+  block  9   10.4%  ######  <== selected
+  block 10   13.5%  ########  <== selected
+  block 11    2.5%  #
+
+wrote ./results/followup/fisher_flowers_seed44.json  (2.0 min)
+SELECTED_BLOCKS=6,8,9,10
+----- flowers seed44: selected blocks = 6,8,9,10 -----
+===== lora/auto / flowers / seed 44 (30 ep) =====
+[explicit blocks] adapting blocks [6, 8, 9, 10] (label='auto')
+[lora | flowers] classes=102 | trainable=176,742 (0.206% of 85,975,398)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 6.215 | train  0.39% | val  0.69% |   4.6s |   3791MB
+epoch   2/30 | loss 5.397 | train  1.47% | val  4.71% |   3.6s |   3791MB
+epoch   3/30 | loss 3.879 | train 14.71% | val 31.86% |   3.9s |   3791MB
+epoch   4/30 | loss 2.056 | train 57.55% | val 79.31% |   4.0s |   3791MB
+epoch   5/30 | loss 0.629 | train 93.53% | val 96.37% |   4.1s |   3791MB
+epoch   6/30 | loss 0.111 | train 99.41% | val 98.92% |   4.0s |   3791MB
+epoch   7/30 | loss 0.025 | train 99.90% | val 99.12% |   3.9s |   3791MB
+epoch   8/30 | loss 0.010 | train 100.00% | val 99.12% |   4.0s |   3791MB
+epoch   9/30 | loss 0.006 | train 100.00% | val 99.31% |   3.9s |   3791MB
+epoch  10/30 | loss 0.003 | train 100.00% | val 99.41% |   3.7s |   3791MB
+epoch  11/30 | loss 0.003 | train 100.00% | val 99.41% |   4.0s |   3791MB
+epoch  12/30 | loss 0.002 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  13/30 | loss 0.002 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  14/30 | loss 0.002 | train 100.00% | val 99.41% |   3.8s |   3791MB
+epoch  15/30 | loss 0.002 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  16/30 | loss 0.002 | train 100.00% | val 99.41% |   3.8s |   3791MB
+epoch  17/30 | loss 0.002 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  18/30 | loss 0.001 | train 100.00% | val 99.41% |   3.8s |   3791MB
+epoch  19/30 | loss 0.001 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  20/30 | loss 0.001 | train 100.00% | val 99.41% |   3.7s |   3791MB
+epoch  21/30 | loss 0.001 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  22/30 | loss 0.001 | train 100.00% | val 99.41% |   4.0s |   3791MB
+epoch  23/30 | loss 0.001 | train 100.00% | val 99.41% |   3.8s |   3791MB
+epoch  24/30 | loss 0.001 | train 100.00% | val 99.41% |   4.0s |   3791MB
+epoch  25/30 | loss 0.001 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  26/30 | loss 0.001 | train 100.00% | val 99.41% |   3.7s |   3791MB
+epoch  27/30 | loss 0.002 | train 100.00% | val 99.41% |   3.9s |   3791MB
+epoch  28/30 | loss 0.001 | train 100.00% | val 99.41% |   3.8s |   3791MB
+epoch  29/30 | loss 0.001 | train 100.00% | val 99.41% |   3.8s |   3791MB
+epoch  30/30 | loss 0.001 | train 100.00% | val 99.41% |   3.9s |   3791MB
+
+== lora-auto_flowers_seed44: best_val=99.41%  test=99.28%  trainable=176,742 (0.206%)
+----- fisher_select: dtd seed42 -----
+[head warmup] step 1/300  loss=5.111
+[head warmup] step 100/300  loss=0.077
+[head warmup] step 200/300  loss=0.050
+[head warmup] step 300/300  loss=0.035
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0    9.0%  #####
+  block  1    7.5%  #####
+  block  2    9.2%  ######
+  block  3   10.6%  ######  <== selected
+  block  4    9.8%  ######  <== selected
+  block  5    8.4%  #####
+  block  6    9.4%  ######  <== selected
+  block  7    9.4%  ######  <== selected
+  block  8    8.6%  #####
+  block  9    6.3%  ####
+  block 10    5.7%  ###
+  block 11    6.0%  ####
+
+wrote ./results/followup/fisher_dtd_seed42.json  (1.7 min)
+SELECTED_BLOCKS=3,4,6,7
+----- dtd seed42: selected blocks = 3,4,6,7 -----
+===== lora/auto / dtd / seed 42 (30 ep) =====
+[explicit blocks] adapting blocks [3, 4, 6, 7] (label='auto')
+[lora | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.111 | train  1.86% | val  2.61% |   5.7s |   5238MB
+epoch   2/30 | loss 4.345 | train  5.59% | val 11.17% |   4.4s |   5238MB
+epoch   3/30 | loss 3.112 | train 24.15% | val 35.90% |   4.6s |   5238MB
+epoch   4/30 | loss 1.910 | train 53.78% | val 55.59% |   4.7s |   5238MB
+epoch   5/30 | loss 1.073 | train 71.17% | val 66.12% |   4.6s |   5238MB
+epoch   6/30 | loss 0.650 | train 83.03% | val 70.00% |   4.6s |   5238MB
+epoch   7/30 | loss 0.432 | train 89.31% | val 71.86% |   4.6s |   5238MB
+epoch   8/30 | loss 0.283 | train 92.93% | val 73.94% |   4.8s |   5238MB
+epoch   9/30 | loss 0.183 | train 97.02% | val 75.00% |   4.5s |   5238MB
+epoch  10/30 | loss 0.119 | train 98.62% | val 74.63% |   4.6s |   5238MB
+epoch  11/30 | loss 0.087 | train 99.04% | val 75.32% |   4.5s |   5238MB
+epoch  12/30 | loss 0.064 | train 99.63% | val 75.74% |   4.6s |   5238MB
+epoch  13/30 | loss 0.046 | train 99.79% | val 75.48% |   4.5s |   5238MB
+epoch  14/30 | loss 0.035 | train 100.00% | val 75.37% |   4.6s |   5238MB
+epoch  15/30 | loss 0.031 | train 99.95% | val 76.54% |   4.6s |   5238MB
+epoch  16/30 | loss 0.027 | train 100.00% | val 76.38% |   4.5s |   5238MB
+epoch  17/30 | loss 0.021 | train 99.95% | val 76.33% |   4.5s |   5238MB
+epoch  18/30 | loss 0.018 | train 100.00% | val 76.33% |   4.5s |   5238MB
+epoch  19/30 | loss 0.017 | train 100.00% | val 76.60% |   4.6s |   5238MB
+epoch  20/30 | loss 0.016 | train 100.00% | val 76.86% |   4.6s |   5238MB
+epoch  21/30 | loss 0.014 | train 100.00% | val 76.65% |   4.6s |   5238MB
+epoch  22/30 | loss 0.014 | train 100.00% | val 76.76% |   4.7s |   5238MB
+epoch  23/30 | loss 0.013 | train 99.95% | val 76.65% |   4.4s |   5238MB
+epoch  24/30 | loss 0.013 | train 99.95% | val 76.54% |   4.6s |   5238MB
+epoch  25/30 | loss 0.013 | train 99.89% | val 76.65% |   4.5s |   5238MB
+epoch  26/30 | loss 0.013 | train 100.00% | val 76.60% |   4.5s |   5238MB
+epoch  27/30 | loss 0.012 | train 100.00% | val 76.65% |   4.6s |   5238MB
+epoch  28/30 | loss 0.013 | train 99.89% | val 76.70% |   4.6s |   5238MB
+epoch  29/30 | loss 0.013 | train 99.95% | val 76.65% |   4.5s |   5238MB
+epoch  30/30 | loss 0.015 | train 99.95% | val 76.65% |   4.5s |   5238MB
+
+== lora-auto_dtd_seed42: best_val=76.86%  test=77.87%  trainable=134,447 (0.156%)
+----- fisher_select: dtd seed43 -----
+[head warmup] step 1/300  loss=5.260
+[head warmup] step 100/300  loss=0.074
+[head warmup] step 200/300  loss=0.121
+[head warmup] step 300/300  loss=0.316
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0    9.0%  #####
+  block  1    9.3%  ######  <== selected
+  block  2   11.3%  #######  <== selected
+  block  3   12.0%  #######  <== selected
+  block  4   11.6%  #######  <== selected
+  block  5    8.6%  #####
+  block  6    9.0%  #####
+  block  7    8.7%  #####
+  block  8    6.8%  ####
+  block  9    5.2%  ###
+  block 10    4.0%  ##
+  block 11    4.5%  ###
+
+wrote ./results/followup/fisher_dtd_seed43.json  (1.7 min)
+SELECTED_BLOCKS=1,2,3,4
+----- dtd seed43: selected blocks = 1,2,3,4 -----
+===== lora/auto / dtd / seed 43 (30 ep) =====
+[explicit blocks] adapting blocks [1, 2, 3, 4] (label='auto')
+[lora | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.108 | train  2.18% | val  2.50% |   5.9s |   6205MB
+epoch   2/30 | loss 4.336 | train  5.21% | val 10.53% |   4.5s |   6205MB
+epoch   3/30 | loss 3.127 | train 23.51% | val 33.40% |   4.7s |   6205MB
+epoch   4/30 | loss 1.998 | train 50.85% | val 51.65% |   4.7s |   6205MB
+epoch   5/30 | loss 1.205 | train 69.95% | val 63.72% |   4.6s |   6205MB
+epoch   6/30 | loss 0.747 | train 80.53% | val 69.04% |   4.6s |   6205MB
+epoch   7/30 | loss 0.489 | train 87.39% | val 71.49% |   4.7s |   6205MB
+epoch   8/30 | loss 0.319 | train 92.87% | val 72.50% |   4.6s |   6205MB
+epoch   9/30 | loss 0.221 | train 95.53% | val 73.72% |   4.5s |   6205MB
+epoch  10/30 | loss 0.154 | train 97.93% | val 74.15% |   4.8s |   6205MB
+epoch  11/30 | loss 0.110 | train 98.94% | val 74.68% |   4.6s |   6205MB
+epoch  12/30 | loss 0.084 | train 99.26% | val 74.84% |   4.8s |   6205MB
+epoch  13/30 | loss 0.063 | train 99.68% | val 74.95% |   4.7s |   6205MB
+epoch  14/30 | loss 0.050 | train 99.79% | val 75.21% |   4.7s |   6205MB
+epoch  15/30 | loss 0.043 | train 99.79% | val 75.21% |   4.6s |   6205MB
+epoch  16/30 | loss 0.034 | train 100.00% | val 75.48% |   4.7s |   6205MB
+epoch  17/30 | loss 0.030 | train 100.00% | val 75.05% |   4.6s |   6205MB
+epoch  18/30 | loss 0.030 | train 99.89% | val 75.53% |   4.6s |   6205MB
+epoch  19/30 | loss 0.026 | train 99.95% | val 75.53% |   4.5s |   6205MB
+epoch  20/30 | loss 0.024 | train 99.95% | val 75.37% |   4.7s |   6205MB
+epoch  21/30 | loss 0.022 | train 100.00% | val 75.59% |   4.6s |   6205MB
+epoch  22/30 | loss 0.020 | train 100.00% | val 75.64% |   4.6s |   6205MB
+epoch  23/30 | loss 0.020 | train 100.00% | val 75.69% |   4.6s |   6205MB
+epoch  24/30 | loss 0.018 | train 100.00% | val 75.53% |   4.5s |   6205MB
+epoch  25/30 | loss 0.018 | train 100.00% | val 75.37% |   4.6s |   6205MB
+epoch  26/30 | loss 0.018 | train 99.95% | val 75.53% |   4.6s |   6205MB
+epoch  27/30 | loss 0.018 | train 100.00% | val 75.69% |   4.5s |   6205MB
+epoch  28/30 | loss 0.017 | train 100.00% | val 75.69% |   4.7s |   6205MB
+epoch  29/30 | loss 0.017 | train 100.00% | val 75.64% |   4.5s |   6205MB
+epoch  30/30 | loss 0.018 | train 100.00% | val 75.69% |   4.6s |   6205MB
+
+== lora-auto_dtd_seed43: best_val=75.69%  test=77.45%  trainable=134,447 (0.156%)
+----- fisher_select: dtd seed44 -----
+[head warmup] step 1/300  loss=5.612
+[head warmup] step 100/300  loss=0.003
+[head warmup] step 200/300  loss=0.003
+[head warmup] step 300/300  loss=0.002
+[fisher] batch 50/200
+[fisher] batch 100/200
+[fisher] batch 150/200
+[fisher] batch 200/200
+
+Per-block Fisher share (qkv.weight):
+  block  0    7.8%  #####
+  block  1    8.6%  #####
+  block  2    9.7%  ######
+  block  3   10.8%  ######  <== selected
+  block  4   10.6%  ######  <== selected
+  block  5    8.4%  #####
+  block  6    9.8%  ######  <== selected
+  block  7    9.7%  ######  <== selected
+  block  8    8.1%  #####
+  block  9    6.4%  ####
+  block 10    4.8%  ###
+  block 11    5.2%  ###
+
+wrote ./results/followup/fisher_dtd_seed44.json  (1.7 min)
+SELECTED_BLOCKS=3,4,6,7
+----- dtd seed44: selected blocks = 3,4,6,7 -----
+===== lora/auto / dtd / seed 44 (30 ep) =====
+[explicit blocks] adapting blocks [3, 4, 6, 7] (label='auto')
+[lora | dtd] classes=47 | trainable=134,447 (0.156% of 85,933,103)
+lr=0.001  wd=0.0001  drop_path=0.0  opt=adamw  epochs=30  bs=128  amp=True  device=cuda
+epoch   1/30 | loss 5.296 | train  1.33% | val  1.97% |   6.0s |   5238MB
+epoch   2/30 | loss 4.499 | train  4.04% | val  8.19% |   4.7s |   5238MB
+epoch   3/30 | loss 3.241 | train 20.85% | val 31.17% |   4.6s |   5238MB
+epoch   4/30 | loss 1.980 | train 50.90% | val 54.15% |   4.5s |   5238MB
+epoch   5/30 | loss 1.082 | train 71.91% | val 65.90% |   4.5s |   5238MB
+epoch   6/30 | loss 0.661 | train 82.82% | val 70.74% |   4.6s |   5238MB
+epoch   7/30 | loss 0.428 | train 88.78% | val 73.14% |   4.7s |   5238MB
+epoch   8/30 | loss 0.281 | train 93.83% | val 74.79% |   4.6s |   5238MB
+epoch   9/30 | loss 0.187 | train 96.97% | val 75.00% |   4.6s |   5238MB
+epoch  10/30 | loss 0.124 | train 98.30% | val 75.80% |   4.6s |   5238MB
+epoch  11/30 | loss 0.085 | train 99.31% | val 75.11% |   4.6s |   5238MB
+epoch  12/30 | loss 0.064 | train 99.57% | val 76.12% |   4.6s |   5238MB
+epoch  13/30 | loss 0.048 | train 99.73% | val 76.70% |   4.6s |   5238MB
+epoch  14/30 | loss 0.037 | train 99.84% | val 76.86% |   4.7s |   5238MB
+epoch  15/30 | loss 0.030 | train 99.95% | val 77.34% |   4.6s |   5238MB
+epoch  16/30 | loss 0.025 | train 99.95% | val 77.18% |   4.6s |   5238MB
+epoch  17/30 | loss 0.021 | train 100.00% | val 77.34% |   4.5s |   5238MB
+epoch  18/30 | loss 0.020 | train 99.95% | val 77.34% |   4.5s |   5238MB
+epoch  19/30 | loss 0.019 | train 100.00% | val 77.02% |   4.5s |   5238MB
+epoch  20/30 | loss 0.018 | train 99.95% | val 77.18% |   4.6s |   5238MB
+epoch  21/30 | loss 0.014 | train 100.00% | val 77.55% |   4.6s |   5238MB
+epoch  22/30 | loss 0.013 | train 100.00% | val 77.61% |   4.5s |   5238MB
+epoch  23/30 | loss 0.013 | train 100.00% | val 77.50% |   4.6s |   5238MB
+epoch  24/30 | loss 0.012 | train 100.00% | val 77.39% |   4.5s |   5238MB
+epoch  25/30 | loss 0.012 | train 100.00% | val 77.13% |   4.5s |   5238MB
+epoch  26/30 | loss 0.012 | train 100.00% | val 77.34% |   4.6s |   5238MB
+epoch  27/30 | loss 0.011 | train 100.00% | val 77.55% |   4.7s |   5238MB
+epoch  28/30 | loss 0.012 | train 100.00% | val 77.50% |   4.6s |   5238MB
+epoch  29/30 | loss 0.011 | train 100.00% | val 77.50% |   4.5s |   5238MB
+epoch  30/30 | loss 0.011 | train 100.00% | val 77.50% |   4.5s |   5238MB
+
+== lora-auto_dtd_seed44: best_val=77.61%  test=77.87%  trainable=134,447 (0.156%)
+ALL_FOLLOWUP_DONE  ->  接着跑: python scripts/summarize_followup.py
