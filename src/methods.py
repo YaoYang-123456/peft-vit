@@ -127,7 +127,10 @@ def _inject_ssf(model, block_ids=None):
 # --------------------------------------------------------------------------- #
 #  Public entry point (called once by train.py after the model is built)
 # --------------------------------------------------------------------------- #
-def configure_method(model, method):
+def configure_method(model, method, block_ids=None):
+    """block_ids: optional explicit list of block indices for LoRA/SSF.
+    When given (e.g. by an automatic layer-selection procedure), it overrides
+    any placement suffix in `method`."""
     method = method.lower()
     # train.py moves the model to the GPU BEFORE calling this; any modules we
     # inject below (LoRA/SSF) are created on CPU, so capture the device now and
@@ -167,7 +170,8 @@ def configure_method(model, method):
     elif base == "lora":
         for p in model.parameters():
             p.requires_grad_(False)
-        ids = _placement_to_block_ids(placement, len(model.blocks))
+        ids = (sorted(set(int(b) for b in block_ids)) if block_ids is not None
+               else _placement_to_block_ids(placement, len(model.blocks)))
         _inject_lora(model, r=rank, alpha=2 * rank, block_ids=ids)   # trainable low-rank params
         for p in model.get_classifier().parameters():
             p.requires_grad_(True)
@@ -175,7 +179,8 @@ def configure_method(model, method):
     elif base == "ssf":
         for p in model.parameters():
             p.requires_grad_(False)
-        ids = _placement_to_block_ids(placement, len(model.blocks))
+        ids = (sorted(set(int(b) for b in block_ids)) if block_ids is not None
+               else _placement_to_block_ids(placement, len(model.blocks)))
         _inject_ssf(model, block_ids=ids)        # trainable scale/shift params
         for p in model.get_classifier().parameters():
             p.requires_grad_(True)

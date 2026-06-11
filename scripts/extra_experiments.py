@@ -2,7 +2,7 @@
 """再现报告 §3.6 的两组追加实验(从原始结果聚合,完全可复现):
   实验A 等预算重分配  -> results/eqbudget/  (4 块 × r24,等于全 12 层 × r8 的预算)
   实验B 基线学习率体检 -> results/baseline_sweep/ (full FT 在 Flowers 上 lr=3e-5/5e-5)
-并生成 results/figures/fig6_equal_budget.png。
+并生成 results/figures/fig7_equal_budget.png。
 用法: python scripts/extra_experiments.py
 """
 import os, zipfile
@@ -53,8 +53,8 @@ ax.set_xlabel("Which 4 transformer blocks get LoRA")
 ax.set_ylabel("CIFAR-100 test accuracy (%)  (mean±std, 3 seeds)")
 ax.set_title("Equal-budget reallocation: coverage beats rank")
 ax.legend(loc="lower left",fontsize=8.5); ax.grid(alpha=0.3,axis="y")
-fig.tight_layout(); fig.savefig(os.path.join(FIG,"fig6_equal_budget.png"),dpi=150); plt.close()
-print("\n✓ 已生成 results/figures/fig6_equal_budget.png")
+fig.tight_layout(); fig.savefig(os.path.join(FIG,"fig7_equal_budget.png"),dpi=150); plt.close()
+print("\n✓ 已生成 results/figures/fig7_equal_budget.png")
 
 # ====== §3.7 第二主干 ViT-Small/16(若存在）======
 vs_path = os.path.join(RES, "vit_small", "summary.csv")
@@ -78,5 +78,5 @@ if os.path.exists(vs_path):
         ax.set_xticks(range(5)); ax.set_xticklabels(xl,fontsize=8.5); ax.set_ylim(*ylim); ax.grid(alpha=0.3,axis="y"); ax.set_axisbelow(True)
         ax.set_title(ttl,fontsize=10.5); ax.set_ylabel("test accuracy (%)" if ds=="cifar100" else "")
     fig.suptitle("ViT-Small/16: late-layer LoRA worst on CIFAR-100, gap vanishes on high-res Flowers-102",fontsize=10.5)
-    fig.tight_layout(rect=[0,0,1,0.94]); fig.savefig(os.path.join(FIG,"fig7_vit_small.png"),dpi=150); plt.close()
-    print("✓ 已生成 results/figures/fig7_vit_small.png")
+    fig.tight_layout(rect=[0,0,1,0.94]); fig.savefig(os.path.join(FIG,"fig8_vit_small.png"),dpi=150); plt.close()
+    print("✓ 已生成 results/figures/fig8_vit_small.png")

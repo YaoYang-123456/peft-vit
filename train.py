@@ -87,6 +87,11 @@ def main():
                     help="save best-on-val weights to <out-dir>/runs/<run>_best.pt")
     ap.add_argument("--backbone", type=str, default=None,
                     help="timm 主干名;默认 ViT-B/16 IN-21k (vit_base_patch16_224.augreg_in21k)")
+    ap.add_argument("--blocks", type=str, default=None,
+                    help="逗号分隔的 Block 序号(如 '0,3,5,7'),仅对 lora/ssf 生效;"
+                         "给出时覆盖 method 中的位置后缀(用于自动选层实验)")
+    ap.add_argument("--placement-label", type=str, default=None,
+                    help="与 --blocks 搭配使用,写入 summary.csv 的 placement 标签(如 'auto')")
     args = ap.parse_args()
 
     set_seed(args.seed)
@@ -94,6 +99,10 @@ def main():
     use_amp = (not args.no_amp) and (device.type == "cuda")
 
     base_method, placement = parse_method(args.method)
+    explicit_blocks = None
+    if args.blocks is not None:
+        explicit_blocks = sorted({int(b) for b in args.blocks.split(",") if b.strip() != ""})
+        placement = args.placement_label or "custom"
     d = dict(METHOD_DEFAULTS[base_method])
     if args.lr is not None: d["lr"] = args.lr
     if args.wd is not None: d["weight_decay"] = args.wd
@@ -118,7 +127,13 @@ def main():
         train_set, val_set, test_set, args.batch_size, args.num_workers)
 
     model = create_model(num_classes=num_classes, drop_path_rate=drop_path, model_name=model_name).to(device)
-    configure_method(model, args.method)
+    if explicit_blocks is not None:
+        n_blk = len(model.blocks)
+        bad = [b for b in explicit_blocks if not (0 <= b < n_blk)]
+        if bad:
+            raise ValueError(f"--blocks 中的序号 {bad} 超出范围 [0, {n_blk - 1}]")
+        print(f"[explicit blocks] adapting blocks {explicit_blocks} (label='{placement}')")
+    configure_method(model, args.method, block_ids=explicit_blocks)
     trainable, total = count_parameters(model)
 
     print(f"[{args.method} | {args.dataset}] classes={num_classes} | "
@@ -137,6 +152,8 @@ def main():
     run_dir = os.path.join(args.out_dir, "runs")
     os.makedirs(run_dir, exist_ok=True)
     run_name = f"{args.method}_{args.dataset}_seed{args.seed}"
+    if explicit_blocks is not None:
+        run_name = f"{base_method}-{placement}_{args.dataset}_seed{args.seed}"
     logger = CSVLogger(
         os.path.join(run_dir, run_name + ".csv"),
         ["epoch", "train_loss", "train_acc", "val_acc", "lr", "time_s", "peak_mem_mb"])
