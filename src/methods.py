@@ -54,6 +54,19 @@ class SSF(nn.Module):
 
     Initialised to identity (scale=1, shift=0) so it does not disturb the
     pre-trained features at the start of training.
+
+    Training-memory note: because `scale` is trainable and applied
+    multiplicatively, autograd MUST retain the input activation `x`
+    (d L / d scale = sum (d L / d y) * x).  With one SSF after each of the 6
+    ops per block (and two of them very wide: qkv=2304, fc1=3072), this makes
+    SSF's *training* activation memory genuinely higher than e.g. LoRA -- it
+    is largely intrinsic, not a wrapper artifact.  In-place writes are not an
+    option (they would destroy the `x` needed for d L / d scale), and folding
+    scale/shift into the upstream Linear only changes *which* activation is
+    stored (its input vs. its output), not whether one is stored.  SSF's
+    advertised efficiency is about trainable-parameter count and zero-overhead
+    *inference* (re-parameterizable), not training memory; the real lever for
+    training memory is gradient/activation checkpointing.  See report S3.6.
     """
 
     def __init__(self, dim: int):

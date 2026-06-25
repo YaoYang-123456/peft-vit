@@ -20,9 +20,9 @@
       --data-root ./data --out-dir ./results/followup
 输出:
   <out-dir>/fisher_<dataset>_seed<seed>.json   (含 12 个 Block 的得分与选中序号)
-  并在 stdout 打印  SELECTED_BLOCKS=0,2,3,5  供 shell 脚本读取。
+  并在 stdout 打印  SELECTED_BLOCKS=0,1,3,4  供 shell 脚本读取。
 
-整个过程只前向/反向、不训练主干,在单卡上约 2–5 分钟。
+整个过程只前向/反向、不训练主干,在单卡上约 1.5–2 分钟。
 """
 import argparse
 import json
