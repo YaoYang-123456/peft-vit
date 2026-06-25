@@ -72,6 +72,15 @@ def _placement_to_block_ids(placement, n_blocks):
     """Map a placement keyword to the indices of the blocks to adapt.
     early/mid/late take one contiguous third of the network; 'all' takes every
     block.  This lets us ask "where should a fixed budget go?" at matched cost.
+
+    NOTE on the fixed-budget property: equal budget across early/mid/late/even
+    holds only for 12-block backbones (ViT-B, ViT-S), where one third == 4 blocks
+    and 'even' also yields 4 blocks.  On deeper backbones the budgets diverge:
+    for ViT-L (24 blocks) early/mid/late each become 8 blocks while 'even' stays
+    4, so the placements are no longer budget-matched and their comparison would
+    be confounded.  To run a budget-matched placement study on such backbones,
+    pass an explicit, equal-size block list via train.py --blocks (e.g. four
+    blocks per placement) instead of relying on these keywords.
     """
     placement = (placement or "all").lower()
     if placement == "all":

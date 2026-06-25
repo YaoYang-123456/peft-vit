@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""再现报告 §3.6 的两组追加实验(从原始结果聚合,完全可复现):
+"""再现报告 §3.7(等预算重分配)与 §3.8(第二主干 ViT-Small)的追加实验(从原始结果聚合,完全可复现):
   实验A 等预算重分配  -> results/eqbudget/  (4 块 × r24,等于全 12 层 × r8 的预算)
   实验B 基线学习率体检 -> results/baseline_sweep/ (full FT 在 Flowers 上 lr=3e-5/5e-5)
-并生成 results/figures/fig7_equal_budget.png。
+并生成 results/figures/fig7_equal_budget.png;若存在 ViT-Small 结果,同时生成 fig8_vit_small.png。
 用法: python scripts/extra_experiments.py
 """
 import os, zipfile
@@ -35,7 +35,7 @@ for lr,fn in [("3e-5","full_lr3e5.csv"),("5e-5","full_lr5e5.csv")]:
 lo=acc(main,"lora","all","flowers")
 print(f"LoRA (最优PEFT): {lo.mean():.2f} ± {lo.std(ddof=1):.2f}")
 
-# fig6
+# fig7 (等预算重分配)
 def ms(df,p):
     v=acc(df,"lora",p,"cifar100"); return v.mean(), v.std(ddof=1)
 places=["early","mid","even","late"]; xl=["early\n(0–3)","mid\n(4–7)","even\n(0,3,6,9)","late\n(8–11)"]
@@ -56,10 +56,10 @@ ax.legend(loc="lower left",fontsize=8.5); ax.grid(alpha=0.3,axis="y")
 fig.tight_layout(); fig.savefig(os.path.join(FIG,"fig7_equal_budget.png"),dpi=150); plt.close()
 print("\n✓ 已生成 results/figures/fig7_equal_budget.png")
 
-# ====== §3.7 第二主干 ViT-Small/16(若存在）======
+# ====== §3.8 第二主干 ViT-Small/16(若存在) ======
 vs_path = os.path.join(RES, "vit_small", "summary.csv")
 if os.path.exists(vs_path):
-    print("\n" + "="*64); print("§3.7 第二主干 ViT-Small/16  LoRA 层位置"); print("="*64)
+    print("\n" + "="*64); print("§3.8 第二主干 ViT-Small/16  LoRA 层位置"); print("="*64)
     vs = pd.read_csv(vs_path).drop_duplicates(["placement","dataset","seed"], keep="last")
     def vacc(p, ds): return vs[(vs.placement==p)&(vs.dataset==ds)]["test_acc"].values
     for ds in ["cifar100", "flowers"]:
@@ -68,7 +68,7 @@ if os.path.exists(vs_path):
             a = vacc(p, ds); print(f"   {p:<6} {a.mean():.2f} ± {a.std(ddof=1):.2f}")
         lt = vacc("late", ds); al = vacc("all", ds)
         print(f"   late vs all: Δ={lt.mean()-al.mean():+.2f}pp")
-    # fig7
+    # fig8 (第二主干 ViT-Small)
     places=["all","early","mid","even","late"]; xl=["all\n(0-11)","early\n(0-3)","mid\n(4-7)","even\n(0,3,6,9)","late\n(8-11)"]
     fig,axes=plt.subplots(1,2,figsize=(11,4.4))
     for ax,ds,ttl,ylim in [(axes[0],"cifar100","CIFAR-100 (low-res 32px)",(86.5,92)),(axes[1],"flowers","Flowers-102 (high-res)",(98.4,99.7))]:

@@ -4,7 +4,7 @@
   - main_comparison.csv     表 2 (五方法 × 三数据集, 3 种子 mean/std/n)
   - placement_ablation.csv  表 3/4 (LoRA/SSF 层位置, 各数据集 mean±std)
   - significance.csv         配对 t 检验 p 值 (报告 §3.3/§3.4 引用)
-  - efficiency.csv          表 5 (峰值显存=各种子一致值; 每轮时间=seed42 代表性运行)
+  - efficiency.csv          表 6 (峰值显存=各种子一致值; 每轮时间=seed42 代表性运行)
 
 用法: python scripts/summarize_results.py
 """
@@ -100,7 +100,7 @@ hi = sigdf[(sigdf.dataset.isin(["flowers", "pets"])) & (sigdf.significant)]
 print((hi.to_string(index=False) if len(hi) else "  (无)"), "\n")
 
 # --------------------------------------------------------------------------- #
-#  4) efficiency.csv  (表 5)
+#  4) efficiency.csv  (表 6)
 #     peak memory is deterministic (identical across seeds); per-epoch wall time
 #     is taken from the seed-42 run as a representative figure (cross-seed wall
 #     time varies up to ~2x with GPU load, so a mean would be misleading).
@@ -115,5 +115,5 @@ for m in METHODS:
                     pct=round(float(g["pct"].iloc[0]), 3), peak_mem_MB=mem, sec_per_epoch=spe))
 effdf = pd.DataFrame(eff)
 effdf.to_csv(os.path.join(RES, "efficiency.csv"), index=False)
-print("== efficiency.csv (表 5; 显存=各种子一致值, 时间=seed42 代表性运行) ==")
+print("== efficiency.csv (表 6; 显存=各种子一致值, 时间=seed42 代表性运行) ==")
 print(effdf.to_string(index=False))

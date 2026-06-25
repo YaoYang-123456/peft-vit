@@ -29,7 +29,8 @@ def load(path):
 
 
 def acc(df, m, p, ds):
-    return df[(df.method == m) & (df.placement == p) & (df.dataset == ds)]["test_acc"].values
+    g = df[(df.method == m) & (df.placement == p) & (df.dataset == ds)].sort_values("seed")
+    return g["test_acc"].values
 
 
 def fmt(v):
@@ -88,5 +89,5 @@ for ds in ["cifar100", "flowers", "dtd"]:
         tail = f"   auto vs {p}: p={pv:.3f}" if pv == pv else ""
         print(f"    {p:<6} {fmt(v)}{tail}")
 
-n_done = len(glob.glob(os.path.join(FUP, "done_*.flag")))
+n_done = len(fup)
 print(f"\n(进度: {n_done}/48 个 run 已完成; 缺失项会随实验推进自动补全)")

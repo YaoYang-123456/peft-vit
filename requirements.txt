@@ -1,6 +1,9 @@
-# 在 GPU 上验证(PyTorch 2.x / CUDA 11.8+)。版本以你的环境为准,可用以下命令查看:
-#   python -c "import torch,timm;print('torch',torch.__version__,'timm',timm.__version__)"
-torch>=2.1
+# 在 GPU 上验证。下方版本下限面向较旧的 GPU(PyTorch 2.x / CUDA 11.8+ 即可)。
+# 注意:本文实验所用的 RTX 5090D(Blackwell, sm_120)需要 CUDA 12.8 + PyTorch>=2.7
+#   才能正常运行(实测 torch 2.8 / CUDA 12.8);更早的 CUDA/torch 在 5090 上无法启动。
+# 版本以你的环境为准,可用以下命令查看:
+#   python -c "import torch,timm;print('torch',torch.__version__,'cuda',torch.version.cuda,'timm',timm.__version__)"
+torch>=2.1            # 旧卡可用;RTX 5090 等 Blackwell 卡请装 >=2.7 (cu128)
 torchvision>=0.16
 timm>=1.0.0
 pandas>=2.0

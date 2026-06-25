@@ -84,7 +84,8 @@ def main():
     ap.add_argument("--subset-size", type=int, default=None,
                     help="use only the first N training samples (quick code check)")
     ap.add_argument("--save-ckpt", action="store_true",
-                    help="save best-on-val weights to <out-dir>/runs/<run>_best.pt")
+                    help="save best-on-val trainable slice (adapters+head) to "
+                         "<out-dir>/runs/<run>_adapter.pt")
     ap.add_argument("--backbone", type=str, default=None,
                     help="timm 主干名;默认 ViT-B/16 IN-21k (vit_base_patch16_224.augreg_in21k)")
     ap.add_argument("--blocks", type=str, default=None,
