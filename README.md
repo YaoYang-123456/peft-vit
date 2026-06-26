@@ -43,7 +43,7 @@
 - 安装依赖:`pip install -r requirements.txt`(含 `torch / torchvision / timm / pandas / numpy / matplotlib / scipy`)。如需完全锁定版本,可在运行环境执行 `pip freeze > requirements-lock.txt` 一并提交。
 - 查看版本:`python -c "import torch,timm;print('torch',torch.__version__,'timm',timm.__version__)"`。
 
-## 数据集准备
+## 数据集下载与准备
 CIFAR-100、Flowers-102、Oxford-IIIT Pets、DTD 均由 `torchvision` 自动下载到 `--data-root`(默认 `./data`)。
 验证集为从训练集划出的 10%(Flowers-102 与 DTD 用各自官方 train/val/test 划分),测试集仅在训练结束时评测一次。
 
