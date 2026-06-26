@@ -47,7 +47,7 @@
 CIFAR-100、Flowers-102、Oxford-IIIT Pets、DTD 均由 `torchvision` 自动下载到 `--data-root`(默认 `./data`)。
 验证集为从训练集划出的 10%(Flowers-102 与 DTD 用各自官方 train/val/test 划分),测试集仅在训练结束时评测一次。
 
-> 复现提示:随机增广由 DataLoader worker 产生,改变 `--num-workers` 会改变增广序列、从而带来与“换硬件”类似的约 0.1–0.2 pp 波动。要逐位对齐论文数字,请固定 `--num-workers`(主体实验用 2),并使用与报告一致的种子(42/43/44)。
+> 复现提示:随机增广由 DataLoader worker 产生,改变 `--num-workers` 会改变增广序列,从而带来与“换硬件”类似的约 0.1–0.2 pp 波动。提交脚本中,主体实验 `scripts/run_all_full.sh` 默认使用 `--num-workers 4`,追加实验 `scripts/run_followup.sh` 默认使用 `NW=8`;该参数只影响 DataLoader 并行加载效率,不改变模型、数据划分、训练轮数、学习率、权重衰减或实验结论。若本地复现时内存或 CPU 资源有限,可适当降低 `--num-workers`;要更接近论文数字,请固定该参数并使用报告中的随机种子(42/43/44)。
 
 一次性下载并自检(打印 `ALL DATA READY` 即就绪):
 ```bash
